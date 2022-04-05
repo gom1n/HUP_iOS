@@ -16,6 +16,8 @@
 		23829AA127F749D100506560 /* HUPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23829AA027F749D100506560 /* HUPTests.swift */; };
 		23829AAB27F749D100506560 /* HUPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23829AAA27F749D100506560 /* HUPUITests.swift */; };
 		23829AAD27F749D100506560 /* HUPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23829AAC27F749D100506560 /* HUPUITestsLaunchTests.swift */; };
+		23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */; };
+		23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A2027F8208900C7B619 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		23829AA627F749D100506560 /* HUPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HUPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23829AAA27F749D100506560 /* HUPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUPUITests.swift; sourceTree = "<group>"; };
 		23829AAC27F749D100506560 /* HUPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		23AD5A2027F8208900C7B619 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				23829A8B27F749D000506560 /* SceneDelegate.swift */,
 				23829A8D27F749D000506560 /* ViewController.swift */,
 				23829A8F27F749D000506560 /* Main.storyboard */,
+				23AD5A2027F8208900C7B619 /* RegisterViewController.swift */,
+				23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */,
 				23829A9227F749D100506560 /* Assets.xcassets */,
 				23829A9427F749D100506560 /* LaunchScreen.storyboard */,
 				23829A9727F749D100506560 /* Info.plist */,
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
+				23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */,
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,
 				23829A8C27F749D000506560 /* SceneDelegate.swift in Sources */,
