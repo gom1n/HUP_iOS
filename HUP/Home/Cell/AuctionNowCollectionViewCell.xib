@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AuctionNowCollectionViewCell" id="gTV-IL-0wX" customClass="AuctionNowCollectionViewCell" customModule="HUP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="273" height="266"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="273" height="266"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hupimage" translatesAutoresizingMaskIntoConstraints="NO" id="cTY-7v-Oc4">
+                        <rect key="frame" x="0.0" y="0.0" width="273" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="9AP-hX-YQI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Auction Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cN0-qI-dCJ">
+                        <rect key="frame" x="10" y="160" width="160" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="160" id="d37-us-XBb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeB-6R-3DJ">
+                        <rect key="frame" x="10" y="188" width="253" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item context. item context. item context. item context" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-kX-Qgs">
+                        <rect key="frame" x="10" y="214" width="253" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZeB-6R-3DJ" firstAttribute="leading" secondItem="cN0-qI-dCJ" secondAttribute="leading" id="5aT-fM-Dla"/>
+                <constraint firstAttribute="trailing" secondItem="cTY-7v-Oc4" secondAttribute="trailing" id="73s-Np-gsa"/>
+                <constraint firstAttribute="trailing" secondItem="ZeB-6R-3DJ" secondAttribute="trailing" constant="10" id="Iy2-H0-0We"/>
+                <constraint firstItem="cN0-qI-dCJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="KLh-Pr-DXh"/>
+                <constraint firstItem="cTY-7v-Oc4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="R55-c1-6Zx"/>
+                <constraint firstAttribute="trailing" secondItem="2e3-kX-Qgs" secondAttribute="trailing" constant="10" id="UJq-Nx-qJv"/>
+                <constraint firstItem="cN0-qI-dCJ" firstAttribute="top" secondItem="cTY-7v-Oc4" secondAttribute="bottom" constant="10" id="g4C-ct-9Xz"/>
+                <constraint firstItem="cTY-7v-Oc4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mN6-g5-1ab"/>
+                <constraint firstItem="2e3-kX-Qgs" firstAttribute="top" secondItem="ZeB-6R-3DJ" secondAttribute="bottom" constant="10" id="pa9-hP-v8P"/>
+                <constraint firstItem="2e3-kX-Qgs" firstAttribute="leading" secondItem="ZeB-6R-3DJ" secondAttribute="leading" id="v5f-1S-wXb"/>
+                <constraint firstItem="ZeB-6R-3DJ" firstAttribute="top" secondItem="cN0-qI-dCJ" secondAttribute="bottom" constant="10" id="vJe-U8-dXF"/>
+            </constraints>
+            <size key="customSize" width="273" height="266"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="imageViewHomeAuctionItem" destination="cTY-7v-Oc4" id="jKK-vl-fSb"/>
+                <outlet property="labelHomeAuctionItem" destination="cN0-qI-dCJ" id="6a1-nX-64i"/>
+                <outlet property="labelItemContext" destination="2e3-kX-Qgs" id="Alw-jy-hrn"/>
+                <outlet property="labelItemDate" destination="2e3-kX-Qgs" id="XhM-vt-5NK"/>
+            </connections>
+            <point key="canvasLocation" x="557" y="54"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="hupimage" width="1650" height="1313"/>
+    </resources>
+</document>

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233A7001282A7D1C000CB6C8 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A6FFF282A7D1C000CB6C8 /* HomeTableViewCell.swift */; };
+		233A7002282A7D1C000CB6C8 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233A7000282A7D1C000CB6C8 /* HomeTableViewCell.xib */; };
+		233A7005282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */; };
+		233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */; };
+		233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7008282A817A000CB6C8 /* UIView+Extension.swift */; };
 		23829A8A27F749D000506560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23829A8927F749D000506560 /* AppDelegate.swift */; };
 		23829A8C27F749D000506560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23829A8B27F749D000506560 /* SceneDelegate.swift */; };
 		23829A8E27F749D000506560 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23829A8D27F749D000506560 /* ViewController.swift */; };
@@ -39,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		233A6FFF282A7D1C000CB6C8 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		233A7000282A7D1C000CB6C8 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowCollectionViewCell.swift; sourceTree = "<group>"; };
+		233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionNowCollectionViewCell.xib; sourceTree = "<group>"; };
+		233A7008282A817A000CB6C8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		23829A8627F749D000506560 /* HUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23829A8927F749D000506560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23829A8B27F749D000506560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +92,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233A6FFE282A7CDF000CB6C8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				233A6FFF282A7D1C000CB6C8 /* HomeTableViewCell.swift */,
+				233A7000282A7D1C000CB6C8 /* HomeTableViewCell.xib */,
+				233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */,
+				233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		233A7007282A8162000CB6C8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				233A7008282A817A000CB6C8 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		23829A7D27F749D000506560 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +134,7 @@
 		23829A8827F749D000506560 /* HUP */ = {
 			isa = PBXGroup;
 			children = (
+				233A7007282A8162000CB6C8 /* Extension */,
 				238F4BD4282544BB0060F804 /* Home */,
 				23829A8927F749D000506560 /* AppDelegate.swift */,
 				23829A8B27F749D000506560 /* SceneDelegate.swift */,
@@ -139,6 +169,7 @@
 		238F4BD4282544BB0060F804 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				233A6FFE282A7CDF000CB6C8 /* Cell */,
 				238F4BD5282544D70060F804 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -250,7 +281,9 @@
 			files = (
 				23829A9627F749D100506560 /* LaunchScreen.storyboard in Resources */,
 				23829A9327F749D100506560 /* Assets.xcassets in Resources */,
+				233A7002282A7D1C000CB6C8 /* HomeTableViewCell.xib in Resources */,
 				23829A9127F749D000506560 /* Main.storyboard in Resources */,
+				233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,10 +310,13 @@
 			files = (
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
 				23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */,
+				233A7001282A7D1C000CB6C8 /* HomeTableViewCell.swift in Sources */,
+				233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */,
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,
 				23829A8C27F749D000506560 /* SceneDelegate.swift in Sources */,
 				238F4BD6282544D70060F804 /* HomeViewController.swift in Sources */,
+				233A7005282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
