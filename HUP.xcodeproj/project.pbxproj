@@ -16,6 +16,7 @@
 		23829AA127F749D100506560 /* HUPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23829AA027F749D100506560 /* HUPTests.swift */; };
 		23829AAB27F749D100506560 /* HUPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23829AAA27F749D100506560 /* HUPUITests.swift */; };
 		23829AAD27F749D100506560 /* HUPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23829AAC27F749D100506560 /* HUPUITestsLaunchTests.swift */; };
+		238F4BD6282544D70060F804 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F4BD5282544D70060F804 /* HomeViewController.swift */; };
 		23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */; };
 		23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A2027F8208900C7B619 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		23829AA627F749D100506560 /* HUPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HUPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23829AAA27F749D100506560 /* HUPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUPUITests.swift; sourceTree = "<group>"; };
 		23829AAC27F749D100506560 /* HUPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		238F4BD5282544D70060F804 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		23AD5A2027F8208900C7B619 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 		23829A8827F749D000506560 /* HUP */ = {
 			isa = PBXGroup;
 			children = (
+				238F4BD4282544BB0060F804 /* Home */,
 				23829A8927F749D000506560 /* AppDelegate.swift */,
 				23829A8B27F749D000506560 /* SceneDelegate.swift */,
 				23829A8D27F749D000506560 /* ViewController.swift */,
@@ -131,6 +134,14 @@
 				23829AAC27F749D100506560 /* HUPUITestsLaunchTests.swift */,
 			);
 			path = HUPUITests;
+			sourceTree = "<group>";
+		};
+		238F4BD4282544BB0060F804 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				238F4BD5282544D70060F804 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,
 				23829A8C27F749D000506560 /* SceneDelegate.swift in Sources */,
+				238F4BD6282544D70060F804 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
