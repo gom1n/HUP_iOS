@@ -10,6 +10,11 @@
 		2339AE42282B7FB5002318FB /* ItemListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE40282B7FB5002318FB /* ItemListTableViewCell.swift */; };
 		2339AE43282B7FB5002318FB /* ItemListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE41282B7FB5002318FB /* ItemListTableViewCell.xib */; };
 		2339AE45282B82E9002318FB /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE44282B82E9002318FB /* ItemListViewController.swift */; };
+		2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE47282B8CCB002318FB /* ChattingViewController.swift */; };
+		2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE4A282B8D00002318FB /* ChattingRoomTableViewCell.swift */; };
+		2339AE4D282B8D00002318FB /* ChattingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE4B282B8D00002318FB /* ChattingRoomTableViewCell.xib */; };
+		2339AE52282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE50282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift */; };
+		2339AE53282B9456002318FB /* ChattingRoomAdverImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE51282B9456002318FB /* ChattingRoomAdverImageTableViewCell.xib */; };
 		233A7001282A7D1C000CB6C8 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A6FFF282A7D1C000CB6C8 /* HomeTableViewCell.swift */; };
 		233A7002282A7D1C000CB6C8 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233A7000282A7D1C000CB6C8 /* HomeTableViewCell.xib */; };
 		233A7005282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */; };
@@ -50,6 +55,11 @@
 		2339AE40282B7FB5002318FB /* ItemListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewCell.swift; sourceTree = "<group>"; };
 		2339AE41282B7FB5002318FB /* ItemListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemListTableViewCell.xib; sourceTree = "<group>"; };
 		2339AE44282B82E9002318FB /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		2339AE47282B8CCB002318FB /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
+		2339AE4A282B8D00002318FB /* ChattingRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomTableViewCell.swift; sourceTree = "<group>"; };
+		2339AE4B282B8D00002318FB /* ChattingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattingRoomTableViewCell.xib; sourceTree = "<group>"; };
+		2339AE50282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomAdverImageTableViewCell.swift; sourceTree = "<group>"; };
+		2339AE51282B9456002318FB /* ChattingRoomAdverImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattingRoomAdverImageTableViewCell.xib; sourceTree = "<group>"; };
 		233A6FFF282A7D1C000CB6C8 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		233A7000282A7D1C000CB6C8 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +126,26 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2339AE46282B8CBC002318FB /* Chatting */ = {
+			isa = PBXGroup;
+			children = (
+				2339AE49282B8CCF002318FB /* Cell */,
+				2339AE47282B8CCB002318FB /* ChattingViewController.swift */,
+			);
+			path = Chatting;
+			sourceTree = "<group>";
+		};
+		2339AE49282B8CCF002318FB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2339AE4A282B8D00002318FB /* ChattingRoomTableViewCell.swift */,
+				2339AE4B282B8D00002318FB /* ChattingRoomTableViewCell.xib */,
+				2339AE50282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift */,
+				2339AE51282B9456002318FB /* ChattingRoomAdverImageTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		233A6FFE282A7CDF000CB6C8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +188,7 @@
 		23829A8827F749D000506560 /* HUP */ = {
 			isa = PBXGroup;
 			children = (
+				2339AE46282B8CBC002318FB /* Chatting */,
 				2339AE3E282B7EEB002318FB /* ItemList */,
 				233A7007282A8162000CB6C8 /* Extension */,
 				238F4BD4282544BB0060F804 /* Home */,
@@ -310,6 +341,8 @@
 				233A7002282A7D1C000CB6C8 /* HomeTableViewCell.xib in Resources */,
 				23829A9127F749D000506560 /* Main.storyboard in Resources */,
 				233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */,
+				2339AE4D282B8D00002318FB /* ChattingRoomTableViewCell.xib in Resources */,
+				2339AE53282B9456002318FB /* ChattingRoomAdverImageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,8 +367,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */,
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
 				23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */,
+				2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */,
 				2339AE42282B7FB5002318FB /* ItemListTableViewCell.swift in Sources */,
 				233A7001282A7D1C000CB6C8 /* HomeTableViewCell.swift in Sources */,
 				2339AE45282B82E9002318FB /* ItemListViewController.swift in Sources */,
@@ -343,6 +378,7 @@
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,
 				23829A8C27F749D000506560 /* SceneDelegate.swift in Sources */,
+				2339AE52282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift in Sources */,
 				238F4BD6282544D70060F804 /* HomeViewController.swift in Sources */,
 				233A7005282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift in Sources */,
 			);

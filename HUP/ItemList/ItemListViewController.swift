@@ -35,8 +35,7 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // 수정필요
-        if indexPath.row == 0 {return 0}
-        else {return 170}
+        return 170
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 //        guard let tableViewCell = cell as? ItemListTableViewCell else {

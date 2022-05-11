@@ -190,7 +190,7 @@
         <!--Chatting-->
         <scene sceneID="zc0-vJ-72q">
             <objects>
-                <viewController id="B6Z-6O-QFq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChattingVC" id="B6Z-6O-QFq" customClass="ChattingViewController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4nv-ph-sIc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,6 +220,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Chatting" image="message" catalog="system" id="Ki8-V1-d6Z"/>
+                    <connections>
+                        <outlet property="chattingRoomTableView" destination="bHl-wR-Oqg" id="Tui-JP-aHH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBW-Qp-2Ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
