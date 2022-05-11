@@ -21,6 +21,15 @@ class MyPageViewController: UIViewController {
         
         mypageTableView.separatorStyle = .none
     }
+    @IBAction func loginButtonDidTap(_ sender: UIButton) {
+        //화면전환
+        //1 스토리 보드를 생성
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //2 뷰컨트롤러를 생성
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        //3 화면전환 메소드를 사용해서 화면을 전환
+        self.present(loginViewController, animated: true, completion: nil)
+    }
 }
 
 extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
