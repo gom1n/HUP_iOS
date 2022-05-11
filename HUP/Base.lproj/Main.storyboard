@@ -285,7 +285,7 @@
         <!--MyPage-->
         <scene sceneID="9RP-u5-Dk8">
             <objects>
-                <viewController id="hsp-zi-hQi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageVC" id="hsp-zi-hQi" customClass="MyPageViewController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ebL-4f-ElV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,7 +391,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bZG-jQ-7dm">
-                                <rect key="frame" x="10" y="476" width="394" height="337"/>
+                                <rect key="frame" x="10" y="486" width="394" height="327"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -412,7 +412,7 @@
                             <constraint firstItem="bZG-jQ-7dm" firstAttribute="leading" secondItem="YjI-kg-S6m" secondAttribute="leading" constant="10" id="YDy-mj-8WI"/>
                             <constraint firstItem="wpV-wm-9WP" firstAttribute="top" secondItem="ngc-8Z-zgU" secondAttribute="bottom" constant="30" id="bfW-3O-C9w"/>
                             <constraint firstItem="S44-su-qPw" firstAttribute="leading" secondItem="YjI-kg-S6m" secondAttribute="leading" id="gLO-xW-h8e"/>
-                            <constraint firstItem="bZG-jQ-7dm" firstAttribute="top" secondItem="wpV-wm-9WP" secondAttribute="bottom" id="h4p-w1-uPp"/>
+                            <constraint firstItem="bZG-jQ-7dm" firstAttribute="top" secondItem="wpV-wm-9WP" secondAttribute="bottom" constant="10" id="h4p-w1-uPp"/>
                             <constraint firstItem="kRj-gW-jLc" firstAttribute="leading" secondItem="YjI-kg-S6m" secondAttribute="leading" constant="10" id="hhC-3l-Mfn"/>
                             <constraint firstItem="IWl-Xy-P11" firstAttribute="centerY" secondItem="ngc-8Z-zgU" secondAttribute="centerY" id="jFK-oT-zRe"/>
                             <constraint firstItem="YjI-kg-S6m" firstAttribute="bottom" secondItem="bZG-jQ-7dm" secondAttribute="bottom" id="mEY-eY-ysb"/>
@@ -424,6 +424,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="MyPage" image="person" catalog="system" id="OM3-BG-6tD"/>
+                    <connections>
+                        <outlet property="mypageTableView" destination="bZG-jQ-7dm" id="Yp7-cB-XQG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W18-mx-Op5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

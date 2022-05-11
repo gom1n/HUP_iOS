@@ -15,6 +15,9 @@
 		2339AE4D282B8D00002318FB /* ChattingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE4B282B8D00002318FB /* ChattingRoomTableViewCell.xib */; };
 		2339AE52282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE50282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift */; };
 		2339AE53282B9456002318FB /* ChattingRoomAdverImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE51282B9456002318FB /* ChattingRoomAdverImageTableViewCell.xib */; };
+		2339AE57282B970B002318FB /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE56282B970B002318FB /* MyPageViewController.swift */; };
+		2339AE5B282B9770002318FB /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE59282B9770002318FB /* MyPageTableViewCell.swift */; };
+		2339AE5C282B9770002318FB /* MyPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE5A282B9770002318FB /* MyPageTableViewCell.xib */; };
 		233A7001282A7D1C000CB6C8 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A6FFF282A7D1C000CB6C8 /* HomeTableViewCell.swift */; };
 		233A7002282A7D1C000CB6C8 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233A7000282A7D1C000CB6C8 /* HomeTableViewCell.xib */; };
 		233A7005282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */; };
@@ -60,6 +63,9 @@
 		2339AE4B282B8D00002318FB /* ChattingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattingRoomTableViewCell.xib; sourceTree = "<group>"; };
 		2339AE50282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomAdverImageTableViewCell.swift; sourceTree = "<group>"; };
 		2339AE51282B9456002318FB /* ChattingRoomAdverImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattingRoomAdverImageTableViewCell.xib; sourceTree = "<group>"; };
+		2339AE56282B970B002318FB /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		2339AE59282B9770002318FB /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
+		2339AE5A282B9770002318FB /* MyPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageTableViewCell.xib; sourceTree = "<group>"; };
 		233A6FFF282A7D1C000CB6C8 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		233A7000282A7D1C000CB6C8 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -146,6 +152,24 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2339AE55282B96F2002318FB /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				2339AE58282B975B002318FB /* Cell */,
+				2339AE56282B970B002318FB /* MyPageViewController.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		2339AE58282B975B002318FB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2339AE59282B9770002318FB /* MyPageTableViewCell.swift */,
+				2339AE5A282B9770002318FB /* MyPageTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		233A6FFE282A7CDF000CB6C8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +212,7 @@
 		23829A8827F749D000506560 /* HUP */ = {
 			isa = PBXGroup;
 			children = (
+				2339AE55282B96F2002318FB /* MyPage */,
 				2339AE46282B8CBC002318FB /* Chatting */,
 				2339AE3E282B7EEB002318FB /* ItemList */,
 				233A7007282A8162000CB6C8 /* Extension */,
@@ -335,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2339AE5C282B9770002318FB /* MyPageTableViewCell.xib in Resources */,
 				2339AE43282B7FB5002318FB /* ItemListTableViewCell.xib in Resources */,
 				23829A9627F749D100506560 /* LaunchScreen.storyboard in Resources */,
 				23829A9327F749D100506560 /* Assets.xcassets in Resources */,
@@ -377,6 +403,8 @@
 				233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */,
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,
+				2339AE5B282B9770002318FB /* MyPageTableViewCell.swift in Sources */,
+				2339AE57282B970B002318FB /* MyPageViewController.swift in Sources */,
 				23829A8C27F749D000506560 /* SceneDelegate.swift in Sources */,
 				2339AE52282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift in Sources */,
 				238F4BD6282544D70060F804 /* HomeViewController.swift in Sources */,
