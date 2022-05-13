@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		231262DF282E9B9B002D549B /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231262DE282E9B9B002D549B /* UploadViewController.swift */; };
 		231262E1282E9C93002D549B /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231262E0282E9C93002D549B /* CustomTabBarController.swift */; };
+		231262E9282EA1E3002D549B /* UploadPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231262E7282EA1E3002D549B /* UploadPhotoTableViewCell.swift */; };
+		231262EA282EA1E3002D549B /* UploadPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231262E8282EA1E3002D549B /* UploadPhotoTableViewCell.xib */; };
+		231262ED282EA1F0002D549B /* UploadContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231262EB282EA1F0002D549B /* UploadContentTableViewCell.swift */; };
+		231262EE282EA1F0002D549B /* UploadContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231262EC282EA1F0002D549B /* UploadContentTableViewCell.xib */; };
+		231262F2282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231262F0282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift */; };
+		231262F3282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231262F1282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib */; };
 		2339AE42282B7FB5002318FB /* ItemListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE40282B7FB5002318FB /* ItemListTableViewCell.swift */; };
 		2339AE43282B7FB5002318FB /* ItemListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE41282B7FB5002318FB /* ItemListTableViewCell.xib */; };
 		2339AE45282B82E9002318FB /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE44282B82E9002318FB /* ItemListViewController.swift */; };
@@ -63,6 +69,12 @@
 /* Begin PBXFileReference section */
 		231262DE282E9B9B002D549B /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		231262E0282E9C93002D549B /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		231262E7282EA1E3002D549B /* UploadPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		231262E8282EA1E3002D549B /* UploadPhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		231262EB282EA1F0002D549B /* UploadContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadContentTableViewCell.swift; sourceTree = "<group>"; };
+		231262EC282EA1F0002D549B /* UploadContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadContentTableViewCell.xib; sourceTree = "<group>"; };
+		231262F0282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		231262F1282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		2339AE40282B7FB5002318FB /* ItemListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewCell.swift; sourceTree = "<group>"; };
 		2339AE41282B7FB5002318FB /* ItemListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemListTableViewCell.xib; sourceTree = "<group>"; };
 		2339AE44282B82E9002318FB /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
@@ -129,9 +141,23 @@
 		231262DD282E9B7C002D549B /* Upload */ = {
 			isa = PBXGroup;
 			children = (
+				231262E2282EA16D002D549B /* Cell */,
 				231262DE282E9B9B002D549B /* UploadViewController.swift */,
 			);
 			path = Upload;
+			sourceTree = "<group>";
+		};
+		231262E2282EA16D002D549B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				231262E7282EA1E3002D549B /* UploadPhotoTableViewCell.swift */,
+				231262E8282EA1E3002D549B /* UploadPhotoTableViewCell.xib */,
+				231262EB282EA1F0002D549B /* UploadContentTableViewCell.swift */,
+				231262EC282EA1F0002D549B /* UploadContentTableViewCell.xib */,
+				231262F0282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift */,
+				231262F1282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		2339AE3E282B7EEB002318FB /* ItemList */ = {
@@ -392,11 +418,14 @@
 				23829A9627F749D100506560 /* LaunchScreen.storyboard in Resources */,
 				23829A9327F749D100506560 /* Assets.xcassets in Resources */,
 				23718509282BE47B00C2A4D7 /* AuctionNowTableViewCell.xib in Resources */,
+				231262F3282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib in Resources */,
 				23829A9127F749D000506560 /* Main.storyboard in Resources */,
+				231262EE282EA1F0002D549B /* UploadContentTableViewCell.xib in Resources */,
 				23F0687C282E5EE000574FB9 /* BestItemCollectionViewCell.xib in Resources */,
 				233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */,
 				2339AE4D282B8D00002318FB /* ChattingRoomTableViewCell.xib in Resources */,
 				2339AE53282B9456002318FB /* ChattingRoomAdverImageTableViewCell.xib in Resources */,
+				231262EA282EA1E3002D549B /* UploadPhotoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +453,8 @@
 				2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */,
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
 				231262E1282E9C93002D549B /* CustomTabBarController.swift in Sources */,
+				231262F2282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift in Sources */,
+				231262ED282EA1F0002D549B /* UploadContentTableViewCell.swift in Sources */,
 				23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */,
 				2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */,
 				2339AE42282B7FB5002318FB /* ItemListTableViewCell.swift in Sources */,
@@ -431,6 +462,7 @@
 				2339AE45282B82E9002318FB /* ItemListViewController.swift in Sources */,
 				233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */,
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
+				231262E9282EA1E3002D549B /* UploadPhotoTableViewCell.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,
 				231262DF282E9B9B002D549B /* UploadViewController.swift in Sources */,
 				2339AE5B282B9770002318FB /* MyPageTableViewCell.swift in Sources */,

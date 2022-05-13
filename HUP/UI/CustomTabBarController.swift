@@ -48,10 +48,10 @@ class CustomTabBarController: UITabBarController {
     // MARK: - Actions
 
     @objc private func menuButtonAction(sender: UIButton) {
-//        selectedIndex = 2
-        let vc = UploadViewController()
-        vc.modalPresentationStyle = .automatic
-        present(vc, animated: true, completion: nil)
+        selectedIndex = 2
+//        let vc = UploadViewController()
+//        vc.modalPresentationStyle = .automatic
+//        present(vc, animated: true, completion: nil)
     }
 
 }

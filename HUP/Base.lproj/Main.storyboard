@@ -237,18 +237,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oo9-cS-lTb">
-                                <rect key="frame" x="87" y="407" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkI-1n-8AM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="제품 등록" leftItemsSupplementBackButton="YES" id="7bf-Fg-xXt">
+                                        <barButtonItem key="rightBarButtonItem" title="완료" style="plain" id="Bxd-Cc-ShV">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cwm-PF-QWe">
+                                                <rect key="frame" x="302" y="3" width="92" height="38"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="완료">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="baseForegroundColor" name="HupColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3Nj-BB-Jnp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Vf-in-Vdq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Vf-in-Vdq" firstAttribute="trailing" secondItem="3Nj-BB-Jnp" secondAttribute="trailing" id="NXp-JP-fI0"/>
+                            <constraint firstItem="3Nj-BB-Jnp" firstAttribute="top" secondItem="PkI-1n-8AM" secondAttribute="bottom" id="RUv-7C-jLv"/>
+                            <constraint firstItem="PkI-1n-8AM" firstAttribute="leading" secondItem="8Vf-in-Vdq" secondAttribute="leading" id="ad0-h1-JqJ"/>
+                            <constraint firstItem="PkI-1n-8AM" firstAttribute="trailing" secondItem="8Vf-in-Vdq" secondAttribute="trailing" id="cWN-kE-GON"/>
+                            <constraint firstItem="3Nj-BB-Jnp" firstAttribute="leading" secondItem="8Vf-in-Vdq" secondAttribute="leading" id="eBH-1I-USm"/>
+                            <constraint firstItem="8Vf-in-Vdq" firstAttribute="bottom" secondItem="3Nj-BB-Jnp" secondAttribute="bottom" id="pRx-x4-bNd"/>
+                            <constraint firstItem="PkI-1n-8AM" firstAttribute="top" secondItem="8Vf-in-Vdq" secondAttribute="top" id="vUb-jC-5vg"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="0w9-Y0-GeO">
                         <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="uploadTableView" destination="3Nj-BB-Jnp" id="ffy-6E-CLA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Adn-6c-Edw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -733,9 +763,6 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
