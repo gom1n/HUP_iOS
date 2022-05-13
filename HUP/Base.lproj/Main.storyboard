@@ -484,6 +484,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <color key="selectedImageTintColor" name="HupColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="4U3-mP-9Zx" kind="relationship" relationship="viewControllers" id="jAk-BX-WMQ"/>
@@ -689,6 +691,9 @@
         <image name="searchview_image" width="980" height="116"/>
         <image name="sell_list" width="286" height="286"/>
         <image name="square.split.1x2" catalog="system" width="128" height="114"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Color">
             <color red="0.019607843137254902" green="0.019607843137254902" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

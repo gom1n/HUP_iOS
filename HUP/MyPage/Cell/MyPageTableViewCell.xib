@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,25 +17,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="356" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.dotted" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JbV-Va-tum">
-                        <rect key="frame" x="10" y="10.5" width="50" height="49"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JbV-Va-tum">
+                        <rect key="frame" x="15" y="15.5" width="40" height="39"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="2Ao-Ku-62R"/>
-                            <constraint firstAttribute="width" constant="50" id="MHk-hK-4ue"/>
+                            <constraint firstAttribute="height" constant="40" id="2Ao-Ku-62R"/>
+                            <constraint firstAttribute="width" constant="40" id="MHk-hK-4ue"/>
                         </constraints>
+                        <imageReference key="image" image="circle.dotted" catalog="system" symbolScale="default"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOd-VD-Fj1">
-                        <rect key="frame" x="80" y="25.5" width="28" height="19.5"/>
+                        <rect key="frame" x="75" y="25.5" width="28" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="6eo-2n-z7t">
-                        <rect key="frame" x="331" y="20" width="15" height="30"/>
+                        <rect key="frame" x="336" y="25" width="10" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="15" id="JGs-J5-jjn"/>
-                            <constraint firstAttribute="height" constant="30" id="lAJ-lQ-Nei"/>
+                            <constraint firstAttribute="width" constant="10" id="JGs-J5-jjn"/>
+                            <constraint firstAttribute="height" constant="20" id="lAJ-lQ-Nei"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -43,9 +45,9 @@
                     <constraint firstItem="aOd-VD-Fj1" firstAttribute="centerY" secondItem="JbV-Va-tum" secondAttribute="centerY" id="Ly5-c6-65y"/>
                     <constraint firstItem="6eo-2n-z7t" firstAttribute="centerY" secondItem="JbV-Va-tum" secondAttribute="centerY" id="ZTj-tH-iNP"/>
                     <constraint firstItem="aOd-VD-Fj1" firstAttribute="leading" secondItem="JbV-Va-tum" secondAttribute="trailing" constant="20" id="aVc-Vq-dWp"/>
-                    <constraint firstAttribute="bottom" secondItem="JbV-Va-tum" secondAttribute="bottom" constant="10" id="r60-OM-VTB"/>
-                    <constraint firstItem="JbV-Va-tum" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="tDf-TU-u4l"/>
-                    <constraint firstItem="JbV-Va-tum" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="vq1-lf-iKx"/>
+                    <constraint firstAttribute="bottom" secondItem="JbV-Va-tum" secondAttribute="bottom" constant="15" id="r60-OM-VTB"/>
+                    <constraint firstItem="JbV-Va-tum" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="tDf-TU-u4l"/>
+                    <constraint firstItem="JbV-Va-tum" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="vq1-lf-iKx"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -53,7 +55,7 @@
                 <outlet property="contentLabel" destination="aOd-VD-Fj1" id="XEA-wt-zEW"/>
                 <outlet property="iconImageView" destination="JbV-Va-tum" id="2JZ-mu-JXq"/>
             </connections>
-            <point key="canvasLocation" x="157.97101449275362" y="92.745535714285708"/>
+            <point key="canvasLocation" x="156.52173913043478" y="92.745535714285708"/>
         </tableViewCell>
     </objects>
     <resources>

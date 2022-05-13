@@ -8,6 +8,7 @@
 import UIKit
 
 class AuctionNowCollectionViewCell: UICollectionViewCell {
+    static let identifier = "AuctionNowCollectionViewCell"
     @IBOutlet weak var imageViewHomeAuctionItem: UIImageView!
     @IBOutlet weak var labelHomeAuctionItem: UILabel!
     @IBOutlet weak var labelItemDate: UILabel!

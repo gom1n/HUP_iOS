@@ -37,10 +37,4 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
         // 수정필요
         return 170
     }
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        guard let tableViewCell = cell as? ItemListTableViewCell else {
-//            return
-//        }
-//        tableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
-    }
 }

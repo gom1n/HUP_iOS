@@ -10,17 +10,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="HUP" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AuctionNowTableViewCell" id="KGk-i7-Jjw" customClass="AuctionNowTableViewCell" customModule="HUP" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="uDc-wx-SmW">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PlB-RQ-dAt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zgy-I7-jKN">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lGY-49-eRg">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -29,15 +29,15 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="uDc-wx-SmW" secondAttribute="bottom" id="TtV-BE-tVX"/>
-                    <constraint firstItem="uDc-wx-SmW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WfI-bF-ko6"/>
-                    <constraint firstItem="uDc-wx-SmW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bw6-uC-PZZ"/>
-                    <constraint firstAttribute="trailing" secondItem="uDc-wx-SmW" secondAttribute="trailing" id="wmR-4W-CHy"/>
+                    <constraint firstItem="PlB-RQ-dAt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Bhe-kk-YUB"/>
+                    <constraint firstAttribute="bottom" secondItem="PlB-RQ-dAt" secondAttribute="bottom" id="Y47-8e-CVH"/>
+                    <constraint firstAttribute="trailing" secondItem="PlB-RQ-dAt" secondAttribute="trailing" id="iVR-mu-LJM"/>
+                    <constraint firstItem="PlB-RQ-dAt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rD8-Az-sdO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="collectionView" destination="uDc-wx-SmW" id="Nt7-bP-vRA"/>
+                <outlet property="auctionNowCollectionView" destination="PlB-RQ-dAt" id="fId-Lu-9BH"/>
             </connections>
             <point key="canvasLocation" x="132" y="83"/>
         </tableViewCell>
