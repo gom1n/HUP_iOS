@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -228,10 +229,35 @@
             </objects>
             <point key="canvasLocation" x="371" y="1619"/>
         </scene>
+        <!--Upload View Controller-->
+        <scene sceneID="THX-CT-ag5">
+            <objects>
+                <viewController storyboardIdentifier="UploadVC" id="dHi-Ax-lKH" customClass="UploadViewController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7hd-Cs-5gM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oo9-cS-lTb">
+                                <rect key="frame" x="87" y="407" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Vf-in-Vdq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="0w9-Y0-GeO">
+                        <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Adn-6c-Edw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="1619"/>
+        </scene>
         <!--ItemList-->
         <scene sceneID="7CL-QN-8nA">
             <objects>
-                <viewController id="zbH-Rl-raA" customClass="ItemListViewController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemListVC" id="zbH-Rl-raA" customClass="ItemListViewController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQA-vP-f1b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0l3-Gp-pGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378" y="1619"/>
+            <point key="canvasLocation" x="2501" y="1619"/>
         </scene>
         <!--MyPage-->
         <scene sceneID="9RP-u5-Dk8">
@@ -433,12 +459,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W18-mx-Op5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="1619"/>
+            <point key="canvasLocation" x="3449" y="1619"/>
         </scene>
         <!--Home-->
         <scene sceneID="eOF-Rd-gum">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="4U3-mP-9Zx" customClass="HomeViewController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="4U3-mP-9Zx" customClass="HomeViewController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6ys-Qf-wxW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -476,10 +502,10 @@
             </objects>
             <point key="canvasLocation" x="-600" y="1619"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="O1U-yK-15n">
             <objects>
-                <tabBarController id="gFw-8b-604" sceneMemberID="viewController">
+                <tabBarController id="gFw-8b-604" customClass="CustomTabBarController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xvu-hs-Dis">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -490,8 +516,9 @@
                     <connections>
                         <segue destination="4U3-mP-9Zx" kind="relationship" relationship="viewControllers" id="jAk-BX-WMQ"/>
                         <segue destination="B6Z-6O-QFq" kind="relationship" relationship="viewControllers" id="aLn-Ae-y5E"/>
-                        <segue destination="zbH-Rl-raA" kind="relationship" relationship="viewControllers" id="i0d-IM-njn"/>
-                        <segue destination="hsp-zi-hQi" kind="relationship" relationship="viewControllers" id="uGg-6C-7jW"/>
+                        <segue destination="dHi-Ax-lKH" kind="relationship" relationship="viewControllers" id="6kX-3J-GS5"/>
+                        <segue destination="zbH-Rl-raA" kind="relationship" relationship="viewControllers" id="dfP-se-iqq"/>
+                        <segue destination="hsp-zi-hQi" kind="relationship" relationship="viewControllers" id="Jrc-b8-CYT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="708-Bb-MQL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -688,6 +715,7 @@
         <image name="n.square.fill" catalog="system" width="128" height="114"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="searchview_image" width="980" height="116"/>
         <image name="sell_list" width="286" height="286"/>
         <image name="square.split.1x2" catalog="system" width="128" height="114"/>
@@ -705,6 +733,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
