@@ -22,7 +22,7 @@
                         <color key="backgroundColor" name="HupColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="10"/>
+                                <real key="value" value="6"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
@@ -37,11 +37,6 @@
                 <constraint firstAttribute="bottom" secondItem="LcS-Np-dyS" secondAttribute="bottom" id="sKP-52-MAx"/>
             </constraints>
             <size key="customSize" width="194" height="191"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                    <real key="value" value="10"/>
-                </userDefinedRuntimeAttribute>
-            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="photoImageView" destination="LcS-Np-dyS" id="ljZ-Rq-uzZ"/>
             </connections>

@@ -66,7 +66,7 @@ extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataS
                 return UICollectionViewCell()
             }
             if indexPath.row == 0 {
-                cell.photoImageView.image = UIImage(systemName: "camera.viewfinder")
+                cell.photoImageView.image = UIImage(named: "choose_image")
                 cell.photoImageView.backgroundColor = .white
                 cell.photoImageView.tintColor = .systemGray
             }
