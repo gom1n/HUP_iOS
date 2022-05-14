@@ -26,50 +26,40 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.row == 0 {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "BestItemTableViewCell", for: indexPath) as? BestItemTableViewCell else {
-//                return UITableViewCell()
-//            }
-//            return cell
-//        } else {
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "BestItemTableViewCell", for: indexPath) as? BestItemTableViewCell else {
+                return UITableViewCell()
+            }
+            return cell
+        } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AuctionNowTableViewCell", for: indexPath) as? AuctionNowTableViewCell else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
             return cell
-//        }
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // 수정필요
-//        if indexPath.row == 0 {return 300}
-//        else {return 600}
-        return 600
+        if indexPath.row == 0 {return 300}
+        else {return 600}
+//        return 600
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let tableViewCell = cell as? AuctionNowTableViewCell else {
-            return
-        }
-        tableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
-    }
-}
-
-extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return 10
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AuctionNowCollectionViewCell", for: indexPath) as? AuctionNowCollectionViewCell else {
-                return UICollectionViewCell()
+        if indexPath.row == 0 {
+            guard let bestItemTableViewCell = cell as? BestItemTableViewCell else {
+                return
             }
-            return cell
+            bestItemTableViewCell.setCollectionViewDataSourceDelegate(forRow: indexPath.row)
+        } else {
+            guard let auctionNowTableViewCell = cell as? AuctionNowTableViewCell else {
+                return
+            }
+            auctionNowTableViewCell.setCollectionViewDataSourceDelegate(forRow: indexPath.row)
         }
-        
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 180, height: 250)
-        }
+    }
 }

@@ -10,13 +10,13 @@ import UIKit
 class BestItemTableViewCell: UITableViewCell {
     @IBOutlet weak var bestItemCollectionView: UICollectionView!
     
-    func setCollectionViewDataSourceDelegate(dataSourceDelegate: UICollectionViewDelegate & UICollectionViewDataSource, forRow row: Int) {
-        bestItemCollectionView.delegate = dataSourceDelegate
-        bestItemCollectionView.dataSource = dataSourceDelegate
+    func setCollectionViewDataSourceDelegate(forRow row: Int) {
+        bestItemCollectionView.delegate = self
+        bestItemCollectionView.dataSource = self
         bestItemCollectionView.tag = row
         
         let bestItemNib = UINib(nibName: "BestItemCollectionViewCell", bundle: nil)
-        bestItemCollectionView.register(bestItemNib, forCellWithReuseIdentifier: "BestItemCollectionViewCell")
+        bestItemCollectionView.register(bestItemNib, forCellWithReuseIdentifier: BestItemCollectionViewCell.identifier)
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
@@ -38,4 +38,20 @@ class BestItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+extension BestItemTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return 10
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BestItemCollectionViewCell", for: indexPath) as? BestItemCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            return cell
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: 300, height: 250)
+        }
 }

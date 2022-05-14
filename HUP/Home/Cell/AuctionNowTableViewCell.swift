@@ -10,9 +10,9 @@ import UIKit
 class AuctionNowTableViewCell: UITableViewCell {
     @IBOutlet weak var auctionNowCollectionView: UICollectionView!
     
-    func setCollectionViewDataSourceDelegate(dataSourceDelegate: UICollectionViewDelegate & UICollectionViewDataSource, forRow row: Int) {
-        auctionNowCollectionView.delegate = dataSourceDelegate
-        auctionNowCollectionView.dataSource = dataSourceDelegate
+    func setCollectionViewDataSourceDelegate(forRow row: Int) {
+        auctionNowCollectionView.delegate = self
+        auctionNowCollectionView.dataSource = self
         auctionNowCollectionView.tag = row
         
         let auctionNowNib = UINib(nibName: "AuctionNowCollectionViewCell", bundle: nil)
@@ -38,4 +38,20 @@ class AuctionNowTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+extension AuctionNowTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return 10
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AuctionNowCollectionViewCell", for: indexPath) as? AuctionNowCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            return cell
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: 180, height: 250)
+        }
 }
