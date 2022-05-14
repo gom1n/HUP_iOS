@@ -186,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="67.633928571428569"/>
+            <point key="canvasLocation" x="3713" y="753"/>
         </scene>
         <!--Chatting-->
         <scene sceneID="zc0-vJ-72q">
@@ -227,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBW-Qp-2Ft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371" y="1619"/>
+            <point key="canvasLocation" x="-116" y="1616"/>
         </scene>
         <!--Upload View Controller-->
         <scene sceneID="THX-CT-ag5">
@@ -282,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Adn-6c-Edw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="1619"/>
+            <point key="canvasLocation" x="938" y="1616"/>
         </scene>
         <!--ItemList-->
         <scene sceneID="7CL-QN-8nA">
@@ -336,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0l3-Gp-pGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2501" y="1619"/>
+            <point key="canvasLocation" x="2014" y="1616"/>
         </scene>
         <!--MyPage-->
         <scene sceneID="9RP-u5-Dk8">
@@ -489,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W18-mx-Op5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3449" y="1619"/>
+            <point key="canvasLocation" x="2962" y="1616"/>
         </scene>
         <!--Home-->
         <scene sceneID="eOF-Rd-gum">
@@ -530,7 +530,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wo-n9-FRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-600" y="1619"/>
+            <point key="canvasLocation" x="-1086" y="1616"/>
+        </scene>
+        <!--Item Detail View Controller-->
+        <scene sceneID="01U-U1-H72">
+            <objects>
+                <viewController id="VSt-oX-GeL" customClass="ItemDetailViewController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jBh-Wn-eqD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ew6-aG-l9e">
+                                <rect key="frame" x="0.0" y="44" width="414" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LZ-co-pPW">
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcE-PL-XsZ">
+                                        <rect key="frame" x="35" y="25" width="33" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="CKT-Uj-dBb"/>
+                                            <constraint firstAttribute="width" constant="33" id="i3U-tR-0nU"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="heartx"/>
+                                        <state key="selected" image="hearto"/>
+                                        <connections>
+                                            <action selector="actionIsHeart:" destination="VSt-oX-GeL" eventType="touchUpInside" id="l5n-HI-d9o"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFW-oU-2qs">
+                                        <rect key="frame" x="93" y="25" width="4" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="4" id="WR4-gs-efG"/>
+                                            <constraint firstAttribute="height" constant="30" id="dzj-WH-npZ"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afo-Vm-w41">
+                                        <rect key="frame" x="122" y="15" width="272" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wcJ-6A-HSL"/>
+                                        </constraints>
+                                        <color key="tintColor" name="HupColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="경매 참여하기">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="baseBackgroundColor" name="HupColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="afo-Vm-w41" firstAttribute="centerY" secondItem="4LZ-co-pPW" secondAttribute="centerY" id="4EE-4L-Ldk"/>
+                                    <constraint firstItem="GFW-oU-2qs" firstAttribute="centerY" secondItem="hcE-PL-XsZ" secondAttribute="centerY" id="4vj-C5-ZHh"/>
+                                    <constraint firstItem="afo-Vm-w41" firstAttribute="leading" secondItem="GFW-oU-2qs" secondAttribute="trailing" constant="25" id="54f-yz-Fq5"/>
+                                    <constraint firstItem="hcE-PL-XsZ" firstAttribute="centerY" secondItem="4LZ-co-pPW" secondAttribute="centerY" id="6fg-AT-QYE"/>
+                                    <constraint firstItem="GFW-oU-2qs" firstAttribute="leading" secondItem="hcE-PL-XsZ" secondAttribute="trailing" constant="25" id="CCU-l7-4Bf"/>
+                                    <constraint firstItem="hcE-PL-XsZ" firstAttribute="leading" secondItem="4LZ-co-pPW" secondAttribute="leading" constant="35" id="RSQ-T6-uUI"/>
+                                    <constraint firstAttribute="height" constant="80" id="n35-u2-eYB"/>
+                                    <constraint firstAttribute="trailing" secondItem="afo-Vm-w41" secondAttribute="trailing" constant="20" id="siY-Dc-xye"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2oW-mT-Sfb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4LZ-co-pPW" firstAttribute="leading" secondItem="2oW-mT-Sfb" secondAttribute="leading" id="17F-oP-aoy"/>
+                            <constraint firstItem="4LZ-co-pPW" firstAttribute="bottom" secondItem="2oW-mT-Sfb" secondAttribute="bottom" id="8Qo-8P-mpr"/>
+                            <constraint firstItem="Ew6-aG-l9e" firstAttribute="leading" secondItem="2oW-mT-Sfb" secondAttribute="leading" id="Dbn-9i-pIe"/>
+                            <constraint firstItem="2oW-mT-Sfb" firstAttribute="trailing" secondItem="4LZ-co-pPW" secondAttribute="trailing" id="acz-6y-pID"/>
+                            <constraint firstItem="4LZ-co-pPW" firstAttribute="top" secondItem="Ew6-aG-l9e" secondAttribute="bottom" id="gVT-dN-kB5"/>
+                            <constraint firstItem="Ew6-aG-l9e" firstAttribute="top" secondItem="2oW-mT-Sfb" secondAttribute="top" id="mMq-7M-KS2"/>
+                            <constraint firstItem="2oW-mT-Sfb" firstAttribute="trailing" secondItem="Ew6-aG-l9e" secondAttribute="trailing" id="xYr-uc-B6d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ItemDetailTableView" destination="Ew6-aG-l9e" id="Lh8-Rk-pEb"/>
+                        <outlet property="bottomView" destination="4LZ-co-pPW" id="4lf-s7-wCG"/>
+                        <outlet property="heartButton" destination="hcE-PL-XsZ" id="xZN-Yq-x6z"/>
+                        <outlet property="participateButton" destination="afo-Vm-w41" id="IOa-AL-7Ea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGL-Uy-8ig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1088.4057971014493" y="2366.5178571428569"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="O1U-yK-15n">
@@ -710,7 +796,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1C-i9-kN2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628.985507246377" y="67.633928571428569"/>
+            <point key="canvasLocation" x="4403" y="753"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QS8-W5-HiQ">
@@ -728,7 +814,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRG-8b-4tm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187" y="68"/>
+            <point key="canvasLocation" x="2961" y="753"/>
         </scene>
     </scenes>
     <resources>
@@ -738,6 +824,8 @@
         <image name="circle.grid.cross" catalog="system" width="128" height="125"/>
         <image name="filterp" width="40" height="46"/>
         <image name="g.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="hearto" width="76" height="67"/>
+        <image name="heartx" width="76" height="67"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="huplogo" width="200" height="98"/>
         <image name="k.square.fill" catalog="system" width="128" height="114"/>
