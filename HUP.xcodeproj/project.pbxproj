@@ -48,6 +48,11 @@
 		2389DE2D28301CE10069BFD8 /* ItemDetailImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2389DE2B28301CE10069BFD8 /* ItemDetailImageTableViewCell.xib */; };
 		2389DE3028301CF10069BFD8 /* ItemDetailImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389DE2E28301CF10069BFD8 /* ItemDetailImageCollectionViewCell.swift */; };
 		2389DE3128301CF10069BFD8 /* ItemDetailImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2389DE2F28301CF10069BFD8 /* ItemDetailImageCollectionViewCell.xib */; };
+		238BF676283162010086FC3C /* BidPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF675283162010086FC3C /* BidPageViewController.swift */; };
+		238BF6822831660A0086FC3C /* BidPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF6802831660A0086FC3C /* BidPageTableViewCell.swift */; };
+		238BF6832831660A0086FC3C /* BidPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238BF6812831660A0086FC3C /* BidPageTableViewCell.xib */; };
+		238BF686283168EF0086FC3C /* ParticipantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF684283168EF0086FC3C /* ParticipantsTableViewCell.swift */; };
+		238BF687283168EF0086FC3C /* ParticipantsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238BF685283168EF0086FC3C /* ParticipantsTableViewCell.xib */; };
 		238F4BD6282544D70060F804 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F4BD5282544D70060F804 /* HomeViewController.swift */; };
 		23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */; };
 		23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A2027F8208900C7B619 /* RegisterViewController.swift */; };
@@ -119,6 +124,11 @@
 		2389DE2B28301CE10069BFD8 /* ItemDetailImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailImageTableViewCell.xib; sourceTree = "<group>"; };
 		2389DE2E28301CF10069BFD8 /* ItemDetailImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		2389DE2F28301CF10069BFD8 /* ItemDetailImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		238BF675283162010086FC3C /* BidPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidPageViewController.swift; sourceTree = "<group>"; };
+		238BF6802831660A0086FC3C /* BidPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidPageTableViewCell.swift; sourceTree = "<group>"; };
+		238BF6812831660A0086FC3C /* BidPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BidPageTableViewCell.xib; sourceTree = "<group>"; };
+		238BF684283168EF0086FC3C /* ParticipantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsTableViewCell.swift; sourceTree = "<group>"; };
+		238BF685283168EF0086FC3C /* ParticipantsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantsTableViewCell.xib; sourceTree = "<group>"; };
 		238F4BD5282544D70060F804 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		23AD5A2027F8208900C7B619 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +287,7 @@
 		23829A8827F749D000506560 /* HUP */ = {
 			isa = PBXGroup;
 			children = (
+				238BF674283161EA0086FC3C /* BidPage */,
 				23FEAF7C282F3EC400345CF1 /* ItemDetail */,
 				231262DD282E9B7C002D549B /* Upload */,
 				2339AE55282B96F2002318FB /* MyPage */,
@@ -323,6 +334,26 @@
 				2389DE2B28301CE10069BFD8 /* ItemDetailImageTableViewCell.xib */,
 				2389DE2E28301CF10069BFD8 /* ItemDetailImageCollectionViewCell.swift */,
 				2389DE2F28301CF10069BFD8 /* ItemDetailImageCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		238BF674283161EA0086FC3C /* BidPage */ = {
+			isa = PBXGroup;
+			children = (
+				238BF677283164C50086FC3C /* Cell */,
+				238BF675283162010086FC3C /* BidPageViewController.swift */,
+			);
+			path = BidPage;
+			sourceTree = "<group>";
+		};
+		238BF677283164C50086FC3C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				238BF6802831660A0086FC3C /* BidPageTableViewCell.swift */,
+				238BF6812831660A0086FC3C /* BidPageTableViewCell.xib */,
+				238BF684283168EF0086FC3C /* ParticipantsTableViewCell.swift */,
+				238BF685283168EF0086FC3C /* ParticipantsTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -459,8 +490,10 @@
 				23718509282BE47B00C2A4D7 /* AuctionNowTableViewCell.xib in Resources */,
 				2389DE3128301CF10069BFD8 /* ItemDetailImageCollectionViewCell.xib in Resources */,
 				231262F3282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib in Resources */,
+				238BF6832831660A0086FC3C /* BidPageTableViewCell.xib in Resources */,
 				23829A9127F749D000506560 /* Main.storyboard in Resources */,
 				231262EE282EA1F0002D549B /* UploadContentTableViewCell.xib in Resources */,
+				238BF687283168EF0086FC3C /* ParticipantsTableViewCell.xib in Resources */,
 				23F0687C282E5EE000574FB9 /* BestItemCollectionViewCell.xib in Resources */,
 				233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */,
 				2339AE4D282B8D00002318FB /* ChattingRoomTableViewCell.xib in Resources */,
@@ -491,11 +524,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */,
+				238BF686283168EF0086FC3C /* ParticipantsTableViewCell.swift in Sources */,
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
 				2389DE2828301CD20069BFD8 /* ItemDetailContentTableViewCell.swift in Sources */,
 				23FEAF7E282F3EDA00345CF1 /* ItemDetailViewController.swift in Sources */,
 				231262E1282E9C93002D549B /* CustomTabBarController.swift in Sources */,
 				231262F2282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift in Sources */,
+				238BF6822831660A0086FC3C /* BidPageTableViewCell.swift in Sources */,
 				231262ED282EA1F0002D549B /* UploadContentTableViewCell.swift in Sources */,
 				23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */,
 				2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */,
@@ -507,6 +542,7 @@
 				231262E9282EA1E3002D549B /* UploadPhotoTableViewCell.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,
 				231262DF282E9B9B002D549B /* UploadViewController.swift in Sources */,
+				238BF676283162010086FC3C /* BidPageViewController.swift in Sources */,
 				2339AE5B282B9770002318FB /* MyPageTableViewCell.swift in Sources */,
 				2339AE57282B970B002318FB /* MyPageViewController.swift in Sources */,
 				2389DE3028301CF10069BFD8 /* ItemDetailImageCollectionViewCell.swift in Sources */,
