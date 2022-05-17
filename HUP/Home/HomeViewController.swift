@@ -8,7 +8,6 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
     @IBOutlet weak var HomeTableView: UITableView!
     
     override func viewDidLoad() {
@@ -17,10 +16,13 @@ class HomeViewController: UIViewController {
         HomeTableView.delegate = self
         HomeTableView.dataSource = self
         
+        HomeTableView.separatorStyle = .none
+        
         let auctionNowNib = UINib(nibName: "AuctionNowTableViewCell", bundle: nil)
         HomeTableView.register(auctionNowNib, forCellReuseIdentifier: "AuctionNowTableViewCell")
         let bestItemNib = UINib(nibName: "BestItemTableViewCell", bundle: nil)
         HomeTableView.register(bestItemNib, forCellReuseIdentifier: "BestItemTableViewCell")
+        
     }
 
 }
@@ -39,15 +41,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AuctionNowTableViewCell", for: indexPath) as? AuctionNowTableViewCell else {
                 return UITableViewCell()
             }
-            cell.selectionStyle = .none
             return cell
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // 수정필요
         if indexPath.row == 0 {return 300}
         else {return 600}
-//        return 600
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {

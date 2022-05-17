@@ -40,18 +40,25 @@ class BestItemTableViewCell: UITableViewCell {
     
 }
 extension BestItemTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return 10
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BestItemCollectionViewCell", for: indexPath) as? BestItemCollectionViewCell else {
+            return UICollectionViewCell()
         }
-        
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BestItemCollectionViewCell", for: indexPath) as? BestItemCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            return cell
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 350, height: 300)
-        }
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let w = collectionView.frame.width
+        return CGSize(width: w, height: 280)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "ItemDetailView", sender: nil)?
+//        let itemDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ItemDetailVC")
+//        itemDetailVC.modalPresentationStyle = .fullScreen
+//        self.present(itemDetailVC, animated: true, completion: nil)
+    }
 }

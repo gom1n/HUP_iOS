@@ -37,7 +37,15 @@ class ItemDetailViewController: UIViewController {
             heartButton.isSelected = true
         }
     }
+    @IBAction func participateButtonDidTap(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "BidPageVC")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
     
+    @IBAction func backButtonTap(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 extension ItemDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,11 +57,13 @@ extension ItemDetailViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemDetailImageTableViewCell", for: indexPath) as? ItemDetailImageTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemDetailContentTableViewCell", for: indexPath) as? ItemDetailContentTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         }
     }

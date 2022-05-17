@@ -21,7 +21,14 @@ class UploadViewController: UIViewController {
         let uploadContentNib = UINib(nibName: "UploadContentTableViewCell", bundle: nil)
         uploadTableView.register(uploadContentNib, forCellReuseIdentifier: "UploadContentTableViewCell")
     }
-
+    
+    @IBAction func uploadButtonTap(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func dismissButtonTap(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension UploadViewController: UITableViewDelegate, UITableViewDataSource {
@@ -67,10 +74,7 @@ extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataS
             }
             if indexPath.row == 0 {
                 cell.photoImageView.image = UIImage(named: "choose_image")
-                cell.photoImageView.backgroundColor = .white
-                cell.photoImageView.tintColor = .systemGray
             }
-            
             return cell
         }
         

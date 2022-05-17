@@ -27,6 +27,11 @@ class BidPageViewController: UIViewController {
         let contentNib = UINib(nibName: "BidPageTableViewCell", bundle: nil)
         bidPageTableView.register(contentNib, forCellReuseIdentifier: "BidPageTableViewCell")
     }
+    
+    @IBAction func backButtonTap(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension BidPageViewController: UITableViewDelegate, UITableViewDataSource {
@@ -38,6 +43,7 @@ extension BidPageViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BidPageTableViewCell", for: indexPath) as? BidPageTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

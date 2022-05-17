@@ -52,7 +52,8 @@ extension ItemDetailImageTableViewCell : UICollectionViewDelegate, UICollectionV
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 400, height: 300)
+            let w = collectionView.frame.width
+            return CGSize(width: w, height: 300)
         }
     func collectionView(
           _ collectionView: UICollectionView,

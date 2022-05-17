@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         vc3.title = "Upload"
         vc4.title = "Itemlist"
         vc5.title = "MyPage"
-
+        
         tabBarVc.setViewControllers([vc1,vc2,vc3,vc4,vc5], animated: false)
         tabBarVc.tabBar.backgroundColor = .white
         tabBarVc.tabBar.layer.cornerRadius = 10

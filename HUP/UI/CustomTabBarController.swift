@@ -48,7 +48,10 @@ class CustomTabBarController: UITabBarController {
     // MARK: - Actions
 
     @objc private func menuButtonAction(sender: UIButton) {
-        selectedIndex = 2
+//        selectedIndex = 2
+        let vc3 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "UploadVC")
+//        vc3.modalPresentationStyle = .fullScreen
+        self.present(vc3, animated: true, completion: nil)
 //        let vc = UploadViewController()
 //        vc.modalPresentationStyle = .automatic
 //        present(vc, animated: true, completion: nil)

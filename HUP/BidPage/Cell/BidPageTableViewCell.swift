@@ -43,6 +43,7 @@ extension BidPageTableViewCell: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ParticipantsTableViewCell", for: indexPath) as? ParticipantsTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
