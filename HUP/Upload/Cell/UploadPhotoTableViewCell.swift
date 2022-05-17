@@ -9,7 +9,10 @@ import UIKit
 
 class UploadPhotoTableViewCell: UITableViewCell {
     @IBOutlet weak var uploadPhotoCollectionView: UICollectionView!
+    @IBOutlet weak var addPhotoView: UIImageView!
+    @IBOutlet weak var photoCountLabel: UILabel!
     
+
     func setCollectionViewDataSourceDelegate(dataSourceDelegate: UICollectionViewDelegate & UICollectionViewDataSource, forRow row: Int) {
         uploadPhotoCollectionView.delegate = dataSourceDelegate
         uploadPhotoCollectionView.dataSource = dataSourceDelegate

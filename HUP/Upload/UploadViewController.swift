@@ -72,9 +72,9 @@ extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataS
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UploadPhotoCollectionViewCell", for: indexPath) as? UploadPhotoCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            if indexPath.row == 0 {
-                cell.photoImageView.image = UIImage(named: "choose_image")
-            }
+//            if indexPath.row == 0 {
+//                cell.photoImageView.image = UIImage(named: "choose_image")
+//            }
             return cell
         }
         
