@@ -558,7 +558,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="kfZ-Da-2BM"/>
                     <connections>
-                        <outlet property="HomeTableView" destination="rQ3-4L-ePv" id="uWK-qE-gx1"/>
+                        <outlet property="HomeTableView" destination="rQ3-4L-ePv" id="QyI-en-Jlj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wo-n9-FRM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

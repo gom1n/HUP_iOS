@@ -130,7 +130,7 @@
                     <constraint firstItem="xpb-Ry-LPj" firstAttribute="top" secondItem="M37-Nb-zTb" secondAttribute="bottom" constant="5" id="zWF-3l-tzI"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <viewLayoutGuide key="safeArea" id="QSr-Kb-JFV"/>
             <point key="canvasLocation" x="69.565217391304358" y="220.98214285714286"/>
         </tableViewCell>
     </objects>

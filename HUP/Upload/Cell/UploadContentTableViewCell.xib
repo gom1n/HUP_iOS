@@ -24,81 +24,105 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6VJ-Kh-77F">
-                        <rect key="frame" x="20" y="48" width="313" height="34"/>
+                        <rect key="frame" x="20" y="48" width="313" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="mlB-UL-li4"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCK-3W-2yF">
-                        <rect key="frame" x="20" y="102" width="52" height="18"/>
+                        <rect key="frame" x="20" y="108" width="52" height="18"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="카테고리 선택" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZdH-pV-QN4">
-                        <rect key="frame" x="20" y="130" width="313" height="34"/>
+                        <rect key="frame" x="20" y="136" width="313" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="IuV-W7-EW5"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경매 시작가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTN-3V-ta1">
-                        <rect key="frame" x="20" y="184" width="69" height="18"/>
+                        <rect key="frame" x="20" y="196" width="69" height="18"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="금액을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9LC-6N-dAs">
-                        <rect key="frame" x="20" y="212" width="313" height="34"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구매 일자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Df-Lu-msW">
-                        <rect key="frame" x="20" y="266" width="56" height="18"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="구매 일자 선택" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1e-XA-2yg">
-                        <rect key="frame" x="20" y="294" width="120" height="34"/>
+                        <rect key="frame" x="20" y="224" width="313" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="120" id="1PA-Ui-Def"/>
+                            <constraint firstAttribute="height" constant="40" id="HRg-81-wVS"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="경매 종료 일자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEW-0W-oy6">
-                        <rect key="frame" x="179" y="266" width="120" height="18"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="종료 일자 선택" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDz-BI-6Xh">
-                        <rect key="frame" x="179" y="292" width="120" height="34"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="120" id="KcX-pi-Gbw"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="FqZ-2M-zgZ">
+                        <rect key="frame" x="20" y="284" width="297" height="68"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="09P-P9-ZGi">
+                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="구매 일자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Df-Lu-msW">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="구매 일자 선택" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1e-XA-2yg">
+                                        <rect key="frame" x="0.0" y="28" width="108.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Zky-Gn-eVd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dDI-Ub-Lek">
+                                <rect key="frame" x="188.5" y="0.0" width="108.5" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경매 종료 일자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEW-0W-oy6">
+                                        <rect key="frame" x="0.0" y="0.0" width="108.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="종료 일자 선택" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDz-BI-6Xh">
+                                        <rect key="frame" x="0.0" y="28" width="108.5" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="C99-GA-fOc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제품 상태" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFG-gC-DMU">
-                        <rect key="frame" x="20" y="348" width="56" height="18"/>
+                        <rect key="frame" x="20" y="372" width="56" height="18"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztz-gk-L9n">
-                        <rect key="frame" x="20" y="376" width="293" height="50"/>
+                        <rect key="frame" x="20" y="400" width="293" height="50"/>
                         <color key="backgroundColor" name="HupColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="Zxj-tL-Naq"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제품 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78d-et-t6d">
-                        <rect key="frame" x="20" y="446" width="56" height="18"/>
+                        <rect key="frame" x="20" y="470" width="56" height="18"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제품을 설명해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfT-pH-oeD">
-                        <rect key="frame" x="20" y="474" width="313" height="200"/>
+                        <rect key="frame" x="20" y="498" width="313" height="200"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="200" id="iuG-bj-MSW"/>
                         </constraints>
@@ -108,38 +132,29 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="ZdH-pV-QN4" firstAttribute="top" secondItem="LCK-3W-2yF" secondAttribute="bottom" constant="10" id="1GV-0b-51b"/>
-                    <constraint firstItem="EDz-BI-6Xh" firstAttribute="trailing" secondItem="9LC-6N-dAs" secondAttribute="trailing" id="1lJ-WG-6wU"/>
-                    <constraint firstItem="hEW-0W-oy6" firstAttribute="trailing" secondItem="9LC-6N-dAs" secondAttribute="trailing" id="34z-NO-xao"/>
                     <constraint firstItem="9LC-6N-dAs" firstAttribute="leading" secondItem="RTN-3V-ta1" secondAttribute="leading" id="3rb-ZM-yqf"/>
                     <constraint firstItem="fxz-0e-N2E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="64V-N5-mED"/>
-                    <constraint firstItem="hEW-0W-oy6" firstAttribute="top" secondItem="9LC-6N-dAs" secondAttribute="bottom" constant="20" id="6Sf-Sk-OMA"/>
-                    <constraint firstItem="4Df-Lu-msW" firstAttribute="top" secondItem="9LC-6N-dAs" secondAttribute="bottom" constant="20" id="7QI-HG-PWq"/>
-                    <constraint firstItem="ztz-gk-L9n" firstAttribute="leading" secondItem="TFG-gC-DMU" secondAttribute="leading" id="8I4-x1-kNT"/>
-                    <constraint firstItem="TFG-gC-DMU" firstAttribute="centerX" secondItem="4Df-Lu-msW" secondAttribute="centerX" id="8Vn-gU-CdT"/>
+                    <constraint firstItem="TFG-gC-DMU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="927-Pb-rgW"/>
                     <constraint firstItem="jfT-pH-oeD" firstAttribute="leading" secondItem="78d-et-t6d" secondAttribute="leading" id="98s-2j-PAD"/>
                     <constraint firstItem="ZdH-pV-QN4" firstAttribute="trailing" secondItem="6VJ-Kh-77F" secondAttribute="trailing" id="9O0-Ow-O8P"/>
+                    <constraint firstItem="TFG-gC-DMU" firstAttribute="top" secondItem="FqZ-2M-zgZ" secondAttribute="bottom" constant="20" id="BSW-cc-Ob9"/>
                     <constraint firstItem="ztz-gk-L9n" firstAttribute="top" secondItem="TFG-gC-DMU" secondAttribute="bottom" constant="10" id="DGv-Pr-StT"/>
-                    <constraint firstItem="f1e-XA-2yg" firstAttribute="centerY" secondItem="EDz-BI-6Xh" secondAttribute="centerY" id="GDL-Gn-jye"/>
-                    <constraint firstItem="78d-et-t6d" firstAttribute="leading" secondItem="TFG-gC-DMU" secondAttribute="leading" id="GrB-aJ-xcz"/>
                     <constraint firstItem="9LC-6N-dAs" firstAttribute="top" secondItem="RTN-3V-ta1" secondAttribute="bottom" constant="10" id="Qj8-d3-uWo"/>
                     <constraint firstItem="LCK-3W-2yF" firstAttribute="top" secondItem="6VJ-Kh-77F" secondAttribute="bottom" constant="20" id="RSy-pq-od3"/>
                     <constraint firstItem="jfT-pH-oeD" firstAttribute="trailing" secondItem="9LC-6N-dAs" secondAttribute="trailing" id="SdG-3d-bgP"/>
                     <constraint firstItem="9LC-6N-dAs" firstAttribute="leading" secondItem="ZdH-pV-QN4" secondAttribute="leading" id="TkO-zF-HV0"/>
-                    <constraint firstItem="f1e-XA-2yg" firstAttribute="leading" secondItem="4Df-Lu-msW" secondAttribute="leading" id="Ttf-CM-F8D"/>
-                    <constraint firstItem="f1e-XA-2yg" firstAttribute="top" secondItem="4Df-Lu-msW" secondAttribute="bottom" constant="10" id="TzT-nz-hxB"/>
                     <constraint firstItem="ZdH-pV-QN4" firstAttribute="leading" secondItem="LCK-3W-2yF" secondAttribute="leading" id="VN2-kx-NDu"/>
                     <constraint firstItem="fxz-0e-N2E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="XKn-l5-pi0"/>
-                    <constraint firstItem="EDz-BI-6Xh" firstAttribute="leading" secondItem="hEW-0W-oy6" secondAttribute="leading" id="Zbc-1s-oiZ"/>
+                    <constraint firstItem="FqZ-2M-zgZ" firstAttribute="leading" secondItem="TFG-gC-DMU" secondAttribute="leading" id="Y2p-wt-72P"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ztz-gk-L9n" secondAttribute="trailing" constant="20" id="bkE-t2-yGd"/>
                     <constraint firstItem="ZdH-pV-QN4" firstAttribute="leading" secondItem="6VJ-Kh-77F" secondAttribute="leading" id="c0A-dq-yzs"/>
                     <constraint firstAttribute="trailing" secondItem="6VJ-Kh-77F" secondAttribute="trailing" constant="20" id="cHt-O6-xDh"/>
                     <constraint firstItem="6VJ-Kh-77F" firstAttribute="top" secondItem="fxz-0e-N2E" secondAttribute="bottom" constant="10" id="dlT-MH-JcN"/>
+                    <constraint firstItem="TFG-gC-DMU" firstAttribute="leading" secondItem="ztz-gk-L9n" secondAttribute="leading" id="e2g-Og-qpP"/>
                     <constraint firstItem="RTN-3V-ta1" firstAttribute="top" secondItem="ZdH-pV-QN4" secondAttribute="bottom" constant="20" id="e9R-Xs-hfw"/>
-                    <constraint firstItem="4Df-Lu-msW" firstAttribute="leading" secondItem="9LC-6N-dAs" secondAttribute="leading" id="eP7-rf-9kJ"/>
-                    <constraint firstItem="EDz-BI-6Xh" firstAttribute="top" secondItem="hEW-0W-oy6" secondAttribute="bottom" constant="10" id="erF-Ik-IY9"/>
                     <constraint firstItem="78d-et-t6d" firstAttribute="top" secondItem="ztz-gk-L9n" secondAttribute="bottom" constant="20" id="hsg-cq-8Cj"/>
-                    <constraint firstItem="4Df-Lu-msW" firstAttribute="centerY" secondItem="hEW-0W-oy6" secondAttribute="centerY" id="mrA-zp-H3P"/>
-                    <constraint firstItem="TFG-gC-DMU" firstAttribute="top" secondItem="f1e-XA-2yg" secondAttribute="bottom" constant="20" id="o96-7B-U4t"/>
+                    <constraint firstItem="78d-et-t6d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="pXw-j1-mwK"/>
+                    <constraint firstItem="FqZ-2M-zgZ" firstAttribute="top" secondItem="9LC-6N-dAs" secondAttribute="bottom" constant="20" id="qnz-AS-tKy"/>
                     <constraint firstItem="9LC-6N-dAs" firstAttribute="trailing" secondItem="ZdH-pV-QN4" secondAttribute="trailing" id="swy-Ea-UP8"/>
                     <constraint firstItem="6VJ-Kh-77F" firstAttribute="leading" secondItem="fxz-0e-N2E" secondAttribute="leading" id="vED-Bh-hcl"/>
                     <constraint firstItem="jfT-pH-oeD" firstAttribute="top" secondItem="78d-et-t6d" secondAttribute="bottom" constant="10" id="zaD-Qy-VxC"/>

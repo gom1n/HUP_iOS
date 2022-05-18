@@ -10,16 +10,15 @@ import UIKit
 class AuctionNowTableViewCell: UITableViewCell {
     @IBOutlet weak var auctionNowCollectionView: UICollectionView!
     
-    func setCollectionViewDataSourceDelegate(forRow row: Int) {
-        auctionNowCollectionView.delegate = self
-        auctionNowCollectionView.dataSource = self
+    func setCollectionViewDataSourceDelegate(dataSourceDelegate: UICollectionViewDelegate & UICollectionViewDataSource, forRow row: Int) {
+        auctionNowCollectionView.delegate = dataSourceDelegate
+        auctionNowCollectionView.dataSource = dataSourceDelegate
         auctionNowCollectionView.tag = row
         
         let auctionNowNib = UINib(nibName: "AuctionNowCollectionViewCell", bundle: nil)
         auctionNowCollectionView.register(auctionNowNib, forCellWithReuseIdentifier: AuctionNowCollectionViewCell.identifier)
         
         let flowLayout = UICollectionViewFlowLayout()
-//        flowLayout.scrollDirection = .horizontal
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         flowLayout.minimumLineSpacing = 12
         
@@ -38,20 +37,4 @@ class AuctionNowTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-}
-extension AuctionNowTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return 10
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AuctionNowCollectionViewCell", for: indexPath) as? AuctionNowCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            return cell
-        }
-        
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 180, height: 250)
-        }
 }
