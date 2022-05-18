@@ -10,11 +10,14 @@ import UIKit
 class UploadViewController: UIViewController {
     @IBOutlet weak var uploadTableView: UITableView!
     
+    let imagePickerController = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         uploadTableView.delegate = self
         uploadTableView.dataSource = self
+        imagePickerController.delegate = self
         
         let uploadPhotoNib = UINib(nibName: "UploadPhotoTableViewCell", bundle: nil)
         uploadTableView.register(uploadPhotoNib, forCellReuseIdentifier: "UploadPhotoTableViewCell")
@@ -72,9 +75,6 @@ extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataS
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UploadPhotoCollectionViewCell", for: indexPath) as? UploadPhotoCollectionViewCell else {
                 return UICollectionViewCell()
             }
-//            if indexPath.row == 0 {
-//                cell.photoImageView.image = UIImage(named: "choose_image")
-//            }
             return cell
         }
         
@@ -92,3 +92,13 @@ extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataS
               return 15
           }
 }
+extension UploadViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+//            let imageString = ""
+//            let input = FeedUploadInput(content: "안녕하세요", postImgUrl: [imageString])
+//            FeedUploadDataManager().posts(self, input)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }

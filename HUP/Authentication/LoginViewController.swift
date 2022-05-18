@@ -15,6 +15,9 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func backButtonTap(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func registerButtonDidTap(_ sender: UIButton) {
         //화면전환
         //1 스토리 보드를 생성

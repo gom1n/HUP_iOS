@@ -37,4 +37,9 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
         // 수정필요
         return 170
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let itemDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ItemDetailVC")
+        itemDetailVC.modalPresentationStyle = .fullScreen
+        self.present(itemDetailVC, animated: true, completion: nil)
+    }
 }

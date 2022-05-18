@@ -279,6 +279,15 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		23596FE5283555B100CF4BEF /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				23AD5A2027F8208900C7B619 /* RegisterViewController.swift */,
+				23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		23829A7D27F749D000506560 = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +313,7 @@
 		23829A8827F749D000506560 /* HUP */ = {
 			isa = PBXGroup;
 			children = (
+				23596FE5283555B100CF4BEF /* Authentication */,
 				238BF674283161EA0086FC3C /* BidPage */,
 				23FEAF7C282F3EC400345CF1 /* ItemDetail */,
 				231262DD282E9B7C002D549B /* Upload */,
@@ -316,8 +326,6 @@
 				23829A8B27F749D000506560 /* SceneDelegate.swift */,
 				23829A8D27F749D000506560 /* ViewController.swift */,
 				23829A8F27F749D000506560 /* Main.storyboard */,
-				23AD5A2027F8208900C7B619 /* RegisterViewController.swift */,
-				23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */,
 				23829A9227F749D100506560 /* Assets.xcassets */,
 				23829A9427F749D100506560 /* LaunchScreen.storyboard */,
 				23829A9727F749D100506560 /* Info.plist */,
@@ -403,7 +411,6 @@
 				A44E93BEA8536DEDE836A430 /* Pods-HUPTests.debug.xcconfig */,
 				B66EF68282207A9AA57A7B8F /* Pods-HUPTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
