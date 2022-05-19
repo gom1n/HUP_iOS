@@ -60,6 +60,9 @@
 		238BF686283168EF0086FC3C /* ParticipantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF684283168EF0086FC3C /* ParticipantsTableViewCell.swift */; };
 		238BF687283168EF0086FC3C /* ParticipantsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238BF685283168EF0086FC3C /* ParticipantsTableViewCell.xib */; };
 		238F4BD6282544D70060F804 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F4BD5282544D70060F804 /* HomeViewController.swift */; };
+		23A2CAE32836D11E009C0000 /* GoogleLoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2CAE22836D11E009C0000 /* GoogleLoginInput.swift */; };
+		23A2CAE52836D127009C0000 /* GoogleLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2CAE42836D127009C0000 /* GoogleLoginModel.swift */; };
+		23A2CAE72836D142009C0000 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2CAE62836D142009C0000 /* LoginDataManager.swift */; };
 		23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */; };
 		23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A2027F8208900C7B619 /* RegisterViewController.swift */; };
 		23F0687B282E5EE000574FB9 /* BestItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F06879282E5EE000574FB9 /* BestItemCollectionViewCell.swift */; };
@@ -146,6 +149,9 @@
 		238BF684283168EF0086FC3C /* ParticipantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsTableViewCell.swift; sourceTree = "<group>"; };
 		238BF685283168EF0086FC3C /* ParticipantsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantsTableViewCell.xib; sourceTree = "<group>"; };
 		238F4BD5282544D70060F804 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		23A2CAE22836D11E009C0000 /* GoogleLoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginInput.swift; sourceTree = "<group>"; };
+		23A2CAE42836D127009C0000 /* GoogleLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginModel.swift; sourceTree = "<group>"; };
+		23A2CAE62836D142009C0000 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		23AD5A2027F8208900C7B619 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		23F06879282E5EE000574FB9 /* BestItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -313,8 +319,10 @@
 		23596FE5283555B100CF4BEF /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				23A2CADF2836D0DD009C0000 /* GoogleLoginDataManager */,
 				23AD5A2027F8208900C7B619 /* RegisterViewController.swift */,
 				23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */,
+				23A2CAE62836D142009C0000 /* LoginDataManager.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -440,6 +448,15 @@
 				238F4BD5282544D70060F804 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		23A2CADF2836D0DD009C0000 /* GoogleLoginDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				23A2CAE22836D11E009C0000 /* GoogleLoginInput.swift */,
+				23A2CAE42836D127009C0000 /* GoogleLoginModel.swift */,
+			);
+			path = GoogleLoginDataManager;
 			sourceTree = "<group>";
 		};
 		23FEAF7C282F3EC400345CF1 /* ItemDetail */ = {
@@ -729,6 +746,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A2CAE32836D11E009C0000 /* GoogleLoginInput.swift in Sources */,
 				23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */,
 				2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */,
 				2333B6432836A6C000304291 /* BestItemDataManager.swift in Sources */,
@@ -736,6 +754,7 @@
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
 				2333B63C28369C5C00304291 /* ItemListModel.swift in Sources */,
 				2389DE2828301CD20069BFD8 /* ItemDetailContentTableViewCell.swift in Sources */,
+				23A2CAE52836D127009C0000 /* GoogleLoginModel.swift in Sources */,
 				23FEAF7E282F3EDA00345CF1 /* ItemDetailViewController.swift in Sources */,
 				231262E1282E9C93002D549B /* CustomTabBarController.swift in Sources */,
 				231262F2282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift in Sources */,
@@ -746,6 +765,7 @@
 				23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */,
 				2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */,
 				2339AE42282B7FB5002318FB /* ItemListTableViewCell.swift in Sources */,
+				23A2CAE72836D142009C0000 /* LoginDataManager.swift in Sources */,
 				23718508282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift in Sources */,
 				2333B63E28369C6A00304291 /* ItemListDataManager.swift in Sources */,
 				2339AE45282B82E9002318FB /* ItemListViewController.swift in Sources */,

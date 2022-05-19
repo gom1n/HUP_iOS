@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
 
@@ -15,6 +16,29 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // GOOGLE LOGIN
+    @IBAction func googleLoginTap(_ sender: Any) {
+        let config = GIDConfiguration(clientID: "221537301769-312uam9bnlhk82hb0gr7n5sore92vblv.apps.googleusercontent.com")
+                
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { user, error in
+            guard let user = user else { return }
+         
+            user.authentication.do { [self] authentication, error in
+                            guard error == nil else { print(error); return }
+                            guard let authentication = authentication else { return }
+                            
+                            let idToken = authentication.accessToken
+                            
+                            // Send ID token to backend
+                            //서버에 보낼 함수
+//                            tokenSign(idToken: idToken!)
+                print(idToken)
+                            let input = GoogleLoginInput(idToken: idToken, targetToken: nil)
+                            LoginDataManager().googleLoginDataManager(input)
+                            
+            }
+        }
+    }
     @IBAction func backButtonTap(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
