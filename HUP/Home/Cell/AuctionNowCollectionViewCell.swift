@@ -13,6 +13,7 @@ class AuctionNowCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelHomeAuctionItem: UILabel!
     @IBOutlet weak var labelItemContext: UILabel!
     @IBOutlet weak var labelItemCategory: UILabel!
+    @IBOutlet weak var labelItemPrice: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +26,17 @@ class AuctionNowCollectionViewCell: UICollectionViewCell {
         guard let itemName = cellData.itemName else {return}
         guard let category = cellData.category else {return}
         guard let description = cellData.description else {return}
+        guard let initPrice = cellData.initPrice else {return}
+        guard let maximumPrice = cellData.maximumPrice else {return}
         guard let imgUrlStr =  (cellData.fileNames?[0]) else {return}
         
+        if maximumPrice == 0 {
+            labelItemPrice.text = String(initPrice) + "원"
+            labelItemPrice.textColor = UIColor(named: "HupColor")
+        } else {
+            labelItemPrice.text = String(maximumPrice) + "원"
+            labelItemPrice.textColor = .red
+        }
         labelHomeAuctionItem.text = itemName
         labelItemCategory.text = category
         labelItemContext.text = description

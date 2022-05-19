@@ -10,6 +10,8 @@ import UIKit
 class BestItemTableViewCell: UITableViewCell {
     @IBOutlet weak var bestItemCollectionView: UICollectionView!
     
+    var bestItemArray : [BestItemModel]?
+    
     func setCollectionViewDataSourceDelegate(forRow row: Int) {
         bestItemCollectionView.delegate = self
         bestItemCollectionView.dataSource = self
@@ -25,6 +27,9 @@ class BestItemTableViewCell: UITableViewCell {
         
         bestItemCollectionView.collectionViewLayout = flowLayout
         bestItemCollectionView.reloadData()
+        
+        //DATA
+        BestItemDataManager().bestItemDataManager("eOnGoing", self)
     }
     
     override func awakeFromNib() {
@@ -41,12 +46,17 @@ class BestItemTableViewCell: UITableViewCell {
 }
 extension BestItemTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return bestItemArray?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BestItemCollectionViewCell", for: indexPath) as? BestItemCollectionViewCell else {
             return UICollectionViewCell()
+        }
+        let itemIdx = indexPath.item
+        if let cellData = self.bestItemArray {
+            // if data exists
+            cell.setUpData(cellData[itemIdx])
         }
         return cell
     }
@@ -55,10 +65,10 @@ extension BestItemTableViewCell : UICollectionViewDelegate, UICollectionViewData
         let w = collectionView.frame.width
         return CGSize(width: w, height: 280)
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "ItemDetailView", sender: nil)?
-//        let itemDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ItemDetailVC")
-//        itemDetailVC.modalPresentationStyle = .fullScreen
-//        self.present(itemDetailVC, animated: true, completion: nil)
+}
+extension BestItemTableViewCell {
+    func bestItemSuccessAPI(_ result : [BestItemModel]) {
+        self.bestItemArray = result
+        bestItemCollectionView.reloadData()
     }
 }

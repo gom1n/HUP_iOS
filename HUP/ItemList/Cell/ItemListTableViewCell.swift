@@ -30,17 +30,23 @@ class ItemListTableViewCell: UITableViewCell {
         let imgBaseURL = "https://hup-bucket.s3.ap-northeast-2.amazonaws.com/"
         
         guard let itemName = cellData.itemName else {return}
-        guard let itemPrice = cellData.maximumPrice else {return}
         guard let heartCount = cellData.scrapCount else {return}
         guard let participantCount = cellData.participants else {return}
 //        guard let startTime = Date() else {return}
 //        guard let endTime = cellData.auctionClosingDate else {return}
         guard let imgUrlStr =  (cellData.fileNames?[0]) else {return}
+        guard let initPrice = cellData.initPrice else {return}
+        guard let maximumPrice = cellData.maximumPrice else {return}
+        
+        if maximumPrice == 0 {
+            itemPriceLabel.text = String(initPrice)
+        } else {
+            itemPriceLabel.text = String(maximumPrice)
+        }
         
 //        getTime(startTime, endTime)
         
         itemNameLabel.text = itemName
-        itemPriceLabel.text = String(itemPrice)
         heartCountLabel.text = String(heartCount)
         participantCountLabel.text = String(participantCount)
         if let url = URL(string: imgBaseURL + imgUrlStr) {

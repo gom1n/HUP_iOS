@@ -17,6 +17,8 @@
 		231262F3282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231262F1282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib */; };
 		2333B63C28369C5C00304291 /* ItemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333B63B28369C5C00304291 /* ItemListModel.swift */; };
 		2333B63E28369C6A00304291 /* ItemListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333B63D28369C6A00304291 /* ItemListDataManager.swift */; };
+		2333B6412836A6B400304291 /* BestItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333B6402836A6B400304291 /* BestItemModel.swift */; };
+		2333B6432836A6C000304291 /* BestItemDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333B6422836A6BF00304291 /* BestItemDataManager.swift */; };
 		2339AE42282B7FB5002318FB /* ItemListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE40282B7FB5002318FB /* ItemListTableViewCell.swift */; };
 		2339AE43282B7FB5002318FB /* ItemListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE41282B7FB5002318FB /* ItemListTableViewCell.xib */; };
 		2339AE45282B82E9002318FB /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE44282B82E9002318FB /* ItemListViewController.swift */; };
@@ -97,6 +99,8 @@
 		231262F1282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		2333B63B28369C5C00304291 /* ItemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListModel.swift; sourceTree = "<group>"; };
 		2333B63D28369C6A00304291 /* ItemListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataManager.swift; sourceTree = "<group>"; };
+		2333B6402836A6B400304291 /* BestItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemModel.swift; sourceTree = "<group>"; };
+		2333B6422836A6BF00304291 /* BestItemDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemDataManager.swift; sourceTree = "<group>"; };
 		2339AE40282B7FB5002318FB /* ItemListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewCell.swift; sourceTree = "<group>"; };
 		2339AE41282B7FB5002318FB /* ItemListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemListTableViewCell.xib; sourceTree = "<group>"; };
 		2339AE44282B82E9002318FB /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +220,15 @@
 			path = ItemListDataManager;
 			sourceTree = "<group>";
 		};
+		2333B63F2836A6A000304291 /* BestItemDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2333B6402836A6B400304291 /* BestItemModel.swift */,
+				2333B6422836A6BF00304291 /* BestItemDataManager.swift */,
+			);
+			path = BestItemDataManager;
+			sourceTree = "<group>";
+		};
 		2339AE3E282B7EEB002318FB /* ItemList */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +322,7 @@
 		23596FE628355D5400CF4BEF /* HomeDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				2333B63F2836A6A000304291 /* BestItemDataManager */,
 				23596FE728355D6200CF4BEF /* AuctionNowDataManager */,
 			);
 			path = HomeDataManager;
@@ -717,6 +731,7 @@
 			files = (
 				23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */,
 				2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */,
+				2333B6432836A6C000304291 /* BestItemDataManager.swift in Sources */,
 				238BF686283168EF0086FC3C /* ParticipantsTableViewCell.swift in Sources */,
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
 				2333B63C28369C5C00304291 /* ItemListModel.swift in Sources */,
@@ -725,6 +740,7 @@
 				231262E1282E9C93002D549B /* CustomTabBarController.swift in Sources */,
 				231262F2282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift in Sources */,
 				238BF6822831660A0086FC3C /* BidPageTableViewCell.swift in Sources */,
+				2333B6412836A6B400304291 /* BestItemModel.swift in Sources */,
 				23596FEB28355D8700CF4BEF /* AuctionNowModel.swift in Sources */,
 				231262ED282EA1F0002D549B /* UploadContentTableViewCell.swift in Sources */,
 				23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */,

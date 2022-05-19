@@ -84,11 +84,11 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="itemPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMD-RI-bWO">
                         <rect key="frame" x="168" y="50.5" width="61" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" name="HupColor"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-e9-yac">
-                        <rect key="frame" x="237" y="50.5" width="12.5" height="17"/>
+                        <rect key="frame" x="229" y="50.5" width="12.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                     <constraint firstItem="hlu-e9-yac" firstAttribute="centerY" secondItem="CMD-RI-bWO" secondAttribute="centerY" id="FWd-Du-QxA"/>
                     <constraint firstItem="5mR-iK-MHf" firstAttribute="leading" secondItem="ewg-Uu-tFx" secondAttribute="trailing" constant="18" id="OBx-xS-LhM"/>
                     <constraint firstItem="5mR-iK-MHf" firstAttribute="top" secondItem="ewg-Uu-tFx" secondAttribute="top" id="PAN-wV-gRM"/>
-                    <constraint firstItem="hlu-e9-yac" firstAttribute="leading" secondItem="CMD-RI-bWO" secondAttribute="trailing" constant="8" symbolic="YES" id="Qcn-NV-iW0"/>
+                    <constraint firstItem="hlu-e9-yac" firstAttribute="leading" secondItem="CMD-RI-bWO" secondAttribute="trailing" id="Qcn-NV-iW0"/>
                     <constraint firstItem="CMD-RI-bWO" firstAttribute="top" secondItem="5mR-iK-MHf" secondAttribute="bottom" constant="10" id="RP4-NA-EX8"/>
                     <constraint firstAttribute="bottom" secondItem="ewg-Uu-tFx" secondAttribute="bottom" constant="20" id="TLj-jw-X7i"/>
                     <constraint firstItem="Q3v-GE-AxD" firstAttribute="top" secondItem="z6E-Fj-NsA" secondAttribute="bottom" constant="10" id="VE5-P1-coL"/>

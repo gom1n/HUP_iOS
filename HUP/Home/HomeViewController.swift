@@ -27,7 +27,6 @@ class HomeViewController: UIViewController {
         
         //DATA
         AuctionNowDataManager().auctionNowDataManager("eOnGoing", self)
-        
     }
 
 }
@@ -95,7 +94,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
 }
 extension HomeViewController {
-    func successAPI(_ result : AuctionNowModel) {
+    func auctionNowSuccessAPI(_ result : AuctionNowModel) {
         self.auctionNowArray = result.data
         HomeTableView.reloadData()
     }

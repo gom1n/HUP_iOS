@@ -11,6 +11,7 @@ class ItemListViewController: UIViewController {
     @IBOutlet weak var itemListTableView: UITableView!
     
     var itemListArray : [ItemListData]?
+    var itemId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
