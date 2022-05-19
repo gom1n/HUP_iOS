@@ -29,6 +29,8 @@
 		233A7005282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */; };
 		233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */; };
 		233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7008282A817A000CB6C8 /* UIView+Extension.swift */; };
+		23596FEB28355D8700CF4BEF /* AuctionNowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23596FEA28355D8700CF4BEF /* AuctionNowModel.swift */; };
+		23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23596FEC28355D9600CF4BEF /* AuctionNowDataManager.swift */; };
 		23718508282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23718506282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift */; };
 		23718509282BE47B00C2A4D7 /* AuctionNowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23718507282BE47B00C2A4D7 /* AuctionNowTableViewCell.xib */; };
 		2371850C282BE64C00C2A4D7 /* BestItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2371850A282BE64C00C2A4D7 /* BestItemTableViewCell.swift */; };
@@ -105,6 +107,8 @@
 		233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowCollectionViewCell.swift; sourceTree = "<group>"; };
 		233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionNowCollectionViewCell.xib; sourceTree = "<group>"; };
 		233A7008282A817A000CB6C8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		23596FEA28355D8700CF4BEF /* AuctionNowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowModel.swift; sourceTree = "<group>"; };
+		23596FEC28355D9600CF4BEF /* AuctionNowDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowDataManager.swift; sourceTree = "<group>"; };
 		23718506282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowTableViewCell.swift; sourceTree = "<group>"; };
 		23718507282BE47B00C2A4D7 /* AuctionNowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionNowTableViewCell.xib; sourceTree = "<group>"; };
 		2371850A282BE64C00C2A4D7 /* BestItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -288,6 +292,23 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		23596FE628355D5400CF4BEF /* HomeDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				23596FE728355D6200CF4BEF /* AuctionNowDataManager */,
+			);
+			path = HomeDataManager;
+			sourceTree = "<group>";
+		};
+		23596FE728355D6200CF4BEF /* AuctionNowDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				23596FEA28355D8700CF4BEF /* AuctionNowModel.swift */,
+				23596FEC28355D9600CF4BEF /* AuctionNowDataManager.swift */,
+			);
+			path = AuctionNowDataManager;
+			sourceTree = "<group>";
+		};
 		23829A7D27F749D000506560 = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +407,7 @@
 		238F4BD4282544BB0060F804 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				23596FE628355D5400CF4BEF /* HomeDataManager */,
 				233A6FFE282A7CDF000CB6C8 /* Cell */,
 				238F4BD5282544D70060F804 /* HomeViewController.swift */,
 			);
@@ -679,6 +701,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */,
 				2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */,
 				238BF686283168EF0086FC3C /* ParticipantsTableViewCell.swift in Sources */,
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
@@ -687,6 +710,7 @@
 				231262E1282E9C93002D549B /* CustomTabBarController.swift in Sources */,
 				231262F2282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift in Sources */,
 				238BF6822831660A0086FC3C /* BidPageTableViewCell.swift in Sources */,
+				23596FEB28355D8700CF4BEF /* AuctionNowModel.swift in Sources */,
 				231262ED282EA1F0002D549B /* UploadContentTableViewCell.swift in Sources */,
 				23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */,
 				2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */,

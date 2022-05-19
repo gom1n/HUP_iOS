@@ -23,6 +23,9 @@ class HomeViewController: UIViewController {
         let bestItemNib = UINib(nibName: "BestItemTableViewCell", bundle: nil)
         HomeTableView.register(bestItemNib, forCellReuseIdentifier: "BestItemTableViewCell")
         
+        //DATA
+        AuctionNowDataManager().auctionNowDataManager("eOnGoing", self)
+        
     }
 
 }
