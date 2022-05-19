@@ -18,8 +18,8 @@ class AuctionNowDataManager {
                 
             switch response.result {
             case .success(let result):
-                print("DEBUG: ", result)
-//                viewController.successAPI(result)
+//                print("DEBUG: ", result)
+                viewController.successAPI(result)
             case .failure(let error):
                 print(error.localizedDescription)
             }

@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var HomeTableView: UITableView!
     
+    var auctionNowArray : [AuctionNowData]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,12 +69,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        let count = auctionNowArray?.count ?? 0
+        return count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AuctionNowCollectionViewCell", for: indexPath) as? AuctionNowCollectionViewCell else {
             return UICollectionViewCell()
+        }
+        let itemIdx = indexPath.item
+        if let cellData = self.auctionNowArray {
+            // if data exists
+            cell.setUpData(cellData[itemIdx])
         }
         return cell
     }
@@ -84,5 +92,11 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         let itemDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ItemDetailVC")
         itemDetailVC.modalPresentationStyle = .fullScreen
         self.present(itemDetailVC, animated: true, completion: nil)
+    }
+}
+extension HomeViewController {
+    func successAPI(_ result : AuctionNowModel) {
+        self.auctionNowArray = result.data
+        HomeTableView.reloadData()
     }
 }
