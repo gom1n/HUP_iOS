@@ -10,6 +10,8 @@ import UIKit
 class ItemListViewController: UIViewController {
     @IBOutlet weak var itemListTableView: UITableView!
     
+    var itemListArray : [ItemListData]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,18 +20,26 @@ class ItemListViewController: UIViewController {
         
         let itemNib = UINib(nibName: "ItemListTableViewCell", bundle: nil)
         itemListTableView.register(itemNib, forCellReuseIdentifier: "ItemListTableViewCell")
+        
+        //DATA
+        ItemListDataManager().itemListDataManager("eOnGoing", self)
     }
     
 }
 
 extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return itemListArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemListTableViewCell", for: indexPath) as? ItemListTableViewCell else {
             return UITableViewCell()
+        }
+        let itemIdx = indexPath.item
+        if let cellData = self.itemListArray {
+            // if data exists
+            cell.setUpData(cellData[itemIdx])
         }
         return cell
     }
@@ -41,5 +51,11 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
         let itemDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ItemDetailVC")
         itemDetailVC.modalPresentationStyle = .fullScreen
         self.present(itemDetailVC, animated: true, completion: nil)
+    }
+}
+extension ItemListViewController {
+    func successAPI(_ result : ItemListModel) {
+        self.itemListArray = result.data
+        itemListTableView.reloadData()
     }
 }
