@@ -14,6 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         sleep(2)
+        
+        UserDefaults.standard.set(false, forKey: "isLogin")
+        UserDefaults.standard.set("", forKey: "accessToken")
+        UserDefaults.standard.set("", forKey: "refreshToken")
+        UserDefaults.standard.set(-1, forKey: "userId")
         return true
     }
     // 구글로그인 버튼 클릭 시 구글로그인url에 연결된 로그인창 띄우기.

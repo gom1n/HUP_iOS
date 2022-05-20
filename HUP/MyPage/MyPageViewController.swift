@@ -24,7 +24,6 @@ class MyPageViewController: UIViewController {
         mypageTableView.register(listViewNib, forCellReuseIdentifier: "MyPageTableViewCell")
         
         mypageTableView.separatorStyle = .none
-        UserDefaults.standard.set(isLogin, forKey: "isLogin")
     }
     override func viewWillAppear(_ animated: Bool) {
         // 화면이 보일때마다 호출

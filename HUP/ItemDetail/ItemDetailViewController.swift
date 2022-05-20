@@ -13,6 +13,13 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet weak var heartButton: UIButton!
     @IBOutlet weak var participateButton: UIButton!
     
+    var itemId: Int?
+    var itemDetailData: ItemDetailModel? = nil {
+        didSet {
+            ItemDetailTableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +35,10 @@ class ItemDetailViewController: UIViewController {
         ItemDetailTableView.register(contentNib, forCellReuseIdentifier: "ItemDetailContentTableViewCell")
         let imageNib = UINib(nibName: "ItemDetailImageTableViewCell", bundle: nil)
         ItemDetailTableView.register(imageNib, forCellReuseIdentifier: "ItemDetailImageTableViewCell")
+        
+        // DATA
+        guard let itemId = self.itemId else {return}
+        ItemDetailDataManager().itemDetailDataManager(itemId, self)
     }
     
     @IBAction func actionIsHeart(_ sender: UIButton) {
@@ -57,11 +68,19 @@ extension ItemDetailViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemDetailImageTableViewCell", for: indexPath) as? ItemDetailImageTableViewCell else {
                 return UITableViewCell()
             }
+            // if data exists
+            if let cellData = itemDetailData {
+                cell.itemImgArray = cellData.fileNames
+            }
             cell.selectionStyle = .none
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemDetailContentTableViewCell", for: indexPath) as? ItemDetailContentTableViewCell else {
                 return UITableViewCell()
+            }
+            // if data exists
+            if let cellData = itemDetailData {
+                cell.setUpData(cellData)
             }
             cell.selectionStyle = .none
             return cell
@@ -76,7 +95,11 @@ extension ItemDetailViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
         itemDetailImageTableViewCell.setCollectionViewDataSourceDelegate(forRow: indexPath.row)
-        
     }
 }
-
+extension ItemDetailViewController {
+    func itemDetailSuccessAPI(_ result: ItemDetailModel) {
+        self.itemDetailData = result
+        self.ItemDetailTableView.reloadData()
+    }
+}

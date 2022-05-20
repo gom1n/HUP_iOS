@@ -80,7 +80,6 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         let itemIdx = indexPath.item
         if let cellData = self.auctionNowArray {
             // if data exists
-            self.cellItemId = cellData[itemIdx].id
             cell.setUpData(cellData[itemIdx])
         }
         return cell
@@ -90,10 +89,13 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         return CGSize(width: 180, height: 250)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let itemIdx = indexPath.item
+        getItemId(itemIdx)
+        
         guard let itemDetailViewController = self.storyboard?
                 .instantiateViewController(withIdentifier: "ItemDetailVC")
                 as? ItemDetailViewController else {return}
-        itemDetailViewController.itemId = cellItemId  //itemId
+        itemDetailViewController.itemId = self.cellItemId  //itemId
         itemDetailViewController.modalPresentationStyle = .fullScreen
         self.present(itemDetailViewController, animated: true, completion: nil)
     }
@@ -102,5 +104,11 @@ extension HomeViewController {
     func auctionNowSuccessAPI(_ result : AuctionNowModel) {
         self.auctionNowArray = result.data
         HomeTableView.reloadData()
+    }
+    func getItemId(_ index: Int) {
+        if let cellData = self.auctionNowArray {
+            // if data exists
+            cellItemId = cellData[index].id
+        }
     }
 }

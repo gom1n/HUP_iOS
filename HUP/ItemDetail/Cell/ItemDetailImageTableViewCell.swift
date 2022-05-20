@@ -9,6 +9,7 @@ import UIKit
 
 class ItemDetailImageTableViewCell: UITableViewCell {
     @IBOutlet weak var itemDetailImageCollectionView: UICollectionView!
+    var itemImgArray: [String]?
     
     func setCollectionViewDataSourceDelegate(forRow row: Int) {
         itemDetailImageCollectionView.delegate = self
@@ -41,12 +42,17 @@ class ItemDetailImageTableViewCell: UITableViewCell {
 }
 extension ItemDetailImageTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return 10
+            return itemImgArray?.count ?? 0
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemDetailImageCollectionViewCell", for: indexPath) as? ItemDetailImageCollectionViewCell else {
                 return UICollectionViewCell()
+            }
+            // if img exists
+            let index = indexPath.item
+            if let imgArray = itemImgArray {
+                cell.setUpData(imgArray[index])
             }
             return cell
         }

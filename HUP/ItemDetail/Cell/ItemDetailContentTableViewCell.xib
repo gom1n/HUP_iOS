@@ -41,6 +41,9 @@
                         <rect key="frame" x="351" y="34.5" width="73" height="31"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="삭제하기"/>
+                        <connections>
+                            <action selector="deleteButtonTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XXk-nT-hjA"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dA-A1-7iv">
                         <rect key="frame" x="20" y="95" width="404" height="1.5"/>
@@ -74,15 +77,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highprice" translatesAutoresizingMaskIntoConstraints="NO" id="UJk-Fm-5xI">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="participants" translatesAutoresizingMaskIntoConstraints="NO" id="UJk-Fm-5xI">
                         <rect key="frame" x="209.5" y="168.5" width="70" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="70" id="0wC-R6-3Mb"/>
                             <constraint firstAttribute="height" constant="25" id="ZFs-vL-K97"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="highPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIU-RZ-q03">
-                        <rect key="frame" x="284.5" y="172" width="64.5" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="participants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIU-RZ-q03">
+                        <rect key="frame" x="284.5" y="172" width="81.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -131,11 +134,21 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="QSr-Kb-JFV"/>
+            <connections>
+                <outlet property="categoryLabel" destination="M37-Nb-zTb" id="CbD-XZ-zMN"/>
+                <outlet property="highPriceLabel" destination="oPx-6U-a8F" id="cFR-QM-gQD"/>
+                <outlet property="itemContentLabel" destination="fFc-Z8-nSA" id="Yk4-6b-Ar4"/>
+                <outlet property="itemNameLabel" destination="xpb-Ry-LPj" id="YgG-3h-D5p"/>
+                <outlet property="participantLabel" destination="BIU-RZ-q03" id="JD3-kH-5Sv"/>
+                <outlet property="sellerNameLabel" destination="gAN-sg-aPS" id="Wb0-cU-ggq"/>
+                <outlet property="sellerProfileImageView" destination="vKj-Wb-3Ui" id="2Vg-w2-Vfs"/>
+            </connections>
             <point key="canvasLocation" x="69.565217391304358" y="220.98214285714286"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="highprice" width="205" height="81"/>
+        <image name="participants" width="208" height="80"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

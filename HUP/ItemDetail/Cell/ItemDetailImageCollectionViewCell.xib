@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="307" height="257"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LSU-ZO-8c3">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LSU-ZO-8c3">
                         <rect key="frame" x="0.0" y="0.0" width="307" height="257"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
@@ -30,6 +30,9 @@
                 <constraint firstItem="LSU-ZO-8c3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nvS-Ip-mwd"/>
             </constraints>
             <size key="customSize" width="307" height="257"/>
+            <connections>
+                <outlet property="itemImageView" destination="LSU-ZO-8c3" id="L1O-Ov-h74"/>
+            </connections>
             <point key="canvasLocation" x="318.11594202898556" y="151.67410714285714"/>
         </collectionViewCell>
     </objects>
