@@ -24,7 +24,8 @@ class AuctionNowCollectionViewCell: UICollectionViewCell {
         let imgBaseURL = "https://hup-bucket.s3.ap-northeast-2.amazonaws.com/"
         
         guard let itemName = cellData.itemName else {return}
-        guard let category = cellData.category else {return}
+        guard let category: String = cellData.category else {return}
+//        let categoryStr = GetCategory().getCategory(category)
         guard let description = cellData.description else {return}
         guard let initPrice = cellData.initPrice else {return}
         guard let maximumPrice = cellData.maximumPrice else {return}

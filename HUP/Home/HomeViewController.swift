@@ -89,15 +89,19 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         return CGSize(width: 180, height: 250)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let itemIdx = indexPath.item
-        getItemId(itemIdx)
-        
-        guard let itemDetailViewController = self.storyboard?
-                .instantiateViewController(withIdentifier: "ItemDetailVC")
-                as? ItemDetailViewController else {return}
-        itemDetailViewController.itemId = self.cellItemId  //itemId
-        itemDetailViewController.modalPresentationStyle = .fullScreen
-        self.present(itemDetailViewController, animated: true, completion: nil)
+        if UIManager().isLogin() {
+            let itemIdx = indexPath.item
+            getItemId(itemIdx)
+            
+            guard let itemDetailViewController = self.storyboard?
+                    .instantiateViewController(withIdentifier: "ItemDetailVC")
+                    as? ItemDetailViewController else {return}
+            itemDetailViewController.itemId = self.cellItemId  //itemId
+            itemDetailViewController.modalPresentationStyle = .fullScreen
+            self.present(itemDetailViewController, animated: true, completion: nil)
+        } else {
+            UIManager().showToast(message: "로그인이 필요합니다.", viewController: self)
+        }
     }
 }
 extension HomeViewController {
