@@ -10,13 +10,25 @@ import GoogleSignIn
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var pwTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    // GOOGLE LOGIN
+    //MARK: App Login
+    @IBAction func appLoginButtonTap(_ sender: UIButton) {
+        let id = idTextField.text!
+        let pw = pwTextField.text!
+        let appLoginInput = AppLoginInput(loginId: id, password: pw, targetToken: "")
+        LoginDataManager().appLoginDataManager(appLoginInput, self)
+    }
+    
+    
+    //MARK: Google Login
     @IBAction func googleLoginTap(_ sender: Any) {
         let config = GIDConfiguration(clientID: "221537301769-312uam9bnlhk82hb0gr7n5sore92vblv.apps.googleusercontent.com")
                 
@@ -27,14 +39,14 @@ class LoginViewController: UIViewController {
                             guard error == nil else { print(error); return }
                             guard let authentication = authentication else { return }
                             
-                            let idToken = authentication.accessToken
+                            let idToken = authentication.idToken
                             
                             // Send ID token to backend
                             //서버에 보낼 함수
 //                            tokenSign(idToken: idToken!)
-                print(idToken)
-                            let input = GoogleLoginInput(idToken: idToken, targetToken: nil)
-                            LoginDataManager().googleLoginDataManager(input)
+                print(idToken!)
+//                            let input = GoogleLoginInput(idToken: idToken, targetToken: nil)
+//                            LoginDataManager().googleLoginDataManager(input)
                             
             }
         }
@@ -51,5 +63,9 @@ class LoginViewController: UIViewController {
         //3 화면전환 메소드를 사용해서 화면을 전환
         self.present(registerViewController, animated: true, completion: nil)
 //        self.navigationController?.pushViewController(registerViewController, animated: true)
+    }
+    
+    public func goBack() {
+        self.dismiss(animated: true, completion: nil)
     }
 }

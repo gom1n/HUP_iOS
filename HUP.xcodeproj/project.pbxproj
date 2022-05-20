@@ -30,6 +30,8 @@
 		2339AE57282B970B002318FB /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE56282B970B002318FB /* MyPageViewController.swift */; };
 		2339AE5B282B9770002318FB /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE59282B9770002318FB /* MyPageTableViewCell.swift */; };
 		2339AE5C282B9770002318FB /* MyPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE5A282B9770002318FB /* MyPageTableViewCell.xib */; };
+		2339B86E283788010082D0F4 /* AppLoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339B86D283788010082D0F4 /* AppLoginInput.swift */; };
+		2339B870283788100082D0F4 /* AppLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339B86F283788100082D0F4 /* AppLoginModel.swift */; };
 		233A7005282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */; };
 		233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */; };
 		233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7008282A817A000CB6C8 /* UIView+Extension.swift */; };
@@ -115,6 +117,8 @@
 		2339AE56282B970B002318FB /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		2339AE59282B9770002318FB /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
 		2339AE5A282B9770002318FB /* MyPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageTableViewCell.xib; sourceTree = "<group>"; };
+		2339B86D283788010082D0F4 /* AppLoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginInput.swift; sourceTree = "<group>"; };
+		2339B86F283788100082D0F4 /* AppLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginModel.swift; sourceTree = "<group>"; };
 		233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowCollectionViewCell.swift; sourceTree = "<group>"; };
 		233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionNowCollectionViewCell.xib; sourceTree = "<group>"; };
 		233A7008282A817A000CB6C8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -292,6 +296,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2339B86C283787F40082D0F4 /* AppLogin */ = {
+			isa = PBXGroup;
+			children = (
+				2339B86D283788010082D0F4 /* AppLoginInput.swift */,
+				2339B86F283788100082D0F4 /* AppLoginModel.swift */,
+			);
+			path = AppLogin;
+			sourceTree = "<group>";
+		};
 		233A6FFE282A7CDF000CB6C8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +332,7 @@
 		23596FE5283555B100CF4BEF /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				2339B86C283787F40082D0F4 /* AppLogin */,
 				23A2CADF2836D0DD009C0000 /* GoogleLoginDataManager */,
 				23AD5A2027F8208900C7B619 /* RegisterViewController.swift */,
 				23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */,
@@ -746,6 +760,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2339B86E283788010082D0F4 /* AppLoginInput.swift in Sources */,
 				23A2CAE32836D11E009C0000 /* GoogleLoginInput.swift in Sources */,
 				23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */,
 				2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */,
@@ -770,6 +785,7 @@
 				2333B63E28369C6A00304291 /* ItemListDataManager.swift in Sources */,
 				2339AE45282B82E9002318FB /* ItemListViewController.swift in Sources */,
 				233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */,
+				2339B870283788100082D0F4 /* AppLoginModel.swift in Sources */,
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
 				231262E9282EA1E3002D549B /* UploadPhotoTableViewCell.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,

@@ -105,6 +105,9 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                     <color key="baseBackgroundColor" name="Color"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="appLoginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fA-dJ-Eg5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XV2-PH-eBF">
                                 <rect key="frame" x="15" y="650" width="145" height="28"/>
@@ -193,6 +196,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kVQ-CU-5Ci"/>
+                    <connections>
+                        <outlet property="idTextField" destination="yjm-iV-UDb" id="z37-hw-WmL"/>
+                        <outlet property="pwTextField" destination="hY5-Yn-caG" id="HeZ-mo-8l0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
