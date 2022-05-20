@@ -21,10 +21,10 @@ struct AuctionNowData : Decodable {
     let bidderUserName: String?
     let buyDate: String?
     let category: String?
-    let chatRoomId: UInt64?
+    let chatRoomId: Int?
     let description: String?
     let fileNames: [String]?
-    let id: UInt64?
+    let id: Int?
     let initPrice: Int?
     let itemName: String?
     let itemStatePoint: Int?

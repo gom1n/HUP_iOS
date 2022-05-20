@@ -32,6 +32,11 @@
 		2339AE5C282B9770002318FB /* MyPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE5A282B9770002318FB /* MyPageTableViewCell.xib */; };
 		2339B86E283788010082D0F4 /* AppLoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339B86D283788010082D0F4 /* AppLoginInput.swift */; };
 		2339B870283788100082D0F4 /* AppLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339B86F283788100082D0F4 /* AppLoginModel.swift */; };
+		2339B88528379A030082D0F4 /* MyInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339B88428379A030082D0F4 /* MyInfoModel.swift */; };
+		2339B88728379A250082D0F4 /* MyPageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339B88628379A250082D0F4 /* MyPageDataManager.swift */; };
+		2339B8922837B8150082D0F4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339B8912837B8150082D0F4 /* APIManager.swift */; };
+		2339B8962837BA150082D0F4 /* ItemDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339B8952837BA150082D0F4 /* ItemDetailModel.swift */; };
+		2339B8982837BA1E0082D0F4 /* ItemDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339B8972837BA1E0082D0F4 /* ItemDetailDataManager.swift */; };
 		233A7005282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */; };
 		233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */; };
 		233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7008282A817A000CB6C8 /* UIView+Extension.swift */; };
@@ -119,6 +124,11 @@
 		2339AE5A282B9770002318FB /* MyPageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageTableViewCell.xib; sourceTree = "<group>"; };
 		2339B86D283788010082D0F4 /* AppLoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginInput.swift; sourceTree = "<group>"; };
 		2339B86F283788100082D0F4 /* AppLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginModel.swift; sourceTree = "<group>"; };
+		2339B88428379A030082D0F4 /* MyInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoModel.swift; sourceTree = "<group>"; };
+		2339B88628379A250082D0F4 /* MyPageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageDataManager.swift; sourceTree = "<group>"; };
+		2339B8912837B8150082D0F4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		2339B8952837BA150082D0F4 /* ItemDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailModel.swift; sourceTree = "<group>"; };
+		2339B8972837BA1E0082D0F4 /* ItemDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailDataManager.swift; sourceTree = "<group>"; };
 		233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowCollectionViewCell.swift; sourceTree = "<group>"; };
 		233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionNowCollectionViewCell.xib; sourceTree = "<group>"; };
 		233A7008282A817A000CB6C8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -281,6 +291,7 @@
 		2339AE55282B96F2002318FB /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				2339B881283799DE0082D0F4 /* MyPageDataManager */,
 				2339AE58282B975B002318FB /* Cell */,
 				2339AE56282B970B002318FB /* MyPageViewController.swift */,
 			);
@@ -303,6 +314,24 @@
 				2339B86F283788100082D0F4 /* AppLoginModel.swift */,
 			);
 			path = AppLogin;
+			sourceTree = "<group>";
+		};
+		2339B881283799DE0082D0F4 /* MyPageDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2339B88428379A030082D0F4 /* MyInfoModel.swift */,
+				2339B88628379A250082D0F4 /* MyPageDataManager.swift */,
+			);
+			path = MyPageDataManager;
+			sourceTree = "<group>";
+		};
+		2339B88A2837B69D0082D0F4 /* ItemDetailDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				2339B8952837BA150082D0F4 /* ItemDetailModel.swift */,
+				2339B8972837BA1E0082D0F4 /* ItemDetailDataManager.swift */,
+			);
+			path = ItemDetailDataManager;
 			sourceTree = "<group>";
 		};
 		233A6FFE282A7CDF000CB6C8 /* Cell */ = {
@@ -400,6 +429,7 @@
 				23829A9227F749D100506560 /* Assets.xcassets */,
 				23829A9427F749D100506560 /* LaunchScreen.storyboard */,
 				23829A9727F749D100506560 /* Info.plist */,
+				2339B8912837B8150082D0F4 /* APIManager.swift */,
 			);
 			path = HUP;
 			sourceTree = "<group>";
@@ -476,6 +506,7 @@
 		23FEAF7C282F3EC400345CF1 /* ItemDetail */ = {
 			isa = PBXGroup;
 			children = (
+				2339B88A2837B69D0082D0F4 /* ItemDetailDataManager */,
 				2389DE2528301CB60069BFD8 /* Cell */,
 				23FEAF7D282F3EDA00345CF1 /* ItemDetailViewController.swift */,
 			);
@@ -765,6 +796,7 @@
 				23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */,
 				2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */,
 				2333B6432836A6C000304291 /* BestItemDataManager.swift in Sources */,
+				2339B8982837BA1E0082D0F4 /* ItemDetailDataManager.swift in Sources */,
 				238BF686283168EF0086FC3C /* ParticipantsTableViewCell.swift in Sources */,
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
 				2333B63C28369C5C00304291 /* ItemListModel.swift in Sources */,
@@ -778,16 +810,20 @@
 				23596FEB28355D8700CF4BEF /* AuctionNowModel.swift in Sources */,
 				231262ED282EA1F0002D549B /* UploadContentTableViewCell.swift in Sources */,
 				23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */,
+				2339B8922837B8150082D0F4 /* APIManager.swift in Sources */,
 				2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */,
 				2339AE42282B7FB5002318FB /* ItemListTableViewCell.swift in Sources */,
 				23A2CAE72836D142009C0000 /* LoginDataManager.swift in Sources */,
 				23718508282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift in Sources */,
 				2333B63E28369C6A00304291 /* ItemListDataManager.swift in Sources */,
 				2339AE45282B82E9002318FB /* ItemListViewController.swift in Sources */,
+				2339B88528379A030082D0F4 /* MyInfoModel.swift in Sources */,
 				233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */,
 				2339B870283788100082D0F4 /* AppLoginModel.swift in Sources */,
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
+				2339B88728379A250082D0F4 /* MyPageDataManager.swift in Sources */,
 				231262E9282EA1E3002D549B /* UploadPhotoTableViewCell.swift in Sources */,
+				2339B8962837BA150082D0F4 /* ItemDetailModel.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,
 				231262DF282E9B9B002D549B /* UploadViewController.swift in Sources */,
 				238BF676283162010086FC3C /* BidPageViewController.swift in Sources */,

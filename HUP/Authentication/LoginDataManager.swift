@@ -27,8 +27,10 @@ class LoginDataManager {
                 print("refreshToken: ", result.refreshToken!)
                 
                 //User Default에 유저 토큰 넣어주기
+                UserDefaults.standard.set(result.userId!, forKey: "userId")
                 UserDefaults.standard.set(result.accessToken!, forKey: "accessToken")
                 UserDefaults.standard.set(result.refreshToken!, forKey: "refreshToken")
+                UserDefaults.standard.set(true, forKey: "isLogin")
                 
                 viewController.goBack()
                 

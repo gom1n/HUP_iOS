@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MyPageViewController: UIViewController {
     @IBOutlet weak var mypageTableView: UITableView!
+    var isLogin: Bool = false
+    @IBOutlet weak var mypageLabel: UIButton!
+    @IBOutlet weak var profileImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,13 +20,31 @@ class MyPageViewController: UIViewController {
         mypageTableView.delegate = self
         mypageTableView.dataSource = self
         
-        let mypageNib = UINib(nibName: "MyPageTableViewCell", bundle: nil)
-        mypageTableView.register(mypageNib, forCellReuseIdentifier: "MyPageTableViewCell")
+        let listViewNib = UINib(nibName: "MyPageTableViewCell", bundle: nil)
+        mypageTableView.register(listViewNib, forCellReuseIdentifier: "MyPageTableViewCell")
         
         mypageTableView.separatorStyle = .none
+        UserDefaults.standard.set(isLogin, forKey: "isLogin")
     }
-    @IBAction func loginButtonDidTap(_ sender: UIButton) {
-        //화면전환
+    override func viewWillAppear(_ animated: Bool) {
+        // 화면이 보일때마다 호출
+        isLogin = UserDefaults.standard.bool(forKey: "isLogin")
+        setMyInfo()
+    }
+    func setMyInfo() {
+        if isLogin == false {
+            mypageLabel.setTitle("로그인하기", for: .normal)
+        } else {
+            mypageLabel.setTitle("login success", for: .normal)
+            let userId = UserDefaults.standard.integer(forKey: "userId")
+            MyPageDataManager().myInfoDataManager(userId, self)
+        }
+    }
+    
+    @IBAction func goLoginButtonTap(_ sender: UIButton) {
+        goLogin()
+    }
+    func goLogin() {
         let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LoginVC")
         loginViewController.modalPresentationStyle = .fullScreen
         self.present(loginViewController, animated: true, completion: nil)
@@ -59,5 +81,17 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+}
+extension MyPageViewController {
+    func myPageSuccessAPI(_ result : MyInfoModel) {
+        
+        let profileName = result.username!
+        let profileImgUrlStr = result.picture!
+        
+        mypageLabel.setTitle(profileName, for: .normal)
+        if let url = URL(string: profileImgUrlStr) {
+            profileImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "person.fill"))
+        }
     }
 }
