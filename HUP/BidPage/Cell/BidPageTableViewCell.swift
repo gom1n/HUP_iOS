@@ -9,7 +9,6 @@ import UIKit
 
 class BidPageTableViewCell: UITableViewCell {
     @IBOutlet weak var itemImageView: UIImageView!
-    @IBOutlet weak var itemState: UIButton!
     @IBOutlet weak var highPriceLabel: UILabel!
     @IBOutlet weak var participantLabel: UILabel!
     @IBOutlet weak var participantsTableView: UITableView!
@@ -31,6 +30,16 @@ class BidPageTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    public func setUpData(_ cellData: ItemDetailModel) {
+        let imgBaseURL = "https://hup-bucket.s3.ap-northeast-2.amazonaws.com/"
+        
+        highPriceLabel.text = String(cellData.maximumPrice!) + "원"
+        participantLabel.text = String(cellData.participants!) + "명"
+        guard let imgUrlStr =  (cellData.fileNames?[0]) else {return}
+        if let url = URL(string: imgBaseURL + imgUrlStr) {
+            itemImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
+        }
     }
     
 }

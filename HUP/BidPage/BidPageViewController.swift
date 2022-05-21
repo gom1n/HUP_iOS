@@ -13,6 +13,13 @@ class BidPageViewController: UIViewController {
     @IBOutlet weak var editPrice: UITextField!
     @IBOutlet weak var bidButton: UIButton!
     
+    var itemId: Int?
+    var itemData: ItemDetailModel? = nil {
+        didSet {
+            bidPageTableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +33,10 @@ class BidPageViewController: UIViewController {
         
         let contentNib = UINib(nibName: "BidPageTableViewCell", bundle: nil)
         bidPageTableView.register(contentNib, forCellReuseIdentifier: "BidPageTableViewCell")
+        
+        // DATA
+        guard let itemId = self.itemId else {return}
+        ItemDetailDataManager().itemDetailDataManager(itemId, self)
     }
     
     @IBAction func backButtonTap(_ sender: UIButton) {
@@ -43,6 +54,10 @@ extension BidPageViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BidPageTableViewCell", for: indexPath) as? BidPageTableViewCell else {
             return UITableViewCell()
         }
+        // if data exists
+        if let cellData = itemData {
+            cell.setUpData(cellData)
+        }
         cell.selectionStyle = .none
         return cell
     }
@@ -55,5 +70,11 @@ extension BidPageViewController: UITableViewDelegate, UITableViewDataSource {
         }
         bidPageTableViewCell.bidPageinit()
         
+    }
+}
+extension BidPageViewController {
+    func bidPageSuccessAPI(_ result: ItemDetailModel) {
+        self.itemData = result
+        self.bidPageTableView.reloadData()
     }
 }

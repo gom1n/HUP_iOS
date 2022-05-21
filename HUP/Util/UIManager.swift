@@ -60,7 +60,7 @@ class UIManager {
         }
     }
     func showToast(message : String, font: UIFont = UIFont.systemFont(ofSize: 14.0), viewController : UIViewController) {
-        let toastLabel = UILabel(frame: CGRect(x: viewController.view.frame.size.width/2 - 75, y: viewController.view.frame.size.height-150, width: 150, height: 35))
+        let toastLabel = UILabel(frame: CGRect(x: viewController.view.frame.size.width/2 - CGFloat(Double(message.count) * 6.5), y: viewController.view.frame.size.height-150, width: CGFloat(message.count * 13), height: 35))
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = UIColor.white
         toastLabel.font = font

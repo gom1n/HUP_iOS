@@ -49,9 +49,12 @@ class ItemDetailViewController: UIViewController {
         }
     }
     @IBAction func participateButtonDidTap(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "BidPageVC")
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        guard let bidPageViewController = self.storyboard?
+                .instantiateViewController(withIdentifier: "BidPageVC")
+                as? BidPageViewController else {return}
+        bidPageViewController.itemId = self.itemId  //itemId 넘기기
+        bidPageViewController.modalPresentationStyle = .fullScreen
+        self.present(bidPageViewController, animated: true, completion: nil)
     }
     
     @IBAction func backButtonTap(_ sender: UIButton) {
