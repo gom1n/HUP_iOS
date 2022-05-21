@@ -16,6 +16,8 @@
 		231262F2282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231262F0282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift */; };
 		231262F3282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 231262F1282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib */; };
 		231C299628381FF500A919D4 /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C299528381FF500A919D4 /* UIManager.swift */; };
+		231C2999283953A300A919D4 /* BidPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C2998283953A300A919D4 /* BidPageModel.swift */; };
+		231C299B283953C400A919D4 /* BidPageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231C299A283953C400A919D4 /* BidPageDataManager.swift */; };
 		2333B63C28369C5C00304291 /* ItemListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333B63B28369C5C00304291 /* ItemListModel.swift */; };
 		2333B63E28369C6A00304291 /* ItemListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333B63D28369C6A00304291 /* ItemListDataManager.swift */; };
 		2333B6412836A6B400304291 /* BestItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333B6402836A6B400304291 /* BestItemModel.swift */; };
@@ -109,6 +111,8 @@
 		231262F0282EA6D2002D549B /* UploadPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		231262F1282EA6D2002D549B /* UploadPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		231C299528381FF500A919D4 /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
+		231C2998283953A300A919D4 /* BidPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidPageModel.swift; sourceTree = "<group>"; };
+		231C299A283953C400A919D4 /* BidPageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidPageDataManager.swift; sourceTree = "<group>"; };
 		2333B63B28369C5C00304291 /* ItemListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListModel.swift; sourceTree = "<group>"; };
 		2333B63D28369C6A00304291 /* ItemListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataManager.swift; sourceTree = "<group>"; };
 		2333B6402836A6B400304291 /* BestItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemModel.swift; sourceTree = "<group>"; };
@@ -240,6 +244,15 @@
 				231C299528381FF500A919D4 /* UIManager.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		231C29972839539400A919D4 /* BidPageDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				231C2998283953A300A919D4 /* BidPageModel.swift */,
+				231C299A283953C400A919D4 /* BidPageDataManager.swift */,
+			);
+			path = BidPageDataManager;
 			sourceTree = "<group>";
 		};
 		2333B63A28369C4600304291 /* ItemListDataManager */ = {
@@ -478,6 +491,7 @@
 		238BF674283161EA0086FC3C /* BidPage */ = {
 			isa = PBXGroup;
 			children = (
+				231C29972839539400A919D4 /* BidPageDataManager */,
 				238BF677283164C50086FC3C /* Cell */,
 				238BF675283162010086FC3C /* BidPageViewController.swift */,
 			);
@@ -824,6 +838,7 @@
 				2339B8922837B8150082D0F4 /* APIManager.swift in Sources */,
 				2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */,
 				2339AE42282B7FB5002318FB /* ItemListTableViewCell.swift in Sources */,
+				231C299B283953C400A919D4 /* BidPageDataManager.swift in Sources */,
 				23A2CAE72836D142009C0000 /* LoginDataManager.swift in Sources */,
 				23718508282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift in Sources */,
 				2333B63E28369C6A00304291 /* ItemListDataManager.swift in Sources */,
@@ -844,6 +859,7 @@
 				2389DE3028301CF10069BFD8 /* ItemDetailImageCollectionViewCell.swift in Sources */,
 				23829A8C27F749D000506560 /* SceneDelegate.swift in Sources */,
 				2339AE52282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift in Sources */,
+				231C2999283953A300A919D4 /* BidPageModel.swift in Sources */,
 				2371850C282BE64C00C2A4D7 /* BestItemTableViewCell.swift in Sources */,
 				238F4BD6282544D70060F804 /* HomeViewController.swift in Sources */,
 				23F0687B282E5EE000574FB9 /* BestItemCollectionViewCell.swift in Sources */,

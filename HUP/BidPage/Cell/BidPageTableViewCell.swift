@@ -13,6 +13,9 @@ class BidPageTableViewCell: UITableViewCell {
     @IBOutlet weak var participantLabel: UILabel!
     @IBOutlet weak var participantsTableView: UITableView!
     
+    var itemId: Int?
+    var ptData: [ParticipantData]?  
+    
     func bidPageinit() {
         participantsTableView.delegate = self
         participantsTableView.dataSource = self
@@ -20,6 +23,10 @@ class BidPageTableViewCell: UITableViewCell {
         
         let participantNib = UINib(nibName: "ParticipantsTableViewCell", bundle: nil)
         participantsTableView.register(participantNib, forCellReuseIdentifier: "ParticipantsTableViewCell")
+        
+        // DATA
+        guard let itemId = self.itemId else {return}
+        BidPageDataManager().participantDataManager(itemId, self)
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,17 +52,27 @@ class BidPageTableViewCell: UITableViewCell {
 }
 extension BidPageTableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return ptData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ParticipantsTableViewCell", for: indexPath) as? ParticipantsTableViewCell else {
             return UITableViewCell()
         }
+        let itemIdx = indexPath.item
+        if let ptArray = ptData {
+            cell.setUpData(ptArray[itemIdx])
+        }
         cell.selectionStyle = .none
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
+    }
+}
+extension BidPageTableViewCell {
+    func participantSuccessAPI(_ result: BidPageModel) {
+        self.ptData = result.data
+        self.participantsTableView.reloadData()
     }
 }

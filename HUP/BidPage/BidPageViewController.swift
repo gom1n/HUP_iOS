@@ -58,6 +58,7 @@ extension BidPageViewController: UITableViewDelegate, UITableViewDataSource {
         if let cellData = itemData {
             cell.setUpData(cellData)
         }
+        cell.itemId = self.itemId
         cell.selectionStyle = .none
         return cell
     }
@@ -69,7 +70,6 @@ extension BidPageViewController: UITableViewDelegate, UITableViewDataSource {
             return
         }
         bidPageTableViewCell.bidPageinit()
-        
     }
 }
 extension BidPageViewController {

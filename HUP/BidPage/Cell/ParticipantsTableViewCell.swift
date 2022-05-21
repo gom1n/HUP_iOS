@@ -22,5 +22,18 @@ class ParticipantsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    public func setUpData(_ ptData: ParticipantData?) {
+        print("여기는 participant tableview cell : ", ptData!)
+//        let imgBaseURL = "https://hup-bucket.s3.ap-northeast-2.amazonaws.com/"
+        
+        guard let ptName =  ptData?.userName else {return}
+        guard let ptPrice =  ptData?.suggestionPrice else {return}
+        guard let profilImg =  ptData?.picture else {return}
+        
+        participantNameLabel.text = ptName
+        bidPriceLabel.text = String(ptPrice)
+        if let url = URL(string: profilImg) {
+            profileImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
+        }
+    }
 }
