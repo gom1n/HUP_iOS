@@ -14,7 +14,7 @@ class UIManager {
 //        this.category = getCategory(category);
 //    }
 
-    func getCategory(categoryStr: String) -> String {
+    func categoryToEnum(categoryStr: String) -> String {
         var str: String = ""
         switch categoryStr {
             case "디지털 기기":

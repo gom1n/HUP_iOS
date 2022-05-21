@@ -100,7 +100,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             itemDetailViewController.modalPresentationStyle = .fullScreen
             self.present(itemDetailViewController, animated: true, completion: nil)
         } else {
-            UIManager().showToast(message: "로그인이 필요합니다.", viewController: self)
+            UIManager().showToast(message: "로그인 후 이용 가능합니다.", viewController: self)
         }
     }
 }

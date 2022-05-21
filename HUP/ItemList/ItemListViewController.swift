@@ -11,7 +11,7 @@ class ItemListViewController: UIViewController {
     @IBOutlet weak var itemListTableView: UITableView!
     
     var itemListArray : [ItemListData]?
-    var itemId: Int?
+    var cellItemId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,14 +49,30 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
         return 170
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let itemDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ItemDetailVC")
-        itemDetailVC.modalPresentationStyle = .fullScreen
-        self.present(itemDetailVC, animated: true, completion: nil)
+        if UIManager().isLogin() {
+            let index = indexPath.item
+            getItemId(index)
+            
+            guard let itemDetailViewController = self.storyboard?
+                    .instantiateViewController(withIdentifier: "ItemDetailVC")
+                    as? ItemDetailViewController else {return}
+            itemDetailViewController.itemId = self.cellItemId  //itemId
+            itemDetailViewController.modalPresentationStyle = .fullScreen
+            self.present(itemDetailViewController, animated: true, completion: nil)
+        } else {
+            UIManager().showToast(message: "로그인 후 이용 가능합니다.", viewController: self)
+        }
     }
 }
 extension ItemListViewController {
     func successAPI(_ result : ItemListModel) {
         self.itemListArray = result.data
         itemListTableView.reloadData()
+    }
+    func getItemId(_ index: Int) {
+        if let cellData = self.itemListArray {
+            // if data exists
+            cellItemId = cellData[index].id
+        }
     }
 }
