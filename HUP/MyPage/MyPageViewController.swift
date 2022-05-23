@@ -10,9 +10,10 @@ import Kingfisher
 
 class MyPageViewController: UIViewController {
     @IBOutlet weak var mypageTableView: UITableView!
-    var isLogin: Bool = false
+    var isLogin: Bool =  UserDefaults.standard.bool(forKey: "isLogin")
     @IBOutlet weak var mypageLabel: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var logoutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +28,17 @@ class MyPageViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         // 화면이 보일때마다 호출
-        isLogin = UserDefaults.standard.bool(forKey: "isLogin")
         setMyInfo()
     }
     func setMyInfo() {
+        isLogin = UserDefaults.standard.bool(forKey: "isLogin")
         if isLogin == false {
             mypageLabel.setTitle("로그인하기", for: .normal)
+            logoutButton.layer.isHidden = true
         } else {
-            mypageLabel.setTitle("login success", for: .normal)
             let userId = UserDefaults.standard.integer(forKey: "userId")
             MyPageDataManager().myInfoDataManager(userId, self)
+            logoutButton.layer.isHidden = false
         }
     }
     
@@ -47,6 +49,13 @@ class MyPageViewController: UIViewController {
         let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LoginVC")
         loginViewController.modalPresentationStyle = .fullScreen
         self.present(loginViewController, animated: true, completion: nil)
+    }
+    // MARK: Logout
+    @IBAction func logoutButtonTap(_ sender: UIButton) {
+        let aT = UserDefaults.standard.string(forKey: "accessToken")
+        let rT = UserDefaults.standard.string(forKey: "refreshToken")
+        let logoutInput = LogoutInput(accessToken: aT, refreshToken: rT)
+        LogoutDataManager().logoutDataManager(logoutInput, self)
     }
 }
 
@@ -92,5 +101,17 @@ extension MyPageViewController {
         if let url = URL(string: profileImgUrlStr) {
             profileImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "person.fill"))
         }
+    }
+    func logoutSuccessAPI(_ result : LogoutModel) {
+        UIManager().showToast(message: "로그아웃 되었습니다.", viewController: self)
+        logoutButton.layer.isHidden = true
+        resetMyInfo()
+        setMyInfo()
+    }
+    func resetMyInfo() {
+        UserDefaults.standard.set(false, forKey: "isLogin")
+        UserDefaults.standard.set("", forKey: "accessToken")
+        UserDefaults.standard.set("", forKey: "refreshToken")
+        UserDefaults.standard.set(-1, forKey: "userId")
     }
 }

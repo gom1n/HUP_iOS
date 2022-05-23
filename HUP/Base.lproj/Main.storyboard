@@ -499,11 +499,23 @@
                                 <rect key="frame" x="10" y="486" width="394" height="327"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7C-zy-pYn">
+                                <rect key="frame" x="155" y="192" width="78.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="로그아웃 " titleAlignment="center">
+                                    <imageReference key="image" image="arrow.up.forward.square" catalog="system" symbolScale="small"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutButtonTap:" destination="hsp-zi-hQi" eventType="touchUpInside" id="wmI-ua-MYG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S44-su-qPw" firstAttribute="top" secondItem="Esm-48-Kl9" secondAttribute="bottom" id="0kD-NF-ZQ8"/>
                             <constraint firstItem="IWl-Xy-P11" firstAttribute="leading" secondItem="ngc-8Z-zgU" secondAttribute="trailing" constant="30" id="2aX-BM-Oab"/>
+                            <constraint firstItem="w7C-zy-pYn" firstAttribute="leading" secondItem="hka-p4-LqI" secondAttribute="leading" id="3U0-D0-3ox"/>
                             <constraint firstAttribute="trailing" secondItem="IWl-Xy-P11" secondAttribute="trailing" constant="70" id="9DO-5n-RWD"/>
                             <constraint firstAttribute="trailing" secondItem="bZG-jQ-7dm" secondAttribute="trailing" constant="10" id="9kV-Od-qRh"/>
                             <constraint firstItem="uuK-7s-a0e" firstAttribute="leading" secondItem="ebL-4f-ElV" secondAttribute="leading" constant="30" id="EMA-34-DcC"/>
@@ -515,6 +527,7 @@
                             <constraint firstAttribute="trailing" secondItem="wpV-wm-9WP" secondAttribute="trailing" constant="10" id="Sfv-pD-4MA"/>
                             <constraint firstItem="bZG-jQ-7dm" firstAttribute="leading" secondItem="ebL-4f-ElV" secondAttribute="leading" constant="10" id="YDy-mj-8WI"/>
                             <constraint firstItem="wpV-wm-9WP" firstAttribute="top" secondItem="ngc-8Z-zgU" secondAttribute="bottom" constant="30" id="bfW-3O-C9w"/>
+                            <constraint firstItem="w7C-zy-pYn" firstAttribute="top" secondItem="hka-p4-LqI" secondAttribute="bottom" id="fWS-ca-brI"/>
                             <constraint firstItem="S44-su-qPw" firstAttribute="leading" secondItem="ebL-4f-ElV" secondAttribute="leading" id="gLO-xW-h8e"/>
                             <constraint firstItem="bZG-jQ-7dm" firstAttribute="top" secondItem="wpV-wm-9WP" secondAttribute="bottom" constant="10" id="h4p-w1-uPp"/>
                             <constraint firstItem="kRj-gW-jLc" firstAttribute="leading" secondItem="ebL-4f-ElV" secondAttribute="leading" constant="10" id="hhC-3l-Mfn"/>
@@ -529,6 +542,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="MyPage" image="person" catalog="system" id="OM3-BG-6tD"/>
                     <connections>
+                        <outlet property="logoutButton" destination="w7C-zy-pYn" id="1fc-JU-O8N"/>
                         <outlet property="mypageLabel" destination="hka-p4-LqI" id="MHJ-Em-yaA"/>
                         <outlet property="mypageTableView" destination="bZG-jQ-7dm" id="Yp7-cB-XQG"/>
                         <outlet property="profileImageView" destination="uuK-7s-a0e" id="3CW-1P-xlg"/>
@@ -1119,6 +1133,7 @@
     <color key="tintColor" name="HupColor"/>
     <resources>
         <image name="arrow.up.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrow.up.forward.square" catalog="system" width="128" height="114"/>
         <image name="camera.circle" catalog="system" width="128" height="121"/>
         <image name="cart" width="286" height="286"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
