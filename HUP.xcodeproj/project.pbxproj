@@ -25,7 +25,7 @@
 		2339AE42282B7FB5002318FB /* ItemListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE40282B7FB5002318FB /* ItemListTableViewCell.swift */; };
 		2339AE43282B7FB5002318FB /* ItemListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE41282B7FB5002318FB /* ItemListTableViewCell.xib */; };
 		2339AE45282B82E9002318FB /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE44282B82E9002318FB /* ItemListViewController.swift */; };
-		2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE47282B8CCB002318FB /* ChattingViewController.swift */; };
+		2339AE48282B8CCB002318FB /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE47282B8CCB002318FB /* ChannelViewController.swift */; };
 		2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE4A282B8D00002318FB /* ChattingRoomTableViewCell.swift */; };
 		2339AE4D282B8D00002318FB /* ChattingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2339AE4B282B8D00002318FB /* ChattingRoomTableViewCell.xib */; };
 		2339AE52282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339AE50282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift */; };
@@ -77,6 +77,14 @@
 		23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A2027F8208900C7B619 /* RegisterViewController.swift */; };
 		23F0687B282E5EE000574FB9 /* BestItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F06879282E5EE000574FB9 /* BestItemCollectionViewCell.swift */; };
 		23F0687C282E5EE000574FB9 /* BestItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F0687A282E5EE000574FB9 /* BestItemCollectionViewCell.xib */; };
+		23F2A05E283B59200052957F /* MyChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A05C283B59200052957F /* MyChatTableViewCell.swift */; };
+		23F2A05F283B59200052957F /* MyChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F2A05D283B59200052957F /* MyChatTableViewCell.xib */; };
+		23F2A062283B592F0052957F /* OtherChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A060283B592F0052957F /* OtherChatTableViewCell.swift */; };
+		23F2A063283B592F0052957F /* OtherChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F2A061283B592F0052957F /* OtherChatTableViewCell.xib */; };
+		23F2A065283B59440052957F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A064283B59440052957F /* ChatViewController.swift */; };
+		23F2A067283B5F370052957F /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A066283B5F370052957F /* PaddingLabel.swift */; };
+		23F2A06C283B647A0052957F /* ChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A06B283B647A0052957F /* ChannelModel.swift */; };
+		23F2A06E283B64840052957F /* ChannelDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A06D283B64840052957F /* ChannelDataManager.swift */; };
 		23FEAF7E282F3EDA00345CF1 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FEAF7D282F3EDA00345CF1 /* ItemDetailViewController.swift */; };
 		60543D381D92864936D8B10A /* Pods_HUP_HUPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17F4D526EB647246870D98C /* Pods_HUP_HUPUITests.framework */; };
 		C8A9D7282720355F6300A8AF /* Pods_HUP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A04A2DA7A1B415279B5A66 /* Pods_HUP.framework */; };
@@ -120,7 +128,7 @@
 		2339AE40282B7FB5002318FB /* ItemListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableViewCell.swift; sourceTree = "<group>"; };
 		2339AE41282B7FB5002318FB /* ItemListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemListTableViewCell.xib; sourceTree = "<group>"; };
 		2339AE44282B82E9002318FB /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
-		2339AE47282B8CCB002318FB /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
+		2339AE47282B8CCB002318FB /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		2339AE4A282B8D00002318FB /* ChattingRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomTableViewCell.swift; sourceTree = "<group>"; };
 		2339AE4B282B8D00002318FB /* ChattingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChattingRoomTableViewCell.xib; sourceTree = "<group>"; };
 		2339AE50282B9456002318FB /* ChattingRoomAdverImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingRoomAdverImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -176,6 +184,14 @@
 		23AD5A2027F8208900C7B619 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		23F06879282E5EE000574FB9 /* BestItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		23F0687A282E5EE000574FB9 /* BestItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		23F2A05C283B59200052957F /* MyChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatTableViewCell.swift; sourceTree = "<group>"; };
+		23F2A05D283B59200052957F /* MyChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyChatTableViewCell.xib; sourceTree = "<group>"; };
+		23F2A060283B592F0052957F /* OtherChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherChatTableViewCell.swift; sourceTree = "<group>"; };
+		23F2A061283B592F0052957F /* OtherChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherChatTableViewCell.xib; sourceTree = "<group>"; };
+		23F2A064283B59440052957F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		23F2A066283B5F370052957F /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		23F2A06B283B647A0052957F /* ChannelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelModel.swift; sourceTree = "<group>"; };
+		23F2A06D283B64840052957F /* ChannelDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDataManager.swift; sourceTree = "<group>"; };
 		23FEAF7D282F3EDA00345CF1 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		51D795D76D3BF68720B23223 /* Pods-HUP-HUPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUP-HUPUITests.debug.xcconfig"; path = "Target Support Files/Pods-HUP-HUPUITests/Pods-HUP-HUPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A44E93BEA8536DEDE836A430 /* Pods-HUPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUPTests.debug.xcconfig"; path = "Target Support Files/Pods-HUPTests/Pods-HUPTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -295,8 +311,8 @@
 		2339AE46282B8CBC002318FB /* Chatting */ = {
 			isa = PBXGroup;
 			children = (
-				2339AE49282B8CCF002318FB /* Cell */,
-				2339AE47282B8CCB002318FB /* ChattingViewController.swift */,
+				23F2A069283B64400052957F /* Channel */,
+				23F2A05A283B580E0052957F /* ChatMessage */,
 			);
 			path = Chatting;
 			sourceTree = "<group>";
@@ -378,6 +394,7 @@
 			children = (
 				233A7008282A817A000CB6C8 /* UIView+Extension.swift */,
 				231262E0282E9C93002D549B /* CustomTabBarController.swift */,
+				23F2A066283B5F370052957F /* PaddingLabel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -526,6 +543,45 @@
 				23A2CAE42836D127009C0000 /* GoogleLoginModel.swift */,
 			);
 			path = GoogleLoginDataManager;
+			sourceTree = "<group>";
+		};
+		23F2A05A283B580E0052957F /* ChatMessage */ = {
+			isa = PBXGroup;
+			children = (
+				23F2A05B283B58320052957F /* Cell */,
+				23F2A064283B59440052957F /* ChatViewController.swift */,
+			);
+			path = ChatMessage;
+			sourceTree = "<group>";
+		};
+		23F2A05B283B58320052957F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				23F2A05C283B59200052957F /* MyChatTableViewCell.swift */,
+				23F2A05D283B59200052957F /* MyChatTableViewCell.xib */,
+				23F2A060283B592F0052957F /* OtherChatTableViewCell.swift */,
+				23F2A061283B592F0052957F /* OtherChatTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		23F2A069283B64400052957F /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				23F2A06A283B64660052957F /* ChannelDataManager */,
+				2339AE49282B8CCF002318FB /* Cell */,
+				2339AE47282B8CCB002318FB /* ChannelViewController.swift */,
+			);
+			path = Channel;
+			sourceTree = "<group>";
+		};
+		23F2A06A283B64660052957F /* ChannelDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				23F2A06B283B647A0052957F /* ChannelModel.swift */,
+				23F2A06D283B64840052957F /* ChannelDataManager.swift */,
+			);
+			path = ChannelDataManager;
 			sourceTree = "<group>";
 		};
 		23FEAF7C282F3EC400345CF1 /* ItemDetail */ = {
@@ -683,9 +739,11 @@
 				238BF6832831660A0086FC3C /* BidPageTableViewCell.xib in Resources */,
 				23829A9127F749D000506560 /* Main.storyboard in Resources */,
 				231262EE282EA1F0002D549B /* UploadContentTableViewCell.xib in Resources */,
+				23F2A05F283B59200052957F /* MyChatTableViewCell.xib in Resources */,
 				238BF687283168EF0086FC3C /* ParticipantsTableViewCell.xib in Resources */,
 				23F0687C282E5EE000574FB9 /* BestItemCollectionViewCell.xib in Resources */,
 				233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */,
+				23F2A063283B592F0052957F /* OtherChatTableViewCell.xib in Resources */,
 				2339AE4D282B8D00002318FB /* ChattingRoomTableViewCell.xib in Resources */,
 				2339AE53282B9456002318FB /* ChattingRoomAdverImageTableViewCell.xib in Resources */,
 				231262EA282EA1E3002D549B /* UploadPhotoTableViewCell.xib in Resources */,
@@ -818,14 +876,16 @@
 			files = (
 				2339B86E283788010082D0F4 /* AppLoginInput.swift in Sources */,
 				23A2CAE32836D11E009C0000 /* GoogleLoginInput.swift in Sources */,
+				23F2A062283B592F0052957F /* OtherChatTableViewCell.swift in Sources */,
 				23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */,
-				2339AE48282B8CCB002318FB /* ChattingViewController.swift in Sources */,
+				2339AE48282B8CCB002318FB /* ChannelViewController.swift in Sources */,
 				2333B6432836A6C000304291 /* BestItemDataManager.swift in Sources */,
 				2339B8982837BA1E0082D0F4 /* ItemDetailDataManager.swift in Sources */,
 				238BF686283168EF0086FC3C /* ParticipantsTableViewCell.swift in Sources */,
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
 				2333B63C28369C5C00304291 /* ItemListModel.swift in Sources */,
 				2389DE2828301CD20069BFD8 /* ItemDetailContentTableViewCell.swift in Sources */,
+				23F2A067283B5F370052957F /* PaddingLabel.swift in Sources */,
 				23A2CAE52836D127009C0000 /* GoogleLoginModel.swift in Sources */,
 				23FEAF7E282F3EDA00345CF1 /* ItemDetailViewController.swift in Sources */,
 				231262E1282E9C93002D549B /* CustomTabBarController.swift in Sources */,
@@ -839,6 +899,7 @@
 				2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */,
 				2339AE42282B7FB5002318FB /* ItemListTableViewCell.swift in Sources */,
 				231C299B283953C400A919D4 /* BidPageDataManager.swift in Sources */,
+				23F2A06C283B647A0052957F /* ChannelModel.swift in Sources */,
 				23A2CAE72836D142009C0000 /* LoginDataManager.swift in Sources */,
 				23718508282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift in Sources */,
 				2333B63E28369C6A00304291 /* ItemListDataManager.swift in Sources */,
@@ -846,15 +907,18 @@
 				2339B88528379A030082D0F4 /* MyInfoModel.swift in Sources */,
 				233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */,
 				2339B870283788100082D0F4 /* AppLoginModel.swift in Sources */,
+				23F2A065283B59440052957F /* ChatViewController.swift in Sources */,
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
 				2339B88728379A250082D0F4 /* MyPageDataManager.swift in Sources */,
 				231C299628381FF500A919D4 /* UIManager.swift in Sources */,
 				231262E9282EA1E3002D549B /* UploadPhotoTableViewCell.swift in Sources */,
+				23F2A06E283B64840052957F /* ChannelDataManager.swift in Sources */,
 				2339B8962837BA150082D0F4 /* ItemDetailModel.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,
 				231262DF282E9B9B002D549B /* UploadViewController.swift in Sources */,
 				238BF676283162010086FC3C /* BidPageViewController.swift in Sources */,
 				2339AE5B282B9770002318FB /* MyPageTableViewCell.swift in Sources */,
+				23F2A05E283B59200052957F /* MyChatTableViewCell.swift in Sources */,
 				2339AE57282B970B002318FB /* MyPageViewController.swift in Sources */,
 				2389DE3028301CF10069BFD8 /* ItemDetailImageCollectionViewCell.swift in Sources */,
 				23829A8C27F749D000506560 /* SceneDelegate.swift in Sources */,

@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ChattingViewController: UIViewController {
+class ChannelViewController: UIViewController {
     @IBOutlet weak var chattingRoomTableView: UITableView!
+    
+    var channelArray: [ChannelModel]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +22,15 @@ class ChattingViewController: UIViewController {
         chattingRoomTableView.register(chatRoomNib, forCellReuseIdentifier: "ChattingRoomTableViewCell")
         let chatRoomAdverNib = UINib(nibName: "ChattingRoomAdverImageTableViewCell", bundle: nil)
         chattingRoomTableView.register(chatRoomAdverNib, forCellReuseIdentifier: "ChattingRoomAdverImageTableViewCell")
+        
+        //DATA
+        ChannelDataManager().channelDataManager(self)
     }
 }
 
-extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
+extension ChannelViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return channelArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,11 +39,15 @@ extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChattingRoomAdverImageTableViewCell", for: indexPath) as? ChattingRoomAdverImageTableViewCell else {
                 return UITableViewCell()
             }
-            
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChattingRoomTableViewCell", for: indexPath) as? ChattingRoomTableViewCell else {
                 return UITableViewCell()
+            }
+            let itemIdx = indexPath.item
+            if let cellData = self.channelArray {
+                // if data exists
+                cell.setUpData(cellData[itemIdx])
             }
             return cell
         }
@@ -53,5 +62,10 @@ extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
 //            return
 //        }
 //        tableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
+    }
+}
+extension ChannelViewController {
+    func channelSuccessAPI(_ result: [ChannelModel]) {
+        self.channelArray = result
     }
 }
