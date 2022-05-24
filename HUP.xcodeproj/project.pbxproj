@@ -44,6 +44,9 @@
 		233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */; };
 		233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7008282A817A000CB6C8 /* UIView+Extension.swift */; };
 		234E3375283D0F0C00771B41 /* GetTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E3374283D0F0C00771B41 /* GetTime.swift */; };
+		234F7150283D216F0038C3F2 /* RegisterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F714F283D216F0038C3F2 /* RegisterInput.swift */; };
+		234F7152283D21790038C3F2 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F7151283D21790038C3F2 /* RegisterModel.swift */; };
+		234F7154283D21840038C3F2 /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F7153283D21840038C3F2 /* RegisterDataManager.swift */; };
 		23596FEB28355D8700CF4BEF /* AuctionNowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23596FEA28355D8700CF4BEF /* AuctionNowModel.swift */; };
 		23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23596FEC28355D9600CF4BEF /* AuctionNowDataManager.swift */; };
 		23718508282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23718506282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift */; };
@@ -151,6 +154,9 @@
 		233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionNowCollectionViewCell.xib; sourceTree = "<group>"; };
 		233A7008282A817A000CB6C8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		234E3374283D0F0C00771B41 /* GetTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTime.swift; sourceTree = "<group>"; };
+		234F714F283D216F0038C3F2 /* RegisterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInput.swift; sourceTree = "<group>"; };
+		234F7151283D21790038C3F2 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		234F7153283D21840038C3F2 /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
 		23596FEA28355D8700CF4BEF /* AuctionNowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowModel.swift; sourceTree = "<group>"; };
 		23596FEC28355D9600CF4BEF /* AuctionNowDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowDataManager.swift; sourceTree = "<group>"; };
 		23718506282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowTableViewCell.swift; sourceTree = "<group>"; };
@@ -408,9 +414,29 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		234E3376283D1F4500771B41 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				234F714E283D21610038C3F2 /* RegisterDataManager */,
+				23AD5A2027F8208900C7B619 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		234F714E283D21610038C3F2 /* RegisterDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				234F714F283D216F0038C3F2 /* RegisterInput.swift */,
+				234F7151283D21790038C3F2 /* RegisterModel.swift */,
+				234F7153283D21840038C3F2 /* RegisterDataManager.swift */,
+			);
+			path = RegisterDataManager;
+			sourceTree = "<group>";
+		};
 		23596FE5283555B100CF4BEF /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				234E3376283D1F4500771B41 /* Register */,
 				23F2A079283B6FC90052957F /* Logout */,
 				23F2A078283B6FB90052957F /* Login */,
 			);
@@ -605,7 +631,6 @@
 			children = (
 				2339B86C283787F40082D0F4 /* AppLogin */,
 				23A2CADF2836D0DD009C0000 /* GoogleLoginDataManager */,
-				23AD5A2027F8208900C7B619 /* RegisterViewController.swift */,
 				23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */,
 				23A2CAE62836D142009C0000 /* LoginDataManager.swift */,
 			);
@@ -913,9 +938,11 @@
 				2339B86E283788010082D0F4 /* AppLoginInput.swift in Sources */,
 				23A2CAE32836D11E009C0000 /* GoogleLoginInput.swift in Sources */,
 				23F2A062283B592F0052957F /* OtherChatTableViewCell.swift in Sources */,
+				234F7150283D216F0038C3F2 /* RegisterInput.swift in Sources */,
 				23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */,
 				2339AE48282B8CCB002318FB /* ChannelViewController.swift in Sources */,
 				2333B6432836A6C000304291 /* BestItemDataManager.swift in Sources */,
+				234F7152283D21790038C3F2 /* RegisterModel.swift in Sources */,
 				2339B8982837BA1E0082D0F4 /* ItemDetailDataManager.swift in Sources */,
 				238BF686283168EF0086FC3C /* ParticipantsTableViewCell.swift in Sources */,
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
@@ -942,6 +969,7 @@
 				2333B63E28369C6A00304291 /* ItemListDataManager.swift in Sources */,
 				2339AE45282B82E9002318FB /* ItemListViewController.swift in Sources */,
 				23F2A071283B6B790052957F /* LogoutInput.swift in Sources */,
+				234F7154283D21840038C3F2 /* RegisterDataManager.swift in Sources */,
 				2339B88528379A030082D0F4 /* MyInfoModel.swift in Sources */,
 				233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */,
 				2339B870283788100082D0F4 /* AppLoginModel.swift in Sources */,
