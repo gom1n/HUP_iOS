@@ -43,6 +43,7 @@
 		233A7005282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */; };
 		233A7006282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */; };
 		233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A7008282A817A000CB6C8 /* UIView+Extension.swift */; };
+		234E3375283D0F0C00771B41 /* GetTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E3374283D0F0C00771B41 /* GetTime.swift */; };
 		23596FEB28355D8700CF4BEF /* AuctionNowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23596FEA28355D8700CF4BEF /* AuctionNowModel.swift */; };
 		23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23596FEC28355D9600CF4BEF /* AuctionNowDataManager.swift */; };
 		23718508282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23718506282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift */; };
@@ -149,6 +150,7 @@
 		233A7003282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowCollectionViewCell.swift; sourceTree = "<group>"; };
 		233A7004282A7D6B000CB6C8 /* AuctionNowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuctionNowCollectionViewCell.xib; sourceTree = "<group>"; };
 		233A7008282A817A000CB6C8 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		234E3374283D0F0C00771B41 /* GetTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTime.swift; sourceTree = "<group>"; };
 		23596FEA28355D8700CF4BEF /* AuctionNowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowModel.swift; sourceTree = "<group>"; };
 		23596FEC28355D9600CF4BEF /* AuctionNowDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowDataManager.swift; sourceTree = "<group>"; };
 		23718506282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowTableViewCell.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				2339B8912837B8150082D0F4 /* APIManager.swift */,
 				231C299528381FF500A919D4 /* UIManager.swift */,
+				234E3374283D0F0C00771B41 /* GetTime.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -408,12 +411,8 @@
 		23596FE5283555B100CF4BEF /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				23F2A06F283B6B690052957F /* LogoutDataManager */,
-				2339B86C283787F40082D0F4 /* AppLogin */,
-				23A2CADF2836D0DD009C0000 /* GoogleLoginDataManager */,
-				23AD5A2027F8208900C7B619 /* RegisterViewController.swift */,
-				23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */,
-				23A2CAE62836D142009C0000 /* LoginDataManager.swift */,
+				23F2A079283B6FC90052957F /* Logout */,
+				23F2A078283B6FB90052957F /* Login */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -599,6 +598,26 @@
 				23F2A076283B6B9F0052957F /* LogoutDataManager.swift */,
 			);
 			path = LogoutDataManager;
+			sourceTree = "<group>";
+		};
+		23F2A078283B6FB90052957F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2339B86C283787F40082D0F4 /* AppLogin */,
+				23A2CADF2836D0DD009C0000 /* GoogleLoginDataManager */,
+				23AD5A2027F8208900C7B619 /* RegisterViewController.swift */,
+				23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */,
+				23A2CAE62836D142009C0000 /* LoginDataManager.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		23F2A079283B6FC90052957F /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				23F2A06F283B6B690052957F /* LogoutDataManager */,
+			);
+			path = Logout;
 			sourceTree = "<group>";
 		};
 		23FEAF7C282F3EC400345CF1 /* ItemDetail */ = {
@@ -932,6 +951,7 @@
 				2339B88728379A250082D0F4 /* MyPageDataManager.swift in Sources */,
 				231C299628381FF500A919D4 /* UIManager.swift in Sources */,
 				231262E9282EA1E3002D549B /* UploadPhotoTableViewCell.swift in Sources */,
+				234E3375283D0F0C00771B41 /* GetTime.swift in Sources */,
 				23F2A06E283B64840052957F /* ChannelDataManager.swift in Sources */,
 				2339B8962837BA150082D0F4 /* ItemDetailModel.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,

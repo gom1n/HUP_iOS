@@ -9,6 +9,7 @@ import UIKit
 
 class ItemDetailImageTableViewCell: UITableViewCell {
     @IBOutlet weak var itemDetailImageCollectionView: UICollectionView!
+    @IBOutlet weak var leftTimeLabel: UILabel!
     var itemImgArray: [String]?
     
     func setCollectionViewDataSourceDelegate(forRow row: Int) {

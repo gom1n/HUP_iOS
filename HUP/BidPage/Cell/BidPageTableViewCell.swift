@@ -12,6 +12,7 @@ class BidPageTableViewCell: UITableViewCell {
     @IBOutlet weak var highPriceLabel: UILabel!
     @IBOutlet weak var participantLabel: UILabel!
     @IBOutlet weak var participantsTableView: UITableView!
+    @IBOutlet weak var leftTimeLabel: PaddingLabel!
     
     var itemId: Int?
     var ptData: [ParticipantData]?  
@@ -41,6 +42,10 @@ class BidPageTableViewCell: UITableViewCell {
     public func setUpData(_ cellData: ItemDetailModel) {
         let imgBaseURL = "https://hup-bucket.s3.ap-northeast-2.amazonaws.com/"
         
+        // left time set
+        let endTime = cellData.auctionClosingDate!
+        let timeDif = GetTime().getTimeDif(Date(), endTime)
+        leftTimeLabel.text = timeDif
         highPriceLabel.text = String(cellData.maximumPrice!) + "원"
         participantLabel.text = String(cellData.participants!) + "명"
         guard let imgUrlStr =  (cellData.fileNames?[0]) else {return}

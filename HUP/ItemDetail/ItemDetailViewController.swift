@@ -74,6 +74,11 @@ extension ItemDetailViewController: UITableViewDelegate, UITableViewDataSource {
             // if data exists
             if let cellData = itemDetailData {
                 cell.itemImgArray = cellData.fileNames
+                
+                // left time set
+                let endTime = cellData.auctionClosingDate!
+                let timeDif = GetTime().getTimeDif(Date(), endTime)
+                cell.leftTimeLabel.text = timeDif
             }
             cell.selectionStyle = .none
             return cell

@@ -104,7 +104,6 @@ extension MyPageViewController {
     }
     func logoutSuccessAPI(_ result : LogoutModel) {
         UIManager().showToast(message: "로그아웃 되었습니다.", viewController: self)
-        logoutButton.layer.isHidden = true
         resetMyInfo()
         setMyInfo()
     }

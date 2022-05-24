@@ -44,7 +44,10 @@ class ItemListTableViewCell: UITableViewCell {
             itemPriceLabel.text = String(maximumPrice)
         }
         
-//        getTime(startTime, endTime)
+        // left time set
+        let endTime = cellData.auctionClosingDate!
+        let timeDif = GetTime().getTimeDif(Date(), endTime)
+        leftTimeLabel.text = timeDif
         
         itemNameLabel.text = itemName
         heartCountLabel.text = String(heartCount)
@@ -52,14 +55,5 @@ class ItemListTableViewCell: UITableViewCell {
         if let url = URL(string: imgBaseURL + imgUrlStr) {
             itemImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
         }
-    }
-    public func getTime(_ start: String, _ end: String) {
-        let format = DateFormatter()
-        format.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        guard let startTime = format.date(from: start) else {return }
-        guard let endTime = format.date(from: end) else {return }
-        
-        let timeLeft = Int(endTime.timeIntervalSince(startTime))
-        leftTimeLabel.text = String(timeLeft)
     }
 }

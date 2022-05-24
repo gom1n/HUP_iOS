@@ -68,8 +68,8 @@
                             <constraint firstAttribute="width" constant="60" id="wal-5M-sfd"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⏰00시간 00분 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bob-R5-pNE">
-                        <rect key="frame" x="15" y="268" width="104" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⏰00시간 00분 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bob-R5-pNE" customClass="PaddingLabel" customModule="HUP" customModuleProvider="target">
+                        <rect key="frame" x="15" y="258" width="118" height="26"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
@@ -77,6 +77,18 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                <real key="value" value="7"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
@@ -112,12 +124,18 @@
             <connections>
                 <outlet property="highPriceLabel" destination="1rF-dX-15l" id="NdT-RN-0h0"/>
                 <outlet property="itemImageView" destination="Wzd-lh-rRv" id="lce-2S-ffR"/>
+                <outlet property="leftTimeLabel" destination="Bob-R5-pNE" id="SUk-Qt-3Fc"/>
                 <outlet property="participantLabel" destination="Ccr-Ul-8pV" id="WQE-6W-oHo"/>
                 <outlet property="participantsTableView" destination="bQv-eA-CnY" id="cvL-fl-9B2"/>
             </connections>
             <point key="canvasLocation" x="150.72463768115944" y="304.6875"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="Bob-R5-pNE">
+            <size key="intrinsicContentSize" width="118" height="26"/>
+        </designable>
+    </designables>
     <resources>
         <image name="highprice" width="205" height="81"/>
         <image name="ongoing" width="180" height="180"/>
