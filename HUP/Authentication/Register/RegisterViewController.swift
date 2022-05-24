@@ -21,6 +21,8 @@ class RegisterViewController: UIViewController {
     }
     // MARK: - Actions
     @IBAction func idCheckButtonTap(_ sender: Any) {
+        let loginId = idTextField.text!
+        RegisterDataManager().idCheckDataManager(loginId, self)
     }
     // MARK: 회원가입 버튼 클릭
     @IBAction func registerButtonTap(_ sender: UIButton) {
@@ -69,6 +71,15 @@ class RegisterViewController: UIViewController {
     }
 }
 extension RegisterViewController {
+    func idCheckSuccessAPI(_ result: IdCheckModel) {
+        UIManager().showToast(message: result.message!, viewController: self)
+        let message = result.message!
+        if message == "사용가능한 이메일입니다." {
+            self.isIdChecked = true
+        } else {
+            self.isIdChecked = false
+        }
+    }
     func registerSuccessAPI(_ result: RegisterModel) {
         UIManager().showToast(message: result.message!, viewController: self)
         let userId = result.userId!

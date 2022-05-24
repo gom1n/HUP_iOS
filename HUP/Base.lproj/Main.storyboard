@@ -980,7 +980,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="idCheckButtonTap:" destination="a6w-rq-YoA" eventType="touchUpInside" id="ZId-hV-9J7"/>
+                                    <action selector="idCheckButtonTap:" destination="a6w-rq-YoA" eventType="touchUpInside" id="geY-nl-gvB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vde-Gc-85R">

@@ -47,6 +47,7 @@
 		234F7150283D216F0038C3F2 /* RegisterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F714F283D216F0038C3F2 /* RegisterInput.swift */; };
 		234F7152283D21790038C3F2 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F7151283D21790038C3F2 /* RegisterModel.swift */; };
 		234F7154283D21840038C3F2 /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F7153283D21840038C3F2 /* RegisterDataManager.swift */; };
+		234F7156283D2BCD0038C3F2 /* IdCheckModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F7155283D2BCD0038C3F2 /* IdCheckModel.swift */; };
 		23596FEB28355D8700CF4BEF /* AuctionNowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23596FEA28355D8700CF4BEF /* AuctionNowModel.swift */; };
 		23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23596FEC28355D9600CF4BEF /* AuctionNowDataManager.swift */; };
 		23718508282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23718506282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift */; };
@@ -157,6 +158,7 @@
 		234F714F283D216F0038C3F2 /* RegisterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInput.swift; sourceTree = "<group>"; };
 		234F7151283D21790038C3F2 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		234F7153283D21840038C3F2 /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
+		234F7155283D2BCD0038C3F2 /* IdCheckModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdCheckModel.swift; sourceTree = "<group>"; };
 		23596FEA28355D8700CF4BEF /* AuctionNowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowModel.swift; sourceTree = "<group>"; };
 		23596FEC28355D9600CF4BEF /* AuctionNowDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowDataManager.swift; sourceTree = "<group>"; };
 		23718506282BE47B00C2A4D7 /* AuctionNowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionNowTableViewCell.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				234F714F283D216F0038C3F2 /* RegisterInput.swift */,
 				234F7151283D21790038C3F2 /* RegisterModel.swift */,
 				234F7153283D21840038C3F2 /* RegisterDataManager.swift */,
+				234F7155283D2BCD0038C3F2 /* IdCheckModel.swift */,
 			);
 			path = RegisterDataManager;
 			sourceTree = "<group>";
@@ -973,6 +976,7 @@
 				2339B88528379A030082D0F4 /* MyInfoModel.swift in Sources */,
 				233A7009282A817A000CB6C8 /* UIView+Extension.swift in Sources */,
 				2339B870283788100082D0F4 /* AppLoginModel.swift in Sources */,
+				234F7156283D2BCD0038C3F2 /* IdCheckModel.swift in Sources */,
 				23F2A065283B59440052957F /* ChatViewController.swift in Sources */,
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
 				23F2A077283B6B9F0052957F /* LogoutDataManager.swift in Sources */,

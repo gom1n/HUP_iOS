@@ -19,8 +19,23 @@ class RegisterDataManager {
                 
             switch response.result {
             case .success(let result):
-                print("register success", result)
                 viewController.registerSuccessAPI(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    func idCheckDataManager(_ loginId: String, _ viewController : RegisterViewController) {
+        AF.request("http://www.hurryuphup.me/api/v1/users/check/\(loginId)",
+                   method: .get,
+                   parameters: nil,
+                   headers: nil)
+            .validate()
+            .responseDecodable(of: IdCheckModel.self) { response in
+                
+            switch response.result {
+            case .success(let result):
+                viewController.idCheckSuccessAPI(result)
             case .failure(let error):
                 print(error.localizedDescription)
             }
