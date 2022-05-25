@@ -75,6 +75,7 @@
 		238BF686283168EF0086FC3C /* ParticipantsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238BF684283168EF0086FC3C /* ParticipantsTableViewCell.swift */; };
 		238BF687283168EF0086FC3C /* ParticipantsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238BF685283168EF0086FC3C /* ParticipantsTableViewCell.xib */; };
 		238F4BD6282544D70060F804 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238F4BD5282544D70060F804 /* HomeViewController.swift */; };
+		239985D6283E5AFB00EC8DBC /* DeleteItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239985D5283E5AFB00EC8DBC /* DeleteItemModel.swift */; };
 		23A2CAE32836D11E009C0000 /* GoogleLoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2CAE22836D11E009C0000 /* GoogleLoginInput.swift */; };
 		23A2CAE52836D127009C0000 /* GoogleLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2CAE42836D127009C0000 /* GoogleLoginModel.swift */; };
 		23A2CAE72836D142009C0000 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2CAE62836D142009C0000 /* LoginDataManager.swift */; };
@@ -190,6 +191,7 @@
 		238BF684283168EF0086FC3C /* ParticipantsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsTableViewCell.swift; sourceTree = "<group>"; };
 		238BF685283168EF0086FC3C /* ParticipantsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantsTableViewCell.xib; sourceTree = "<group>"; };
 		238F4BD5282544D70060F804 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		239985D5283E5AFB00EC8DBC /* DeleteItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteItemModel.swift; sourceTree = "<group>"; };
 		23A2CAE22836D11E009C0000 /* GoogleLoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginInput.swift; sourceTree = "<group>"; };
 		23A2CAE42836D127009C0000 /* GoogleLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginModel.swift; sourceTree = "<group>"; };
 		23A2CAE62836D142009C0000 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				2339B8952837BA150082D0F4 /* ItemDetailModel.swift */,
+				239985D5283E5AFB00EC8DBC /* DeleteItemModel.swift */,
 				2339B8972837BA1E0082D0F4 /* ItemDetailDataManager.swift */,
 			);
 			path = ItemDetailDataManager;
@@ -941,6 +944,7 @@
 				2339B86E283788010082D0F4 /* AppLoginInput.swift in Sources */,
 				23A2CAE32836D11E009C0000 /* GoogleLoginInput.swift in Sources */,
 				23F2A062283B592F0052957F /* OtherChatTableViewCell.swift in Sources */,
+				239985D6283E5AFB00EC8DBC /* DeleteItemModel.swift in Sources */,
 				234F7150283D216F0038C3F2 /* RegisterInput.swift in Sources */,
 				23596FED28355D9600CF4BEF /* AuctionNowDataManager.swift in Sources */,
 				2339AE48282B8CCB002318FB /* ChannelViewController.swift in Sources */,

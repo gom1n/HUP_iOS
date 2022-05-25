@@ -58,7 +58,26 @@ class ItemDetailDataManager {
             case .success(let result):
                 viewController.sellerInfoSuccessAPI(result)
             case .failure(let error):
-                print("myinfo fail")
+                print("sellerInfo fail")
+                print(error.localizedDescription)
+            }
+        }
+    }
+    // MARK: delete item
+    func deleteItemDataManager(_ itemId: Int, _ viewController : ItemDetailContentTableViewCell) {
+        AF.request("http://www.hurryuphup.me/api/v1/items/\(itemId)",
+                   method: .delete,
+                   parameters: nil,
+                   headers: headers)
+            .validate()
+            .responseDecodable(of: DeleteItemModel.self) { response in
+                
+            switch response.result {
+            case .success(let result):
+                print("delete success", result)
+                viewController.deleteItemSuccessAPI(result)
+            case .failure(let error):
+                print("delete item fail")
                 print(error.localizedDescription)
             }
         }

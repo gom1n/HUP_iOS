@@ -89,6 +89,7 @@ extension ItemDetailViewController: UITableViewDelegate, UITableViewDataSource {
             // if data exists
             if let cellData = itemDetailData {
                 cell.setUpData(cellData)
+                cell.itemId = self.itemId
             }
             cell.selectionStyle = .none
             return cell

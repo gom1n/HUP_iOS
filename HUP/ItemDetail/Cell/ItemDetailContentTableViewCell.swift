@@ -8,7 +8,7 @@
 import UIKit
 
 class ItemDetailContentTableViewCell: UITableViewCell {
-    var itemId: Int?
+
     @IBOutlet weak var sellerProfileImageView: UIImageView!
     @IBOutlet weak var sellerNameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -18,6 +18,7 @@ class ItemDetailContentTableViewCell: UITableViewCell {
     @IBOutlet weak var itemContentLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     
+    var itemId: Int?
     var sellerName: String?
     var sellerProfilImg: String?
     let imgBaseURL = "https://hup-bucket.s3.ap-northeast-2.amazonaws.com/"
@@ -44,14 +45,14 @@ class ItemDetailContentTableViewCell: UITableViewCell {
         ItemDetailDataManager().getSellerInfoDataManager(sellerId, self)
         
         if sellerId == self.myUserId {
-            deleteButton.isHidden = true
-        } else {
             deleteButton.isHidden = false
+        } else {
+            deleteButton.isHidden = true
         }
     }
     // MARK: item delete method
     @IBAction func deleteButtonTap(_ sender: UIButton) {
-        
+        ItemDetailDataManager().deleteItemDataManager(itemId!, self)
     }
 }
 extension ItemDetailContentTableViewCell {
@@ -66,7 +67,10 @@ extension ItemDetailContentTableViewCell {
         }
         guard let imgUrlStr =  self.sellerProfilImg else {return}
         if let url = URL(string: imgBaseURL + imgUrlStr) {
-            sellerProfileImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
+            sellerProfileImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "person"))
         }
+    }
+    func deleteItemSuccessAPI(_ result: DeleteItemModel) {
+        let msg = result.message
     }
 }

@@ -70,7 +70,8 @@ class UIManager {
         toastLabel.layer.cornerRadius = 10;
         toastLabel.clipsToBounds = true
         viewController.view.addSubview(toastLabel)
-        UIView.animate(withDuration: 3.0, delay: 0.1, options: .curveEaseOut, animations: { toastLabel.alpha = 0.0 }, completion: {(isCompleted) in toastLabel.removeFromSuperview() }) }
+        UIView.animate(withDuration: 3.0, delay: 0.1, options: .curveEaseOut, animations: { toastLabel.alpha = 0.0 }, completion: {(isCompleted) in toastLabel.removeFromSuperview() })
+    }
 }
 //    eDigital("디지털 기기"),
 //    eHouseHoldAppliance("생활가전"),
