@@ -8,11 +8,8 @@ import Alamofire
 import Kingfisher
 
 class MyPageDataManager {
-    // 1)
-    let token = UserDefaults.standard.string(forKey: "accessToken") ?? ""
-    
+    let headers: HTTPHeaders = APIManager().getHeader()
     func myInfoDataManager(_ userId : Int, _ viewController : MyPageViewController) {
-        let headers: HTTPHeaders = APIManager().getHeader()
         AF.request("http://www.hurryuphup.me/api/v1/users/\(userId)",
                    method: .get,
                    parameters: nil,

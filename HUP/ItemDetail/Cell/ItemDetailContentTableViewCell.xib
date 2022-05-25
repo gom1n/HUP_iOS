@@ -136,6 +136,7 @@
             <viewLayoutGuide key="safeArea" id="QSr-Kb-JFV"/>
             <connections>
                 <outlet property="categoryLabel" destination="M37-Nb-zTb" id="CbD-XZ-zMN"/>
+                <outlet property="deleteButton" destination="rnV-32-RLA" id="ACn-Rg-K8c"/>
                 <outlet property="highPriceLabel" destination="oPx-6U-a8F" id="cFR-QM-gQD"/>
                 <outlet property="itemContentLabel" destination="fFc-Z8-nSA" id="Yk4-6b-Ar4"/>
                 <outlet property="itemNameLabel" destination="xpb-Ry-LPj" id="YgG-3h-D5p"/>

@@ -16,6 +16,12 @@ class ItemDetailContentTableViewCell: UITableViewCell {
     @IBOutlet weak var highPriceLabel: UILabel!
     @IBOutlet weak var participantLabel: UILabel!
     @IBOutlet weak var itemContentLabel: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    var sellerName: String?
+    var sellerProfilImg: String?
+    let imgBaseURL = "https://hup-bucket.s3.ap-northeast-2.amazonaws.com/"
+    let myUserId = UserDefaults.standard.integer(forKey: "userId")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,19 +34,39 @@ class ItemDetailContentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     public func setUpData(_ cellData: ItemDetailModel) {
-        let imgBaseURL = "https://hup-bucket.s3.ap-northeast-2.amazonaws.com/"
-        
         categoryLabel.text = cellData.category!
         itemNameLabel.text = cellData.itemName!
         itemContentLabel.text = cellData.description!
         highPriceLabel.text = String(cellData.maximumPrice!) + "원"
         participantLabel.text = String(cellData.participants!) + "명"
         
-//        guard let imgUrlStr =  (cellData.fileNames?[0]) else {return}
-//        if let url = URL(string: imgBaseURL + imgUrlStr) {
-//            imageViewHomeAuctionItem.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
-//        }
+        guard let sellerId = cellData.userId else {return}
+        ItemDetailDataManager().getSellerInfoDataManager(sellerId, self)
+        
+        if sellerId == self.myUserId {
+            deleteButton.isHidden = true
+        } else {
+            deleteButton.isHidden = false
+        }
     }
+    // MARK: item delete method
     @IBAction func deleteButtonTap(_ sender: UIButton) {
+        
+    }
+}
+extension ItemDetailContentTableViewCell {
+    func sellerInfoSuccessAPI(_ result: MyInfoModel) {
+        self.sellerName = result.username
+        self.sellerProfilImg = result.picture
+        
+        if self.sellerName == "adminName" {
+           sellerNameLabel.text = "관리자"
+        } else {
+            sellerNameLabel.text = self.sellerName
+        }
+        guard let imgUrlStr =  self.sellerProfilImg else {return}
+        if let url = URL(string: imgBaseURL + imgUrlStr) {
+            sellerProfileImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
+        }
     }
 }
