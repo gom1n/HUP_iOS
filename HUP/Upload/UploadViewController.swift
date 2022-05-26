@@ -16,6 +16,9 @@ class UploadViewController: UIViewController {
     var itemCategory: String = ""
     var itemPrice: Int = 0
     var itemDescription: String = ""
+    var itemStatus: Int = 0
+    var buyDate: String = ""
+    var endDateTime: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +39,7 @@ class UploadViewController: UIViewController {
     @IBAction func dismissButtonTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-    // MARK: - Actions: editing changed
+    // MARK: - Actions: add target
     @objc func itemNameTextEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.itemName = text
@@ -48,6 +51,16 @@ class UploadViewController: UIViewController {
     @objc func itemPriceTextEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.itemPrice = Int(text)!
+    }
+    @objc func buyDatePickerHandle(_ sender: UIDatePicker) {
+        let date = sender.date
+        self.buyDate = date.toString()
+//        print("buyDate: ", self.buyDate)
+    }
+    @objc func endDateTimePickerHandle(_ sender: UIDatePicker) {
+        let date = sender.date
+        self.endDateTime = date.toString()
+//        print("endDateTime: ", self.endDateTime)
     }
 //    @objc func itemDescriptionTextEditingChanged(_ sender: UITextView) {
 //        let text = sender.text ?? ""
@@ -73,6 +86,9 @@ extension UploadViewController: UITableViewDelegate, UITableViewDataSource {
             cell.itemNameText.addTarget(self, action: #selector(itemNameTextEditingChanged(_:)), for: .editingChanged)
             cell.itemCategoryText.addTarget(self, action: #selector(itemCategoryTextEditingChanged(_:)), for: .editingChanged)
             cell.itemPriceText.addTarget(self, action: #selector(itemPriceTextEditingChanged(_:)), for: .editingChanged)
+            self.itemStatus = Int(cell.itemStatusView.rating)
+            cell.buyDatePicker.addTarget(self, action: #selector(buyDatePickerHandle(_:)), for: .valueChanged)
+            cell.endDateTimePicker.addTarget(self, action: #selector(endDateTimePickerHandle(_:)), for: .valueChanged)
 //            cell.itemDescriptionText.addTarget(self, action: #selector(itemDescriptionTextEditingChanged(_:)), for: .editingChanged)
             
             cell.selectionStyle = .none
@@ -82,7 +98,7 @@ extension UploadViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // 수정필요
         if indexPath.row == 0 {return 150}
-        else {return 700}
+        else {return 850}
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let tableViewCell = cell as? UploadPhotoTableViewCell else {
