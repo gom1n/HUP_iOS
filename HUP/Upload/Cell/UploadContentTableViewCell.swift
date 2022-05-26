@@ -13,11 +13,14 @@ class UploadContentTableViewCell: UITableViewCell {
     @IBOutlet weak var itemPriceText: UITextField!
     @IBOutlet weak var itemBuyPriceText: UITextField!
     @IBOutlet weak var itemEndDateText: UITextField!
-    @IBOutlet weak var itemContentText: UITextField!
+    @IBOutlet weak var itemContentText: UITextView!
+    @IBOutlet weak var itemEndTimeText: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        itemContentText.layer.borderColor = UIColor.systemGray5.cgColor
+        itemContentText.layer.borderWidth = 1.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,5 +28,7 @@ class UploadContentTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    func setItemData() {
+        
+    }
 }

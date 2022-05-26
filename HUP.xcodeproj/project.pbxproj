@@ -79,6 +79,10 @@
 		23A2CAE72836D142009C0000 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2CAE62836D142009C0000 /* LoginDataManager.swift */; };
 		23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */; };
 		23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AD5A2027F8208900C7B619 /* RegisterViewController.swift */; };
+		23BC8EB4284009E4002FEBB4 /* UploadInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC8EB3284009E4002FEBB4 /* UploadInput.swift */; };
+		23BC8EB6284009EF002FEBB4 /* UploadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC8EB5284009EF002FEBB4 /* UploadModel.swift */; };
+		23BC8EB8284009FC002FEBB4 /* UploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC8EB7284009FC002FEBB4 /* UploadDataManager.swift */; };
+		23BC8EBA28400A88002FEBB4 /* UploadContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC8EB928400A88002FEBB4 /* UploadContent.swift */; };
 		23F0687B282E5EE000574FB9 /* BestItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F06879282E5EE000574FB9 /* BestItemCollectionViewCell.swift */; };
 		23F0687C282E5EE000574FB9 /* BestItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F0687A282E5EE000574FB9 /* BestItemCollectionViewCell.xib */; };
 		23F2A05E283B59200052957F /* MyChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A05C283B59200052957F /* MyChatTableViewCell.swift */; };
@@ -199,6 +203,10 @@
 		23A2CAE62836D142009C0000 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		23AD5A1E27F81FF800C7B619 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		23AD5A2027F8208900C7B619 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		23BC8EB3284009E4002FEBB4 /* UploadInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadInput.swift; sourceTree = "<group>"; };
+		23BC8EB5284009EF002FEBB4 /* UploadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadModel.swift; sourceTree = "<group>"; };
+		23BC8EB7284009FC002FEBB4 /* UploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDataManager.swift; sourceTree = "<group>"; };
+		23BC8EB928400A88002FEBB4 /* UploadContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadContent.swift; sourceTree = "<group>"; };
 		23F06879282E5EE000574FB9 /* BestItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		23F0687A282E5EE000574FB9 /* BestItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		23F2A05C283B59200052957F /* MyChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -260,6 +268,7 @@
 		231262DD282E9B7C002D549B /* Upload */ = {
 			isa = PBXGroup;
 			children = (
+				23BC8EB2284009D4002FEBB4 /* UploadDataManager */,
 				231262E2282EA16D002D549B /* Cell */,
 				231262DE282E9B9B002D549B /* UploadViewController.swift */,
 			);
@@ -581,6 +590,17 @@
 				238F4BD5282544D70060F804 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		23BC8EB2284009D4002FEBB4 /* UploadDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				23BC8EB3284009E4002FEBB4 /* UploadInput.swift */,
+				23BC8EB5284009EF002FEBB4 /* UploadModel.swift */,
+				23BC8EB7284009FC002FEBB4 /* UploadDataManager.swift */,
+				23BC8EB928400A88002FEBB4 /* UploadContent.swift */,
+			);
+			path = UploadDataManager;
 			sourceTree = "<group>";
 		};
 		23F2A05A283B580E0052957F /* ChatMessage */ = {
@@ -987,9 +1007,11 @@
 				2333B6432836A6C000304291 /* BestItemDataManager.swift in Sources */,
 				234F7152283D21790038C3F2 /* RegisterModel.swift in Sources */,
 				2339B8982837BA1E0082D0F4 /* ItemDetailDataManager.swift in Sources */,
+				23BC8EB8284009FC002FEBB4 /* UploadDataManager.swift in Sources */,
 				238BF686283168EF0086FC3C /* ParticipantsTableViewCell.swift in Sources */,
 				23AD5A1F27F81FF800C7B619 /* LoginViewController.swift in Sources */,
 				2333B63C28369C5C00304291 /* ItemListModel.swift in Sources */,
+				23BC8EBA28400A88002FEBB4 /* UploadContent.swift in Sources */,
 				2389DE2828301CD20069BFD8 /* ItemDetailContentTableViewCell.swift in Sources */,
 				23F2A067283B5F370052957F /* PaddingLabel.swift in Sources */,
 				23FEAF7E282F3EDA00345CF1 /* ItemDetailViewController.swift in Sources */,
@@ -1020,6 +1042,7 @@
 				2339B870283788100082D0F4 /* AppLoginModel.swift in Sources */,
 				234F7156283D2BCD0038C3F2 /* IdCheckModel.swift in Sources */,
 				23F2A065283B59440052957F /* ChatViewController.swift in Sources */,
+				23BC8EB4284009E4002FEBB4 /* UploadInput.swift in Sources */,
 				23829A8E27F749D000506560 /* ViewController.swift in Sources */,
 				23F2A077283B6B9F0052957F /* LogoutDataManager.swift in Sources */,
 				2339B88728379A250082D0F4 /* MyPageDataManager.swift in Sources */,
@@ -1034,6 +1057,7 @@
 				238BF676283162010086FC3C /* BidPageViewController.swift in Sources */,
 				23F8502F283F97EA00EF796F /* RegisterEmailInput.swift in Sources */,
 				2339AE5B282B9770002318FB /* MyPageTableViewCell.swift in Sources */,
+				23BC8EB6284009EF002FEBB4 /* UploadModel.swift in Sources */,
 				23F2A05E283B59200052957F /* MyChatTableViewCell.swift in Sources */,
 				2339AE57282B970B002318FB /* MyPageViewController.swift in Sources */,
 				2389DE3028301CF10069BFD8 /* ItemDetailImageCollectionViewCell.swift in Sources */,
