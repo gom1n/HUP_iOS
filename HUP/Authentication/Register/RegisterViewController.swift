@@ -101,15 +101,19 @@ class RegisterViewController: UIViewController {
     }
     // 회원가입 버튼 클릭
     @IBAction func registerButtonTap(_ sender: UIButton) {
-        // MARK: register
+        // register
         let registerInput = RegisterInput(email: self.email, loginId: self.id, password: self.pw, phoneNumber: nil, username: self.nickname)
         RegisterDataManager().registerDataManager(registerInput, self)
+        // send email
+        let emailInput = RegisterEmailInput(email: self.email)
+        EmailDataManager().registerEmailDataManager(emailInput, self)
     }
     
     @IBAction func backButtonTap(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
 }
+// MARK: - API success functions
 extension RegisterViewController {
     func idCheckSuccessAPI(_ result: IdCheckModel) {
         UIManager().showToast(message: result.message!, viewController: self)
@@ -120,7 +124,11 @@ extension RegisterViewController {
         let userId = result.userId!
         UserDefaults.standard.set(userId, forKey: "userId")
     }
+    func registerEmailSuccessAPI(_ result: RegisterEmailModel) {
+        UIManager().showToast(message: result.message!, viewController: self)
+    }
 }
+// MARK: - String extension : checking valid
 extension String {
     // 아이디는 최소 5글자 이상 10글자 이하여야 합니다.
     func isValidId() -> Bool {

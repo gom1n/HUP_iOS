@@ -94,6 +94,9 @@
 		23F2A071283B6B790052957F /* LogoutInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A070283B6B790052957F /* LogoutInput.swift */; };
 		23F2A073283B6B850052957F /* LogoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A072283B6B850052957F /* LogoutModel.swift */; };
 		23F2A077283B6B9F0052957F /* LogoutDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F2A076283B6B9F0052957F /* LogoutDataManager.swift */; };
+		23F8502F283F97EA00EF796F /* RegisterEmailInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8502E283F97EA00EF796F /* RegisterEmailInput.swift */; };
+		23F85031283F97F500EF796F /* RegisterEmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F85030283F97F500EF796F /* RegisterEmailModel.swift */; };
+		23F85033283F980000EF796F /* EmailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F85032283F980000EF796F /* EmailDataManager.swift */; };
 		23FEAF7E282F3EDA00345CF1 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FEAF7D282F3EDA00345CF1 /* ItemDetailViewController.swift */; };
 		60543D381D92864936D8B10A /* Pods_HUP_HUPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D17F4D526EB647246870D98C /* Pods_HUP_HUPUITests.framework */; };
 		C8A9D7282720355F6300A8AF /* Pods_HUP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A04A2DA7A1B415279B5A66 /* Pods_HUP.framework */; };
@@ -210,6 +213,9 @@
 		23F2A070283B6B790052957F /* LogoutInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutInput.swift; sourceTree = "<group>"; };
 		23F2A072283B6B850052957F /* LogoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutModel.swift; sourceTree = "<group>"; };
 		23F2A076283B6B9F0052957F /* LogoutDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutDataManager.swift; sourceTree = "<group>"; };
+		23F8502E283F97EA00EF796F /* RegisterEmailInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailInput.swift; sourceTree = "<group>"; };
+		23F85030283F97F500EF796F /* RegisterEmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailModel.swift; sourceTree = "<group>"; };
+		23F85032283F980000EF796F /* EmailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDataManager.swift; sourceTree = "<group>"; };
 		23FEAF7D282F3EDA00345CF1 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		51D795D76D3BF68720B23223 /* Pods-HUP-HUPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUP-HUPUITests.debug.xcconfig"; path = "Target Support Files/Pods-HUP-HUPUITests/Pods-HUP-HUPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A44E93BEA8536DEDE836A430 /* Pods-HUPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUPTests.debug.xcconfig"; path = "Target Support Files/Pods-HUPTests/Pods-HUPTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -492,6 +498,7 @@
 		23829A8827F749D000506560 /* HUP */ = {
 			isa = PBXGroup;
 			children = (
+				23F8502D283F97D300EF796F /* Email */,
 				231C299428381FE800A919D4 /* Util */,
 				23596FE5283555B100CF4BEF /* Authentication */,
 				238BF674283161EA0086FC3C /* BidPage */,
@@ -649,6 +656,24 @@
 				23F2A06F283B6B690052957F /* LogoutDataManager */,
 			);
 			path = Logout;
+			sourceTree = "<group>";
+		};
+		23F8502D283F97D300EF796F /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				23F85034283F985D00EF796F /* RegisterEmail */,
+				23F85032283F980000EF796F /* EmailDataManager.swift */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		23F85034283F985D00EF796F /* RegisterEmail */ = {
+			isa = PBXGroup;
+			children = (
+				23F8502E283F97EA00EF796F /* RegisterEmailInput.swift */,
+				23F85030283F97F500EF796F /* RegisterEmailModel.swift */,
+			);
+			path = RegisterEmail;
 			sourceTree = "<group>";
 		};
 		23FEAF7C282F3EC400345CF1 /* ItemDetail */ = {
@@ -964,6 +989,7 @@
 				2333B6412836A6B400304291 /* BestItemModel.swift in Sources */,
 				23596FEB28355D8700CF4BEF /* AuctionNowModel.swift in Sources */,
 				231262ED282EA1F0002D549B /* UploadContentTableViewCell.swift in Sources */,
+				23F85033283F980000EF796F /* EmailDataManager.swift in Sources */,
 				23AD5A2127F8208900C7B619 /* RegisterViewController.swift in Sources */,
 				2339B8922837B8150082D0F4 /* APIManager.swift in Sources */,
 				2339AE4C282B8D00002318FB /* ChattingRoomTableViewCell.swift in Sources */,
@@ -990,9 +1016,11 @@
 				234E3375283D0F0C00771B41 /* GetTime.swift in Sources */,
 				23F2A06E283B64840052957F /* ChannelDataManager.swift in Sources */,
 				2339B8962837BA150082D0F4 /* ItemDetailModel.swift in Sources */,
+				23F85031283F97F500EF796F /* RegisterEmailModel.swift in Sources */,
 				23829A8A27F749D000506560 /* AppDelegate.swift in Sources */,
 				231262DF282E9B9B002D549B /* UploadViewController.swift in Sources */,
 				238BF676283162010086FC3C /* BidPageViewController.swift in Sources */,
+				23F8502F283F97EA00EF796F /* RegisterEmailInput.swift in Sources */,
 				2339AE5B282B9770002318FB /* MyPageTableViewCell.swift in Sources */,
 				23F2A05E283B59200052957F /* MyChatTableViewCell.swift in Sources */,
 				2339AE57282B970B002318FB /* MyPageViewController.swift in Sources */,
