@@ -46,9 +46,6 @@
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="googleloginbut"/>
-                                <connections>
-                                    <action selector="googleLoginTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IFj-6U-YIY"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0o-Vu-PLS">
                                 <rect key="frame" x="30" y="324" width="354" height="50"/>
@@ -1207,7 +1204,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="인증번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9oI-RC-Qbq">
-                                <rect key="frame" x="40" y="325.5" width="261" height="50"/>
+                                <rect key="frame" x="40" y="325.5" width="254" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5gy-oW-bfJ"/>
                                 </constraints>
@@ -1218,27 +1215,40 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgE-wE-xYh">
-                                <rect key="frame" x="311" y="325.5" width="63" height="50"/>
+                                <rect key="frame" x="304" y="325.5" width="70" height="50"/>
+                                <color key="backgroundColor" name="HupColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="R5a-qp-j7V"/>
                                     <constraint firstAttribute="height" constant="50" id="nch-eT-TWI"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="재전송">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="재전송"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="resendButtonTap:" destination="YIw-zh-0aP" eventType="touchUpInside" id="wOG-6j-wX2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-hn-wr4">
                                 <rect key="frame" x="40" y="395.5" width="334" height="50"/>
+                                <color key="backgroundColor" name="HupColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="P3H-EI-uQJ"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="인증하기">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="인증하기"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="emailCheckButtonTap:" destination="YIw-zh-0aP" eventType="touchUpInside" id="JqA-iP-yhX"/>
                                 </connections>
