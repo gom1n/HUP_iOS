@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,10 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.set("", forKey: "refreshToken")
         UserDefaults.standard.set(-1, forKey: "userId")
         return true
-    }
-    // 구글로그인 버튼 클릭 시 구글로그인url에 연결된 로그인창 띄우기.
-    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
-        return GIDSignIn.sharedInstance.handle(url)
     }
     // device token 얻기
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
