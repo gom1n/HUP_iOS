@@ -25,9 +25,6 @@
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="choose_image"/>
-                        <connections>
-                            <action selector="albumButtonTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="M86-CH-JM6"/>
-                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="count / 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7y5-Vu-EKA">
                         <rect key="frame" x="45" y="106" width="60" height="16"/>
@@ -62,6 +59,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="photoCountLabel" destination="7y5-Vu-EKA" id="Zzm-wX-EuZ"/>
+                <outlet property="selectPhotoButton" destination="NjZ-Ql-BUE" id="RR8-fN-l6x"/>
                 <outlet property="uploadPhotoCollectionView" destination="Jd2-zG-f1R" id="n3C-LI-5E4"/>
             </connections>
             <point key="canvasLocation" x="364.49275362318843" y="146.65178571428569"/>

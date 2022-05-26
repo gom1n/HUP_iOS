@@ -10,6 +10,7 @@ import UIKit
 class UploadPhotoTableViewCell: UITableViewCell {
     @IBOutlet weak var uploadPhotoCollectionView: UICollectionView!
     @IBOutlet weak var photoCountLabel: UILabel!
+    @IBOutlet weak var selectPhotoButton: UIButton!
     
     
     func setCollectionViewDataSourceDelegate(dataSourceDelegate: UICollectionViewDelegate & UICollectionViewDataSource, forRow row: Int) {
@@ -28,12 +29,6 @@ class UploadPhotoTableViewCell: UITableViewCell {
         uploadPhotoCollectionView.collectionViewLayout = flowLayout
         uploadPhotoCollectionView.reloadData()
     }
-    
-    @IBAction func albumButtonTap(_ sender: Any) {
-//        self.imagePickerController.sourceType = .photoLibrary
-//        self.present(imagePickerController, animated: true, completion: nil)
-    }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

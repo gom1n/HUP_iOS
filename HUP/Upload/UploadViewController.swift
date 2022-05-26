@@ -19,6 +19,7 @@ class UploadViewController: UIViewController {
     var itemStatus: Int = 0
     var buyDate: String = ""
     var endDateTime: String = ""
+    var selectedPhoto: [UIImage]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +63,10 @@ class UploadViewController: UIViewController {
         self.endDateTime = date.toString()
 //        print("endDateTime: ", self.endDateTime)
     }
-//    @objc func itemDescriptionTextEditingChanged(_ sender: UITextView) {
-//        let text = sender.text ?? ""
-//        self.itemName = text
-//    }
+    @objc func selectPhotoButtonTap(_ sender: Any) {
+        self.imagePickerController.sourceType = .photoLibrary
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
 }
 // MARK: - tableView (itemContent) delegate
 extension UploadViewController: UITableViewDelegate, UITableViewDataSource {
@@ -78,6 +79,7 @@ extension UploadViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UploadPhotoTableViewCell", for: indexPath) as? UploadPhotoTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectPhotoButton.addTarget(self, action: #selector(selectPhotoButtonTap(_:)), for: .touchUpInside)
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UploadContentTableViewCell", for: indexPath) as? UploadContentTableViewCell else {
@@ -137,11 +139,11 @@ extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataS
 //MARK: - go album
 extension UploadViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-//            let imageString = ""
-//            let input = FeedUploadInput(content: "안녕하세요", postImgUrl: [imageString])
-//            FeedUploadDataManager().posts(self, input)
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+//            self.selectedPhoto?.append(image)
+            print("image: ", image)
             
             self.dismiss(animated: true, completion: nil)
         }
     }
+}
