@@ -975,19 +975,25 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="idTextFieldEditingChanged:" destination="a6w-rq-YoA" eventType="editingChanged" id="8DF-vM-bPc"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWj-rW-Iyv">
                                 <rect key="frame" x="290" y="158" width="94" height="50"/>
+                                <color key="backgroundColor" name="HupColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="B1C-Ot-o6m"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="중복확인">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="HupColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="중복확인"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="idCheckButtonTap:" destination="a6w-rq-YoA" eventType="touchUpInside" id="geY-nl-gvB"/>
                                 </connections>
@@ -1005,6 +1011,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="pwTextFieldEditingChanged:" destination="a6w-rq-YoA" eventType="editingChanged" id="iIX-eL-hDG"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4B-N1-eIS">
                                 <rect key="frame" x="30" y="321" width="354" height="50"/>
@@ -1013,6 +1022,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="pwCheckTextFieldEditingChanged:" destination="a6w-rq-YoA" eventType="editingChanged" id="p78-jf-f6d"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeG-bq-0P3">
                                 <rect key="frame" x="30" y="396" width="39" height="18"/>
@@ -1028,6 +1040,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nickNameTextFieldEditingChanged:" destination="a6w-rq-YoA" eventType="editingChanged" id="rMz-c5-2Cz"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 주소" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfl-3O-bgV">
                                 <rect key="frame" x="30" y="499" width="69" height="18"/>
@@ -1044,21 +1059,26 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="emailTextFieldEditingChanged:" destination="a6w-rq-YoA" eventType="editingChanged" id="mA5-vW-Vox"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blc-jB-Jka">
                                 <rect key="frame" x="30" y="602" width="354" height="50"/>
+                                <color key="backgroundColor" name="HupColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="PCr-69-Rcb"/>
                                     <constraint firstAttribute="height" constant="50" id="pcF-u4-l8c"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="회원가입">
-                                    <backgroundConfiguration key="background" cornerRadius="8">
-                                        <color key="backgroundColor" name="HupColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                    <color key="baseBackgroundColor" name="Color"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="회원가입"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="registerButtonTap:" destination="a6w-rq-YoA" eventType="touchUpInside" id="iZr-Tk-cnh"/>
                                 </connections>
@@ -1123,10 +1143,12 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="new-u7-Wx6" id="Lki-tj-KfU"/>
+                        <outlet property="idCheckButton" destination="yWj-rW-Iyv" id="5hE-Gi-0WH"/>
                         <outlet property="idTextField" destination="cYj-yt-3Zo" id="Yeh-KX-Tz6"/>
                         <outlet property="nickNameTextField" destination="JXd-0e-Y7F" id="Mi3-hh-RUY"/>
                         <outlet property="pwCheckTextField" destination="a4B-N1-eIS" id="20J-5p-kj6"/>
                         <outlet property="pwTextField" destination="chX-N5-z0S" id="WXF-JD-qHr"/>
+                        <outlet property="registerButton" destination="blc-jB-Jka" id="t7K-Jd-J0t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1C-i9-kN2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1282,9 +1304,6 @@
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Color">
-            <color red="0.019607843137254902" green="0.019607843137254902" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HupColor">
             <color red="0.019607843137254902" green="0.019607843137254902" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
