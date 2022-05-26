@@ -12,13 +12,40 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    var id: String?
+    var pw: String?
+    var validId: Bool = false
+    var validPW: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        isValidTf()
     }
-
+    func isValidTf() {
+        if self.validId && self.validPW {
+            self.loginButton.backgroundColor = UIColor(named: "HupColor")
+            self.loginButton.isEnabled = true
+        } else {
+            self.loginButton.backgroundColor = UIColor(named: "disabledButtonColor")
+            self.loginButton.isEnabled = false
+        }
+    }
+    @IBAction func idTextFieldEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        self.id = text
+        self.validId = text.isValidId() ? true : false
+        isValidTf()
+    }
+    @IBAction func pwTextFieldEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        self.pw = text
+        self.validPW = text.count > 2 ? true : false
+        isValidTf()
+    }
+    
     //MARK: App Login
     @IBAction func appLoginButtonTap(_ sender: UIButton) {
         let id = idTextField.text!
@@ -27,30 +54,6 @@ class LoginViewController: UIViewController {
         LoginDataManager().appLoginDataManager(appLoginInput, self)
     }
     
-    
-    //MARK: Google Login
-    @IBAction func googleLoginTap(_ sender: Any) {
-        let config = GIDConfiguration(clientID: "221537301769-312uam9bnlhk82hb0gr7n5sore92vblv.apps.googleusercontent.com")
-                
-        GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { user, error in
-            guard let user = user else { return }
-         
-            user.authentication.do { [self] authentication, error in
-                            guard error == nil else { print(error); return }
-                            guard let authentication = authentication else { return }
-                            
-                            let idToken = authentication.idToken
-                            
-                            // Send ID token to backend
-                            //서버에 보낼 함수
-//                            tokenSign(idToken: idToken!)
-                print(idToken!)
-//                            let input = GoogleLoginInput(idToken: idToken, targetToken: nil)
-//                            LoginDataManager().googleLoginDataManager(input)
-                            
-            }
-        }
-    }
     @IBAction func backButtonTap(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -61,8 +64,8 @@ class LoginViewController: UIViewController {
         //2 뷰컨트롤러를 생성
         let registerViewController = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterViewController
         //3 화면전환 메소드를 사용해서 화면을 전환
+        registerViewController.modalPresentationStyle = .fullScreen
         self.present(registerViewController, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(registerViewController, animated: true)
     }
     
     public func goBack() {

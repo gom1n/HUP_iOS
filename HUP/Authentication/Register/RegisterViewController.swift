@@ -18,6 +18,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     // MARK: - Actions
     @IBAction func idCheckButtonTap(_ sender: Any) {
@@ -87,12 +88,25 @@ extension RegisterViewController {
     }
 }
 extension String {
-    // 대문자, 소문자, 특수문자, 숫자 포함 8글자 이상일 때
+    // 아이디는 최소 5글자 이상 10글자 이하여야 합니다.
+    func isValidId() -> Bool {
+        let idRegEx = "^[a-zA-Z0-9]{5,10}$"
+        let idTest = NSPredicate(format: "SELF MATCHES %@", idRegEx)
+        return idTest.evaluate(with: self)
+    }
+    // 비밀번호는 영어, 숫자, 특수문자를 조합해 8~12자리로 입력해주세요.
     func isValidPassword() -> Bool {
-        let passwordRegEx = "^.*(?=^.{8,16}$)(?=.*\\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$"
+        let passwordRegEx = "^[a-z0-9_-]{8,12}$"
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
         return passwordTest.evaluate(with: self)
     }
+    // 이름은 최소 2글자 이상 10글자 이하여야 합니다.
+    func isValidNickName() -> Bool {
+        let passwordRegEx = "^[a-zA-Z0-9]{2,10}$"
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
+        return passwordTest.evaluate(with: self)
+    }
+    // 이메일 형식
     func isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)

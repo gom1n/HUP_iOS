@@ -83,6 +83,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="idTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="t9N-Bg-SUA"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hY5-Yn-caG">
                                 <rect key="frame" x="20" y="520" width="374" height="50"/>
@@ -91,20 +94,25 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="pwTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="RPx-rO-nFE"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PX-zA-nDt">
                                 <rect key="frame" x="15" y="590" width="384" height="50"/>
+                                <color key="backgroundColor" name="HupColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="w5Y-yB-lja"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="로그인">
-                                    <backgroundConfiguration key="background" cornerRadius="8">
-                                        <color key="backgroundColor" name="HupColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                    <color key="baseBackgroundColor" name="Color"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="로그인"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="appLoginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fA-dJ-Eg5"/>
                                 </connections>
@@ -198,6 +206,7 @@
                     <navigationItem key="navigationItem" id="kVQ-CU-5Ci"/>
                     <connections>
                         <outlet property="idTextField" destination="yjm-iV-UDb" id="z37-hw-WmL"/>
+                        <outlet property="loginButton" destination="3PX-zA-nDt" id="tgb-zd-seF"/>
                         <outlet property="pwTextField" destination="hY5-Yn-caG" id="HeZ-mo-8l0"/>
                     </connections>
                 </viewController>
