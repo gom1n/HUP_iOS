@@ -922,7 +922,7 @@
         <!--Custom Tab Bar Controller-->
         <scene sceneID="O1U-yK-15n">
             <objects>
-                <tabBarController id="gFw-8b-604" customClass="CustomTabBarController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarC" id="gFw-8b-604" customClass="CustomTabBarController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xvu-hs-Dis">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1155,10 +1155,10 @@
             </objects>
             <point key="canvasLocation" x="4403" y="753"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Email View Controller-->
         <scene sceneID="Qg4-PG-gAK">
             <objects>
-                <viewController id="YIw-zh-0aP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterEmailVC" id="YIw-zh-0aP" customClass="RegisterEmailViewController" customModule="HUP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MdA-e3-Nzz"/>
                         <viewControllerLayoutGuide type="bottom" id="GaT-5o-2GL"/>
@@ -1213,6 +1213,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="aucthCodeTextFieldEditingChanged:" destination="YIw-zh-0aP" eventType="editingChanged" id="une-Mj-xSf"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgE-wE-xYh">
                                 <rect key="frame" x="311" y="325.5" width="63" height="50"/>
@@ -1223,6 +1226,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="재전송">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="resendButtonTap:" destination="YIw-zh-0aP" eventType="touchUpInside" id="wOG-6j-wX2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xch-hn-wr4">
                                 <rect key="frame" x="40" y="395.5" width="334" height="50"/>
@@ -1233,6 +1239,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="인증하기">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="emailCheckButtonTap:" destination="YIw-zh-0aP" eventType="touchUpInside" id="JqA-iP-yhX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1254,6 +1263,11 @@
                             <constraint firstItem="Xch-hn-wr4" firstAttribute="top" secondItem="9oI-RC-Qbq" secondAttribute="bottom" constant="20" id="zuN-b3-rEw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authcodeTextField" destination="9oI-RC-Qbq" id="w4W-ah-b1R"/>
+                        <outlet property="emailCheckButton" destination="Xch-hn-wr4" id="Fc7-Sb-0DE"/>
+                        <outlet property="emailLabel" destination="M5b-KA-Rbc" id="bBV-d2-7e7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfP-2Y-c2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

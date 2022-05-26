@@ -69,6 +69,12 @@ class LoginViewController: UIViewController {
     }
     
     public func goBack() {
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        // 첫 화면 전환
+        guard let tabBarController = self.storyboard?
+                .instantiateViewController(withIdentifier: "TabBarC")
+                as? CustomTabBarController else {return}
+        tabBarController.modalPresentationStyle = .fullScreen
+        self.present(tabBarController, animated: true, completion: nil)
     }
 }

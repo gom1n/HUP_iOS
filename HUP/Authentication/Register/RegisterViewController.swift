@@ -30,9 +30,8 @@ class RegisterViewController: UIViewController {
     var isValidPasswordCheck = false
     var isIdChecked = false
     
-    var textFields: [UITextField] {
-        [idTextField, pwTextField, nickNameTextField, emailTextField]
-    }
+    var isRegistered = false
+    var isEmailSended = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,25 +56,35 @@ class RegisterViewController: UIViewController {
             self.idCheckButton.isEnabled = false
         }
     }
+    // 이메일 인증 화면 전환
+    func goToEmailCheckPage() {
+        if isRegistered && isEmailSended {
+            guard let registerEmailViewController = self.storyboard?
+                    .instantiateViewController(withIdentifier: "RegisterEmailVC")
+                    as? RegisterEmailViewController else {return}
+            registerEmailViewController.email = self.email //email 넘기기
+            registerEmailViewController.modalPresentationStyle = .fullScreen
+            self.present(registerEmailViewController, animated: true, completion: nil)
+        } else {
+            // 기본 화면으로 돌아가...
+        }
+    }
     // MARK: - Actions - textFields editing changed
     @IBAction func idTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.isValidId = text.isValidId()
         self.id = text
         isValidTf()
-        print("isValidId ", self.isValidId)
     }
     @IBAction func pwTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.isValidPassword = text.isValidPassword()
         self.pw = text
         isValidTf()
-        print("isValidPassword ", self.isValidPassword)
     }
     @IBAction func pwCheckTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         isValidPasswordCheck = (text == self.pw) ? true : false
-        print("isValidPWCHeck ", self.isValidPasswordCheck)
         isValidTf()
     }
     @IBAction func nickNameTextFieldEditingChanged(_ sender: UITextField) {
@@ -83,20 +92,17 @@ class RegisterViewController: UIViewController {
         self.isValidNickname = text.isValidNickName()
         self.nickname = text
         isValidTf()
-        print("isValidNickname ", self.isValidNickname)
     }
     @IBAction func emailTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.isValidEmail = text.isValidEmail()
         self.email = text
         isValidTf()
-        print("isValidEmail ", self.isValidEmail)
     }
     // MARK: - Actions - button tap
     // id check button click
     @IBAction func idCheckButtonTap(_ sender: Any) {
         let loginId = (self.id)!
-        print("edited loginId: ", loginId)
         RegisterDataManager().idCheckDataManager(loginId, self)
     }
     // 회원가입 버튼 클릭
@@ -123,9 +129,14 @@ extension RegisterViewController {
         UIManager().showToast(message: result.message!, viewController: self)
         let userId = result.userId!
         UserDefaults.standard.set(userId, forKey: "userId")
+        
+        self.isRegistered = true
+        goToEmailCheckPage()
     }
     func registerEmailSuccessAPI(_ result: RegisterEmailModel) {
         UIManager().showToast(message: result.message!, viewController: self)
+        self.isEmailSended = true
+        goToEmailCheckPage()
     }
 }
 // MARK: - String extension : checking valid
