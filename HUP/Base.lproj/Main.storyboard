@@ -90,7 +90,7 @@
                                     <constraint firstAttribute="height" constant="50" id="N1b-cT-syI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                                 <connections>
                                     <action selector="pwTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="RPx-rO-nFE"/>
                                 </connections>
@@ -856,7 +856,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Pci-h9-6FX"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvX-zT-Wcp">
                                         <rect key="frame" x="229" y="29.5" width="15" height="21"/>
@@ -1007,7 +1007,7 @@
                                     <constraint firstAttribute="height" constant="50" id="EuJ-f4-15g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                                 <connections>
                                     <action selector="pwTextFieldEditingChanged:" destination="a6w-rq-YoA" eventType="editingChanged" id="iIX-eL-hDG"/>
                                 </connections>
@@ -1018,7 +1018,7 @@
                                     <constraint firstAttribute="height" constant="50" id="mHA-W1-53W"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                                 <connections>
                                     <action selector="pwCheckTextFieldEditingChanged:" destination="a6w-rq-YoA" eventType="editingChanged" id="p78-jf-f6d"/>
                                 </connections>
@@ -1055,7 +1055,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="jBc-4G-Myu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <connections>
                                     <action selector="emailTextFieldEditingChanged:" destination="a6w-rq-YoA" eventType="editingChanged" id="mA5-vW-Vox"/>
                                 </connections>
@@ -1209,7 +1209,7 @@
                                     <constraint firstAttribute="height" constant="50" id="5gy-oW-bfJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <connections>
                                     <action selector="aucthCodeTextFieldEditingChanged:" destination="YIw-zh-0aP" eventType="editingChanged" id="une-Mj-xSf"/>
                                 </connections>
