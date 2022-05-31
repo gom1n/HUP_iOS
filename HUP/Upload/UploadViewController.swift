@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import CoreMIDI
 
 class UploadViewController: UIViewController {
     @IBOutlet weak var uploadTableView: UITableView!
     
     let imagePickerController = UIImagePickerController()
+    
     var itemContent: UploadContent?
     var itemName: String = ""
     var itemCategory: String = ""
@@ -109,15 +111,19 @@ extension UploadViewController: UITableViewDelegate, UITableViewDataSource {
         tableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
     }
 }
-// MARK: - collectionView(itemImg) delegate
+// MARK: - collectionView(selected Imgs) delegate
 extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return 5
+            return selectedPhoto?.count ?? 0
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UploadPhotoCollectionViewCell", for: indexPath) as? UploadPhotoCollectionViewCell else {
                 return UICollectionViewCell()
+            }
+            let index = indexPath.item
+            if let photoArray = self.selectedPhoto {
+                cell.setUpPhoto(photoArray[index])
             }
             return cell
         }
@@ -136,14 +142,15 @@ extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataS
               return 15
           }
 }
-//MARK: - go album
+// MARK: - finish selecting photo
 extension UploadViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-//            self.selectedPhoto?.append(image)
-            print("image: ", image)
+            self.selectedPhoto?.append((image) as (UIImage))
+            print("count: ", self.selectedPhoto?.count ?? 0)
+            print(info)
             
-            self.dismiss(animated: true, completion: nil)
         }
+        self.dismiss(animated: true, completion: nil)
     }
 }

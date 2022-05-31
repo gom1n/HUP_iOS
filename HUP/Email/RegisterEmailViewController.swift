@@ -57,6 +57,7 @@ extension RegisterEmailViewController {
                 .instantiateViewController(withIdentifier: "TabBarC")
                 as? CustomTabBarController else {return}
         tabBarController.modalPresentationStyle = .fullScreen
-        self.present(tabBarController, animated: true, completion: nil)
+        self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
+//        self.present(tabBarController, animated: true, completion: nil)
     }
 }

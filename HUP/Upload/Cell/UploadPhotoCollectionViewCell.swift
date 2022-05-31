@@ -9,11 +9,14 @@ import UIKit
 
 class UploadPhotoCollectionViewCell: UICollectionViewCell {
     static let identifier = "UploadPhotoCollectionViewCell"
+    
     @IBOutlet weak var photoImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    func setUpPhoto(_ photo: UIImage) {
+        photoImageView.image = photo
+    }
 }
