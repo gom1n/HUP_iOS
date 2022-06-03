@@ -42,9 +42,9 @@ class UploadContentTableViewCell: UITableViewCell {
         endDateTimePicker.locale = Locale(identifier: "ko-KR")
         endDateTimePicker.timeZone = .autoupdatingCurrent
         var components = DateComponents()
-        components.day = 10
+        components.day = 0
         let maxDate = Calendar.autoupdatingCurrent.date(byAdding: components, to: Date())
-        components.day = -10
+        components.day = 0
         let minDate = Calendar.autoupdatingCurrent.date(byAdding: components, to: Date())
 
         buyDatePicker.maximumDate = maxDate

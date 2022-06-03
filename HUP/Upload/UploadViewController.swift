@@ -21,7 +21,8 @@ class UploadViewController: UIViewController {
     var itemStatus: Int = 0
     var buyDate: String = ""
     var endDateTime: String = ""
-    var selectedPhoto: [UIImage]?
+    
+    var selectedPhoto: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +83,7 @@ extension UploadViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.selectPhotoButton.addTarget(self, action: #selector(selectPhotoButtonTap(_:)), for: .touchUpInside)
+            cell.photoCountLabel.text = String(self.selectedPhoto.count) + " / 10"
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UploadContentTableViewCell", for: indexPath) as? UploadContentTableViewCell else {
@@ -114,7 +116,7 @@ extension UploadViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - collectionView(selected Imgs) delegate
 extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return selectedPhoto?.count ?? 0
+            return selectedPhoto.count
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -122,9 +124,7 @@ extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataS
                 return UICollectionViewCell()
             }
             let index = indexPath.item
-            if let photoArray = self.selectedPhoto {
-                cell.setUpPhoto(photoArray[index])
-            }
+            cell.setUpPhoto(self.selectedPhoto[index])
             return cell
         }
         
@@ -146,11 +146,11 @@ extension UploadViewController : UICollectionViewDelegate, UICollectionViewDataS
 extension UploadViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            self.selectedPhoto?.append((image) as (UIImage))
-            print("count: ", self.selectedPhoto?.count ?? 0)
+            self.selectedPhoto.append(image)
+            print("count: ", self.selectedPhoto.count)
             print(info)
-            
         }
+        uploadTableView.reloadData()
         self.dismiss(animated: true, completion: nil)
     }
 }
