@@ -15,6 +15,7 @@ class AuctionNowCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelItemCategory: UILabel!
     @IBOutlet weak var labelItemPrice: UILabel!
     
+    var imgUrlStr: String = ""
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,7 +30,10 @@ class AuctionNowCollectionViewCell: UICollectionViewCell {
         guard let description = cellData.description else {return}
         guard let initPrice = cellData.initPrice else {return}
         guard let maximumPrice = cellData.maximumPrice else {return}
-        guard let imgUrlStr =  (cellData.fileNames?[0]) else {return}
+        guard let fileNames = cellData.fileNames else {return}
+        if !(fileNames.isEmpty) {
+            imgUrlStr = fileNames[0]
+        }
         
         if maximumPrice == 0 {
             labelItemPrice.text = String(initPrice) + "원"
@@ -42,7 +46,7 @@ class AuctionNowCollectionViewCell: UICollectionViewCell {
         labelItemCategory.text = category
         labelItemContext.text = description
         if let url = URL(string: imgBaseURL + imgUrlStr) {
-            imageViewHomeAuctionItem.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
+            imageViewHomeAuctionItem.kf.setImage(with: url, placeholder: UIImage(named: "hupicon"))
         }
     }
 }

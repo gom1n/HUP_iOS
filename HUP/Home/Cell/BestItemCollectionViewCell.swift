@@ -15,6 +15,8 @@ class BestItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var buyDateLabel: UILabel!
     @IBOutlet weak var initPriceLabel: UILabel!
     
+    var imgUrlStr: String = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,7 +27,10 @@ class BestItemCollectionViewCell: UICollectionViewCell {
         guard let itemName = cellData.itemName else {return}
         guard let buydate = cellData.buyDate else {return}
         guard let initPrice = cellData.initPrice else {return}
-        guard let imgUrlStr =  (cellData.fileNames?[0]) else {return}
+        guard let fileNames = cellData.fileNames else {return}
+        if !(fileNames.isEmpty) {
+            imgUrlStr = fileNames[0]
+        }
         
         // buy date
         let buydateRange = buydate.index(buydate.startIndex, offsetBy: 0) ... buydate.index(buydate.endIndex, offsetBy: -10)
@@ -34,7 +39,7 @@ class BestItemCollectionViewCell: UICollectionViewCell {
         buyDateLabel.text = String(buydate[buydateRange])
         initPriceLabel.text = String(initPrice)
         if let url = URL(string: imgBaseURL + imgUrlStr) {
-            itemImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
+            itemImageView.kf.setImage(with: url, placeholder: UIImage(named: "hupicon"))
         }
     }
 }

@@ -20,7 +20,7 @@ class ItemDetailImageCollectionViewCell: UICollectionViewCell {
         
         guard let imgUrlStr =  imgStr else {return}
         if let url = URL(string: imgBaseURL + imgUrlStr) {
-            itemImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
+            itemImageView.kf.setImage(with: url, placeholder: UIImage(named: "hupicon"))
         }
     }
 }

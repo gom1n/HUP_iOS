@@ -15,7 +15,8 @@ class BidPageTableViewCell: UITableViewCell {
     @IBOutlet weak var leftTimeLabel: PaddingLabel!
     
     var itemId: Int?
-    var ptData: [ParticipantData]?  
+    var ptData: [ParticipantData]?
+    var imgUrlStr: String = ""
     
     func bidPageinit() {
         participantsTableView.delegate = self
@@ -48,9 +49,12 @@ class BidPageTableViewCell: UITableViewCell {
         leftTimeLabel.text = timeDif
         highPriceLabel.text = String(cellData.maximumPrice!) + "원"
         participantLabel.text = String(cellData.participants!) + "명"
-        guard let imgUrlStr =  (cellData.fileNames?[0]) else {return}
+        guard let fileNames = cellData.fileNames else {return}
+        if !(fileNames.isEmpty) {
+            imgUrlStr = fileNames[0]
+        }
         if let url = URL(string: imgBaseURL + imgUrlStr) {
-            itemImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
+            itemImageView.kf.setImage(with: url, placeholder: UIImage(named: "hupicon"))
         }
     }
     

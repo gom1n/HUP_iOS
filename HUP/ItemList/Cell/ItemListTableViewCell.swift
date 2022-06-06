@@ -15,6 +15,7 @@ class ItemListTableViewCell: UITableViewCell {
     @IBOutlet weak var heartCountLabel: UILabel!
     @IBOutlet weak var participantCountLabel: UILabel!
     
+    var imgUrlStr: String = ""
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,9 +33,10 @@ class ItemListTableViewCell: UITableViewCell {
         guard let itemName = cellData.itemName else {return}
         guard let heartCount = cellData.scrapCount else {return}
         guard let participantCount = cellData.participants else {return}
-//        guard let startTime = Date() else {return}
-//        guard let endTime = cellData.auctionClosingDate else {return}
-        guard let imgUrlStr =  (cellData.fileNames?[0]) else {return}
+        guard let fileNames = cellData.fileNames else {return}
+        if !(fileNames.isEmpty) {
+            imgUrlStr = fileNames[0]
+        }
         guard let initPrice = cellData.initPrice else {return}
         guard let maximumPrice = cellData.maximumPrice else {return}
         
@@ -53,7 +55,7 @@ class ItemListTableViewCell: UITableViewCell {
         heartCountLabel.text = String(heartCount)
         participantCountLabel.text = String(participantCount)
         if let url = URL(string: imgBaseURL + imgUrlStr) {
-            itemImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "photo"))
+            itemImageView.kf.setImage(with: url, placeholder: UIImage(named: "hupicon"))
         }
     }
 }
