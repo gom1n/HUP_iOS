@@ -10,7 +10,7 @@ import Cosmos
 
 class UploadContentTableViewCell: UITableViewCell {
     @IBOutlet weak var itemNameText: UITextField!
-    @IBOutlet weak var itemCategoryText: UITextField!
+    @IBOutlet weak var itemCategoryText: UIButton!
     @IBOutlet weak var itemPriceText: UITextField!
     @IBOutlet weak var itemDescriptionText: UITextView!
     @IBOutlet weak var itemStatusView: CosmosView!
