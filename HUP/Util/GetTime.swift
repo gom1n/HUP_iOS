@@ -7,6 +7,7 @@
 
 import Foundation
 class GetTime {
+    var isFinish: Bool = false
     func getTimeDif(_ nowTime: Date, _ closingTime: String) -> String {
         let format = DateFormatter()
         format.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -18,16 +19,20 @@ class GetTime {
         return getTimeToString(useTime)
     }
     func getTimeToString(_ seconds: Int) -> String {
-        if seconds < 0 {return "🔔 경매 종료"}
+        if seconds < 0 {
+            isFinish = true
+            return "🔔 경매 종료"
+        }
         var day = 0
         var hour = seconds / 3600
         var min = (seconds % 3600) / 60
         if hour > 24 {
+            isFinish = false
             day = hour / 24
             hour = hour % 24
             return "⏰ " + String(day) + "일 " + String(hour) + "시간 " + String(min) + "분 전"
         }
-        else { return "⏰ " + String(hour) + "시간 " + String(min) + "분 전" }
+        else { isFinish = false; return "⏰ " + String(hour) + "시간 " + String(min) + "분 전" }
     }
 }
 extension String {

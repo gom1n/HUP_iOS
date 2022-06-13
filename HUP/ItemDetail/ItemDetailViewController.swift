@@ -77,8 +77,9 @@ extension ItemDetailViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 // left time set
                 let endTime = cellData.auctionClosingDate!
-                let timeDif = GetTime().getTimeDif(Date(), endTime)
-                cell.leftTimeLabel.text = timeDif
+                let getTime = GetTime()
+                participateButton.isEnabled = getTime.isFinish ? false : true
+                cell.leftTimeLabel.text = getTime.getTimeDif(Date(), endTime)
             }
             cell.selectionStyle = .none
             return cell
