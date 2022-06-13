@@ -322,6 +322,7 @@
                         <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="uploadButton" destination="Bxd-Cc-ShV" id="8H3-Ie-5yn"/>
                         <outlet property="uploadTableView" destination="3Nj-BB-Jnp" id="ffy-6E-CLA"/>
                     </connections>
                 </viewController>

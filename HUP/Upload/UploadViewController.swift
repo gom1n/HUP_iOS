@@ -10,9 +10,11 @@ import CoreMIDI
 
 class UploadViewController: UIViewController {
     @IBOutlet weak var uploadTableView: UITableView!
+    @IBOutlet weak var uploadButton: UIBarButtonItem!
     
     let imagePickerController = UIImagePickerController()
     
+    var userId: Int = UserDefaults.standard.integer(forKey: "userId")
     var itemContent: UploadContent?
     var itemName: String = ""
     var itemCategory: String = ""
@@ -23,6 +25,7 @@ class UploadViewController: UIViewController {
     var endDateTime: String = ""
     
     var selectedPhoto: [UIImage] = []
+    var selectedPhotoUrl: [String] = []
     var cateStr = "카테고리 선택"
     
     override func viewDidLoad() {
@@ -36,10 +39,13 @@ class UploadViewController: UIViewController {
         uploadTableView.register(uploadPhotoNib, forCellReuseIdentifier: "UploadPhotoTableViewCell")
         let uploadContentNib = UINib(nibName: "UploadContentTableViewCell", bundle: nil)
         uploadTableView.register(uploadContentNib, forCellReuseIdentifier: "UploadContentTableViewCell")
+        
+        uploadButton.isEnabled = (userId == -1) ? false : true
     }
     // MARK: - Actions: button tap
     @IBAction func uploadButtonTap(_ sender: UIButton) {
-        //        let uploadInput = UploadInput(auctionClosingDate: <#T##String?#>, buyDate: <#T##String?#>, category: <#T##String?#>, description: <#T##String?#>, files: <#T##[String]?#>, initPrice: <#T##String?#>, itemName: <#T##String?#>, itemStatePoint: <#T##String?#>, userId: <#T##String?#>)
+        let uploadInput = UploadInput(auctionClosingDate: self.endDateTime, buyDate: self.buyDate, category: self.itemCategory, description: self.itemDescription, files: self.selectedPhotoUrl, initPrice: self.itemPrice, itemName: self.itemName, itemStatePoint: self.itemStatus, userId: self.userId)
+        UploadDataManager().uploadDataManager(uploadInput, self)
     }
     @IBAction func dismissButtonTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -156,7 +162,12 @@ extension UploadViewController : UIImagePickerControllerDelegate, UINavigationCo
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.selectedPhoto.append(image)
             print("count: ", self.selectedPhoto.count)
-            print(info)
+//            print(info)
+        }
+        if let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL{
+            let urlStr = imageUrl.absoluteString
+            self.selectedPhotoUrl.append(urlStr)
+            print(urlStr)
         }
         uploadTableView.reloadData()
         self.dismiss(animated: true, completion: nil)

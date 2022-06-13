@@ -11,8 +11,8 @@ struct UploadInput: Encodable {
     let category: String?
     let description: String?
     let files: [String]?
-    let initPrice: String?
+    let initPrice: Int?
     let itemName: String?
-    let itemStatePoint: String?
-    let userId: String?
+    let itemStatePoint: Int?
+    let userId: Int?
 }
