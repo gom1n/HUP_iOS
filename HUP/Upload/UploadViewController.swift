@@ -55,7 +55,7 @@ class UploadViewController: UIViewController {
     }
     @objc func itemPriceTextEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
-        self.itemPrice = Int(text)!
+        self.itemPrice = (text=="") ? 0 : Int(text)!
     }
     @objc func buyDatePickerHandle(_ sender: UIDatePicker) {
         let date = sender.date
