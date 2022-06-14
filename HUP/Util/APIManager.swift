@@ -17,4 +17,12 @@ class APIManager {
         ]
         return headers
     }
+    func getMultipartHeader() -> HTTPHeaders {
+        let token = UserDefaults.standard.string(forKey: "accessToken") ?? ""
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer " + token,
+            "Content-Type": "multipart/form-data"
+        ]
+        return headers
+    }
 }

@@ -25,7 +25,7 @@ class UploadViewController: UIViewController {
     var endDateTime: String = ""
     
     var selectedPhoto: [UIImage] = []
-    var selectedPhotoUrl: [String] = []
+    var selectedPhotoUrl: [URL] = []
     var cateStr = "카테고리 선택"
     
     override func viewDidLoad() {
@@ -45,7 +45,22 @@ class UploadViewController: UIViewController {
     // MARK: - Actions: button tap
     @IBAction func uploadButtonTap(_ sender: UIButton) {
         let uploadInput = UploadInput(auctionClosingDate: self.endDateTime, buyDate: self.buyDate, category: self.itemCategory, description: self.itemDescription, files: self.selectedPhotoUrl, initPrice: self.itemPrice, itemName: self.itemName, itemStatePoint: self.itemStatus, userId: self.userId)
-        UploadDataManager().uploadDataManager(uploadInput, self)
+        UploadDataManager().uploadNewItem(with: uploadInput, self) { result in
+            
+//            switch result {
+//            case .success(let msg):
+//                print("success", msg)
+//            case .requestErr(let msg):
+//                print("requestERR", msg)
+//            case .pathErr:
+//                print("pathERR")
+//            case .serverErr:
+//                print("serverERR")
+//            case .networkFail:
+//                print("networkFail")
+//            }
+        }
+//        UploadDataManager().uploadDataManager(uploadInput, self)
     }
     @IBAction func dismissButtonTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -65,12 +80,16 @@ class UploadViewController: UIViewController {
     }
     @objc func buyDatePickerHandle(_ sender: UIDatePicker) {
         let date = sender.date
-        self.buyDate = date.toString()
+        let buyDateStr = date.toString()
+        let localDate = buyDateStr.replacingOccurrences(of: " ", with: "T")
+        self.buyDate = localDate
 //        print("buyDate: ", self.buyDate)
     }
     @objc func endDateTimePickerHandle(_ sender: UIDatePicker) {
         let date = sender.date
-        self.endDateTime = date.toString()
+        let endDateStr = date.toString()
+        let localDate = endDateStr.replacingOccurrences(of: " ", with: "T")
+        self.endDateTime = localDate
 //        print("endDateTime: ", self.endDateTime)
     }
     @objc func selectPhotoButtonTap(_ sender: Any) {
@@ -166,7 +185,7 @@ extension UploadViewController : UIImagePickerControllerDelegate, UINavigationCo
         }
         if let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL{
             let urlStr = imageUrl.absoluteString
-            self.selectedPhotoUrl.append(urlStr)
+            self.selectedPhotoUrl.append(imageUrl)
             print(urlStr)
         }
         uploadTableView.reloadData()
@@ -227,5 +246,10 @@ extension UploadViewController {
         self.present(actionsheetController, animated: true, completion: nil)
         
         return cateStr
+    }
+}
+extension UploadViewController {
+    func uploadSuccessAPI() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
