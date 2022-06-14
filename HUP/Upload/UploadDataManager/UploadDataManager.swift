@@ -24,7 +24,7 @@ class UploadDataManager {
                 print("upload success: ", result)
 //                viewController.registerEmailSuccessAPI(result)
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
     }
