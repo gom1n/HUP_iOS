@@ -37,6 +37,8 @@ class BidPageViewController: UIViewController {
         // DATA
         guard let itemId = self.itemId else {return}
         ItemDetailDataManager().itemDetailDataManager(itemId, self)
+        // STOMP
+        PriceSuggestionStomp().registerSockect(itemId: itemId)
     }
     
     @IBAction func backButtonTap(_ sender: UIButton) {
